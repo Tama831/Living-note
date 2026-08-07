@@ -103,5 +103,5 @@ push しないため)、grep や AI セッションでの「本文からの解�
 ## テスト
 
 ```bash
-python3 -m pytest tests/ -q   # 18本、ネットワーク不要
+python3 -m pytest tests/ -q   # 22本、ネットワーク不要
 ```

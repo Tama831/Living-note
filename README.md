@@ -80,8 +80,11 @@ python3 scripts/living_notes_update.py --dry-run --force
 ### 3. 初回実行
 
 ```bash
-python3 scripts/living_notes_update.py --force
+python3 scripts/living_notes_update.py --topic my-topic --force
 ```
+
+(`--topic` を外すと同梱サンプル4本も更新されます — 織りは1本あたり数分かかるので、
+まずは自分のトピックだけで試すのがおすすめ)
 
 新着がノートの「🆕 新着ログ」に ⏳ 付きで入り、LLM CLI があればそのまま織りが走って
 5行サマリ・横断まとめ・文献リストが書き上がります (⏳→✅、初回は数分かかります)。

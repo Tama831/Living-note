@@ -365,3 +365,22 @@ def test_format_log_block_without_pmid():
     assert "pubmed.ncbi.nlm.nih.gov" not in block
     assert "doi.org/10.1/x" in block
     assert "蔵書より" in block
+
+
+def test_note_contents_count_as_seen(monkeypatch, tmp_path):
+    # fresh clone (state無し) でも、ノートに既に載っている論文は再収集しない
+    topic, cfg, note = _topic_env(monkeypatch, tmp_path)
+    text = note.read_text(encoding="utf-8")
+    text = text.replace(
+        "1. 既存文献",
+        "1. 既存A PMID [111](https://pubmed.ncbi.nlm.nih.gov/111/)\n"
+        "2. 既存B [DOI](https://doi.org/10.1/AAA)",
+    )
+    note.write_text(text, encoding="utf-8")
+    articles = ARTICLES + [{"pmid": "333", "doi": "10.1/aaa", "title": "Doi dup", "authors": [],
+                            "journal": "J", "year": "2026", "abstract": ""}]
+    _fake_fetchers(monkeypatch, ["111", "222", "333"], articles)
+    n = ln.process_topic(topic, cfg, {}, lib=set(), dry_run=False, force=True, weave=False)
+    assert n == 1  # 111 は PMID で、333 は DOI でノート済み → 追加は 222 のみ
+    out = note.read_text(encoding="utf-8")
+    assert "New paper two" in out and "New paper one" not in out and "Doi dup" not in out

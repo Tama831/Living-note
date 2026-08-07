@@ -268,7 +268,11 @@ def entry_key(e: dict) -> str:
 def filter_new(entries: list[dict], seen_pmids: set[str], lib: set[str]) -> list[dict]:
     fresh = []
     for e in entries:
-        if entry_key(e) in seen_pmids or (e["pmid"] and ("pmid:" + e["pmid"]) in lib):
+        # seen は PMID キーと "doi:" キーが混在する (ノート由来の seen は DOI しか無いことが
+        # あるため、PMID 持ちの論文でも DOI 側での照合を必ず行う)
+        if entry_key(e) in seen_pmids or (e["doi"] and ("doi:" + e["doi"]) in seen_pmids):
+            continue
+        if e["pmid"] and ("pmid:" + e["pmid"]) in lib:
             continue
         if e["doi"] and ("doi:" + e["doi"]) in lib:
             continue
@@ -421,6 +425,13 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
     today = now.strftime("%Y-%m-%d")
     mode = topic.get("mode", "latest")  # latest=最新知見 / library=蔵書のみ / both=融合
     seen = set(ts.get("seen_pmids", []))
+    # ノート自身に既に載っている論文は、state が無くても seen 扱いにする。
+    # fresh clone / state 消失 / 手書きで種を蒔いたノートを二重に収集・織りしないための
+    # 自己修復 (2026-08-07 の README 通し再現検証で発見したバグの恒久対策)
+    note_text = note_path.read_text(encoding="utf-8")
+    seen |= set(re.findall(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", note_text))
+    seen |= {"doi:" + d.rstrip(".,;").lower()
+             for d in re.findall(r"doi\.org/(10\.[^)\s]+?)\)", note_text)}
     max_per_run = int(cfg.get("max_per_run", 25))
 
     # ── 蔵書モード: 手持ちの .bib/.jsonl からトピック該当分を種にする ──
