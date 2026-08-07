@@ -111,6 +111,14 @@ python3 scripts/living_notes_update.py --wake  my-topic   # 🟢 再開
 cron / launchd への登録例と全文レイヤー (`UNPAYWALL_EMAIL` の設定) は
 [docs/setup.md](docs/setup.md) にそのまま貼れる形で置いてあります。
 
+### 検証済み環境 (2026-08-07 実測)
+
+- **macOS (開発機)** — 全手順 + 織り (Claude Code) + 全文レイヤー
+- **Debian 12 LXC (まっさらの新規コンテナ)** — apt での前提インストール → clone → テスト22本 →
+  素振り → 収集 → cron 登録と実発火 → `weave_command` 差し替え、まで通しで確認
+- **織り手の互換性** — `claude -p` (既定) と Gemini (`gemini-flash-latest` の小さなラッパー CLI) の
+  両方で織り上がりを実証。出力が検証ゲートに落ちた場合も収集分は保全される (fail-soft) ことを実測
+
 ## しくみ
 
 ```

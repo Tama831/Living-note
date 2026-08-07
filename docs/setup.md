@@ -105,3 +105,13 @@ push しないため)、grep や AI セッションでの「本文からの解�
 ```bash
 python3 -m pytest tests/ -q   # 22本、ネットワーク不要
 ```
+
+pytest だけは標準ライブラリ外です (パイプライン本体には不要):
+macOS `pip3 install pytest` / Debian・Ubuntu `sudo apt install python3-pytest`
+
+## 検証メモ (2026-08-07)
+
+まっさらの Debian 12 LXC で本書の手順を上から通し検証済み: apt での前提インストール →
+clone → テスト → 素振り → `--no-weave` 収集 → cron 登録 (実発火まで確認) →
+`weave_command` 差し替え。織り手は claude (既定) と Gemini ラッパーの両方で実証。
+LLM が無い環境では織りが保留 (⏳) のまま収集だけ進む fail-soft も実測済み。
