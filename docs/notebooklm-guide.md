@@ -8,7 +8,7 @@
 1. **ノートを手に入れる**
    - このリポジトリのサンプル: [notes/example-appendicitis.md](../notes/example-appendicitis.md)
      (GitHub 画面右上の ⬇ ボタンか、Raw 表示からコピー)
-   - あるいは、ikita-note を運用している人から .md を受け取る
+   - あるいは、Living-note を運用している人から .md を受け取る
 2. **[NotebookLM](https://notebooklm.google.com/) を開く** (Google の無料サービス。2026年7月から
    「Gemini Notebook」に改称されていますが同じものです)
 3. **新規ノートブック → ソースを追加 → ファイルをアップロード** で .md を追加
@@ -30,7 +30,7 @@ NotebookLM のノートブックは**リンク共有**できます (閲覧者は
 
 ## ノートが更新されたら
 
-ikita-note のノートは生きているので、週ごとに中身が育ちます。
+Living-note のノートは生きているので、週ごとに中身が育ちます。
 ソースの .md を新しい版に**差し替える**だけで、Q&A も最新の状態に追いつきます。
 
 ## NotebookLM を使わない選択肢

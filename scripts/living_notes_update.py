@@ -161,10 +161,20 @@ def parse_efetch_xml(xml_text: str) -> list[dict]:
                 authors.append(au.findtext("CollectiveName").strip())
         abstract = " ".join(
             "".join(t.itertext()).strip() for t in a.iter("AbstractText")).strip()
+        # DOI は記事自身の PubmedData/ArticleIdList だけから取る。art.iter() で全域を
+        # 舐めると参考文献 (ReferenceList) の ArticleId まで拾い、他人の DOI で上書きされる
+        # (2026-08-07 脂質異常症ノートで 10/23 件が化けた実害バグ)
         doi = ""
-        for aid in art.iter("ArticleId"):
-            if aid.get("IdType") == "doi":
-                doi = (aid.text or "").strip().lower()
+        id_list = art.find("PubmedData/ArticleIdList")
+        if id_list is not None:
+            for aid in id_list.findall("ArticleId"):
+                if aid.get("IdType") == "doi":
+                    doi = (aid.text or "").strip().lower()
+        if not doi:
+            for el in a.iter("ELocationID"):
+                if el.get("EIdType") == "doi":
+                    doi = (el.text or "").strip().lower()
+                    break
         out.append({"pmid": pmid, "doi": doi, "title": title, "authors": authors,
                     "journal": journal, "year": year, "abstract": abstract})
     return out

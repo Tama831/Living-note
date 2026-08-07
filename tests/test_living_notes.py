@@ -51,6 +51,11 @@ SAMPLE_XML = """<?xml version="1.0"?>
       <ArticleId IdType="pubmed">12345678</ArticleId>
       <ArticleId IdType="doi">10.1000/TEST.1</ArticleId>
     </ArticleIdList>
+    <ReferenceList>
+      <Reference>
+        <ArticleIdList><ArticleId IdType="doi">10.9999/SOMEONE.ELSES.PAPER</ArticleId></ArticleIdList>
+      </Reference>
+    </ReferenceList>
   </PubmedData>
  </PubmedArticle>
  <PubmedArticle>
@@ -81,7 +86,7 @@ def test_parse_efetch_xml_fields():
     assert a["year"] == "2026"
     assert a["authors"] == ["Smith J", "CODA Group"]
     assert a["abstract"] == "Part one. Part two."
-    assert a["doi"] == "10.1000/test.1"  # 小文字化
+    assert a["doi"] == "10.1000/test.1"  # 小文字化 + 参考文献のDOIに汚染されない (10/23件化けた実害バグのregression)
 
 
 def test_parse_efetch_xml_childless_title_not_dropped():

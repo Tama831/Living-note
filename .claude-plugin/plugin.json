@@ -1,5 +1,5 @@
 {
-  "name": "ikita-note",
+  "name": "living-note",
   "description": "生きたノート — 関心を宣言すると論文が自分で集まり、1枚のMarkdownノートが編み直され続ける。PubMed自律収集 + LLM織り + 合法OA全文 + 根拠付きQ&A",
   "version": "0.1.0",
   "author": {

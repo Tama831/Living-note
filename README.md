@@ -1,8 +1,8 @@
-# 🌱 ikita-note — 生きたノート
+# 🌱 Living-note — 生きたノート
 
 **関心を宣言すると、論文が自分で集まり、1枚のノートが編み直され続ける。**
 
-ikita-note は、医学文献の「生きたレビュー」を個人サイズで回すための小さな道具箱です。
+Living-note は、医学文献の「生きたレビュー」を個人サイズで回すための小さな道具箱です。
 
 - 関心領域を1行の検索式で宣言する (例: 虫垂炎)
 - 週1回、PubMed の新着を自動収集する (無認証 API・鍵不要・Python 標準ライブラリのみ)
@@ -11,39 +11,102 @@ ikita-note は、医学文献の「生きたレビュー」を個人サイズで
 - 本文が読みたくなったら、**合法なオープンアクセス全文だけ**を取得してローカルに貯める
 - ノートはただの Markdown — NotebookLM に入れれば引用付き Q&A、AI チャットに貼れば相談相手になる
 
-> **30秒ストーリー**: 2026-08-07、蔵書3本の虫垂炎ノートに初回実行をかけたところ、直近180日の
-> 新着30本が集まり、12分後には33本構成の横断まとめに自動成長しました。POCUS の使いどころ、
-> 小児の「抗菌薬は本当に要るか」論争、interval appendectomy の判断軸の移動まで編み込まれた
-> 状態で、です。→ 実物: [notes/example-appendicitis.md](notes/example-appendicitis.md)
+> **30秒ストーリー**: 蔵書3本の虫垂炎ノートに初回実行をかけたところ、直近180日の新着30本が
+> 集まり、12分後には33本構成の横断まとめに自動成長しました。POCUS の使いどころ、小児の
+> 「抗菌薬は本当に要るか」論争、interval appendectomy の判断軸の移動まで編み込まれた状態で、です。
+
+## 📓 サンプルノート (すべて実際にこのパイプラインで生成)
+
+| ノート | 領域 |
+|---|---|
+| [虫垂炎](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 |
+| [IgG4関連疾患](notes/igg4-related-disease.md) | 免疫・リウマチ — 新しい疾患概念の最前線 |
+| [感染性心内膜炎](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 |
+| [脂質異常症](notes/dyslipidemia.md) | プライマリケア・予防 — 治療目標/新薬/リスク評価 |
 
 ## ふたつの入口
 
 ### 🚪 入口1: コードを書かない人 (医療者・研究者)
 
-ノート (.md ファイル) さえ手元にあれば、この道具は要りません。
-
-1. ノートを受け取る (このリポジトリのサンプルでも、誰かが運用しているノートでも)
-2. [NotebookLM (Gemini Notebook)](https://notebooklm.google.com/) にソースとして追加する
-3. 「妊婦の虫垂炎、画像評価は？」のように**日本語で質問する** — 引用ジャンプ付きで答えが返ります
-
-→ 詳しい手順: [docs/notebooklm-guide.md](docs/notebooklm-guide.md)
+ノート (.md) さえ手元にあれば、この道具は要りません。上のサンプルをダウンロードして
+[NotebookLM](https://notebooklm.google.com/) にソースとして入れ、日本語で質問するだけ。
+引用ジャンプ付きで答えが返り、ノートブックのリンク共有で同僚にも配れます。
+→ **5分ガイド: [docs/notebooklm-guide.md](docs/notebooklm-guide.md)**
 
 ### 🚪 入口2: 自走させたい人
 
-Python 3.10+ と (あれば) LLM CLI で、収集→織り→全文取得のパイプラインが動きます。
+以下のクイックスタートへ。Claude Code を使っている人は、このリポジトリはそのまま
+プラグインとしても働きます (`/living-note` — [skills/living-note/SKILL.md](skills/living-note/SKILL.md))。
+
+## 🚀 クイックスタート (ゼロから再現する手順)
+
+### 0. 必要なもの
+
+| もの | 用途 | 入れ方 |
+|---|---|---|
+| Python 3.10+ | 収集スクリプト (追加ライブラリ不要) | macOS/Linux は大抵入っています: `python3 --version` |
+| LLM CLI (任意) | 織り (ノートの編み直し) の自動化 | 例: [Claude Code](https://claude.com/claude-code)。**無くても動く** (手順4参照) |
+| pdftotext (任意) | 全文レイヤー | macOS: `brew install poppler` / Ubuntu: `sudo apt install poppler-utils` |
+
+### 1. 取得して、関心を宣言する
 
 ```bash
-git clone https://github.com/Tama831/ikita-note.git && cd ikita-note
-cp config/living-notes.example.json config/living-notes.json  # 検索式を自分の関心に
-cp notes/template.md notes/appendicitis.md
-python3 scripts/living_notes_update.py --dry-run --force       # まず素振り
-python3 scripts/living_notes_update.py --force                 # 収集+織り
+git clone https://github.com/Tama831/Living-note.git
+cd Living-note
+cp config/living-notes.example.json config/living-notes.json
+cp notes/template.md notes/my-topic.md
 ```
 
-→ 定期実行・LLM の差し替え・全文レイヤー: [docs/setup.md](docs/setup.md)
+`config/living-notes.json` を開き、`topics` を自分の関心に書き換えます
+(サンプル4本の設定がそのまま入っているので、真似して1個足すだけでもOK)。
+検索式は PubMed の記法です — まず `<病名>[Title] AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])` から始めるのがおすすめ。
 
-Claude Code を使っている人は、このリポジトリはそのままプラグインとしても働きます
-(`/living-note` — [skills/living-note/SKILL.md](skills/living-note/SKILL.md))。
+### 2. 素振り (何も書き込まずに確認)
+
+```bash
+python3 scripts/living_notes_update.py --dry-run --force
+```
+
+こんな出力が出れば成功です:
+
+```
+[my-topic] 検索窓 2026/02/08→2026/08/07: hits=30 新規候補=25 (上限超過で5件を次回送り)
+  - 42384223 Evidence map of appendicitis - a living systematic review with meta-analyses.
+  ...
+```
+
+`新規候補=0` なら検索式が狭すぎます (→ 下の「困ったとき」)。
+
+### 3. 初回実行
+
+```bash
+python3 scripts/living_notes_update.py --force
+```
+
+新着がノートの「🆕 新着ログ」に ⏳ 付きで入り、LLM CLI があればそのまま織りが走って
+5行サマリ・横断まとめ・文献リストが書き上がります (⏳→✅、初回は数分かかります)。
+
+### 4. LLM CLI が無い場合の織り (手動)
+
+```bash
+python3 scripts/living_notes_update.py --force --no-weave
+python3 scripts/living_notes_update.py --print-weave-prompt my-topic
+```
+
+出てきたプロンプトを ChatGPT / Claude / Gemini に貼り、返ってきた Markdown で
+ノートを上書きすれば同じ結果になります。
+
+### 5. あとは放っておく
+
+```bash
+python3 scripts/living_notes_update.py            # 毎日呼んでOK — 7日ゲートで週1回だけ動く
+python3 scripts/living_notes_update.py --status   # 状態確認
+python3 scripts/living_notes_update.py --sleep my-topic   # 🛏️ 休止 (ノートは残る)
+python3 scripts/living_notes_update.py --wake  my-topic   # 🟢 再開
+```
+
+cron / launchd への登録例と全文レイヤー (`UNPAYWALL_EMAIL` の設定) は
+[docs/setup.md](docs/setup.md) にそのまま貼れる形で置いてあります。
 
 ## しくみ
 
@@ -62,6 +125,17 @@ PubMed 新着収集 ──→ 重複判定 (手持ち文献と照合) ──→ 
                 (任意) 合法OA全文の取得 → ローカル全文ストア → 「その中から解答」
 ```
 
+## 🔧 困ったとき
+
+| 症状 | 対処 |
+|---|---|
+| `新規候補=0` | 検索式を広げる (`[Title]` → `[Title/Abstract]`)、`initial_lookback_days` を 365 に |
+| ヒットが多すぎ・雑音だらけ | `[Title]` に絞る、`AND (systematic[sb] OR guideline[pt] ...)` でタイプを絞る |
+| ⏳ が残ったまま (織りが走らない) | LLM CLI 未検出。`--print-weave-prompt` で手動織り、または config の `weave_command` に手持ちの CLI を設定 |
+| 織りの出力が捨てられた | 仕様です — アンカー欠落など検証に落ちた出力は採用しません。収集分は残っているので次回また織られます |
+| NotebookLM に .md が上がらない | 中身を Google ドキュメントに貼り、それをソース指定 (同じ効果) |
+| 全文が取れない (`no_oa`) | ペイウォール内 = 正当な限界。OA 率は分野で3〜7割です |
+
 ## 設計原則
 
 - **単一の蔵書 + ビューとしてのノート** — ノートブックごとに情報が分断されない。蔵書はひとつ、ノートは関心ごとの「窓」
@@ -69,6 +143,8 @@ PubMed 新着収集 ──→ 重複判定 (手持ち文献と照合) ──→ 
 - **fail-soft** — 外部 API や LLM が落ちても、定期実行を道連れにしない。収集済みは必ず残る
 - **降ろしても失われない** — `--sleep` で収集は止まるが、ノートは読み物として生き続ける
 - **ただの Markdown** — ロックインなし。どの AI にも、どのエディタにも、10年後の自分にも読める
+
+なぜこの形か (先行14ツールの比較表つき): [docs/design.md](docs/design.md)
 
 ## ⚠️ 医療情報についての断り
 
@@ -79,16 +155,17 @@ PubMed 新着収集 ──→ 重複判定 (手持ち文献と照合) ──→ 
 
 ## English
 
-**ikita-note** ("living note" in Japanese) is a tiny personal pipeline for living
-literature reviews: declare a topic as a PubMed query, and a weekly job collects new
-papers, dedupes against your library, and has an LLM *re-weave* a single Markdown
-note — top summary, cross-cutting synthesis, bibliography — so the note always
-reflects the current state of evidence. Notes are plain Markdown: drop them into
-NotebookLM for cited Q&A, or paste into any AI chat. Full texts are fetched via
-Unpaywall (legal OA only). Stdlib-only Python, fail-soft by design.
-As of our survey (Aug 2026), no existing tool combines autonomous collection,
-continuous single-note re-synthesis, personal-corpus Q&A, and casual PDF intake —
-that gap is why this exists. Not medical advice; every claim links to its source.
+**Living-note** (Japanese: 生きたノート, "a note that is alive") is a tiny personal
+pipeline for living literature reviews: declare a topic as a PubMed query, and a
+weekly job collects new papers, dedupes against your library, and has an LLM
+*re-weave* a single Markdown note — top summary, cross-cutting synthesis,
+bibliography — so the note always reflects the current state of evidence.
+Notes are plain Markdown: drop them into NotebookLM for cited Q&A, or paste into
+any AI chat. Full texts are fetched via Unpaywall (legal OA only). Stdlib-only
+Python, fail-soft by design. As of our survey (Aug 2026), no existing tool
+combines autonomous collection, continuous single-note re-synthesis,
+personal-corpus Q&A, and casual PDF intake — that gap is why this exists.
+Not medical advice; every claim links to its source.
 
 ## ライセンス
 

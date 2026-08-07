@@ -60,27 +60,27 @@ python3 scripts/living_notes_update.py --wake appendicitis    # 🟢 再開
 
 **Linux (cron)**:
 ```
-30 21 * * * cd /path/to/ikita-note && python3 scripts/living_notes_update.py >> ~/ikita-note.log 2>&1
+30 21 * * * cd /path/to/living-note && python3 scripts/living_notes_update.py >> ~/living-note.log 2>&1
 ```
 
-**macOS (launchd)** — `~/Library/LaunchAgents/com.example.ikita-note.plist`:
+**macOS (launchd)** — `~/Library/LaunchAgents/com.example.living-note.plist`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
-  <key>Label</key><string>com.example.ikita-note</string>
+  <key>Label</key><string>com.example.living-note</string>
   <key>ProgramArguments</key><array>
     <string>/usr/bin/python3</string>
-    <string>/path/to/ikita-note/scripts/living_notes_update.py</string>
+    <string>/path/to/living-note/scripts/living_notes_update.py</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>30</integer></dict>
-  <key>StandardOutPath</key><string>/tmp/ikita-note.log</string>
-  <key>StandardErrorPath</key><string>/tmp/ikita-note.log</string>
+  <key>StandardOutPath</key><string>/tmp/living-note.log</string>
+  <key>StandardErrorPath</key><string>/tmp/living-note.log</string>
 </dict></plist>
 ```
 ```bash
-launchctl load ~/Library/LaunchAgents/com.example.ikita-note.plist
+launchctl load ~/Library/LaunchAgents/com.example.living-note.plist
 ```
 
 ## 全文レイヤー (任意)

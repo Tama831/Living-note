@@ -11,7 +11,31 @@
       "queries": [
         "appendicitis[Title] AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])"
       ],
-      "note": "notes/appendicitis.md"
+      "note": "notes/example-appendicitis.md"
+    },
+    {
+      "slug": "igg4-related-disease",
+      "title": "IgG4関連疾患",
+      "queries": [
+        "(\"IgG4-related disease\"[Title] OR \"immunoglobulin G4-related disease\"[Title] OR \"IgG4-related\"[Title]) AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])"
+      ],
+      "note": "notes/igg4-related-disease.md"
+    },
+    {
+      "slug": "infective-endocarditis",
+      "title": "感染性心内膜炎",
+      "queries": [
+        "(infective endocarditis[Title]) AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])"
+      ],
+      "note": "notes/infective-endocarditis.md"
+    },
+    {
+      "slug": "dyslipidemia",
+      "title": "脂質異常症",
+      "queries": [
+        "(dyslipidemia[Title] OR hypercholesterolemia[Title] OR \"LDL cholesterol\"[Title]) AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])"
+      ],
+      "note": "notes/dyslipidemia.md"
     }
   ]
 }
