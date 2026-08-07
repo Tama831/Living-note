@@ -109,6 +109,74 @@ def library_ids(cfg: dict) -> set[str]:
     return ids
 
 
+def parse_bib_entries(text: str) -> list[dict]:
+    """BibTeX export を efetch 互換の entry dict 列に変換 (蔵書モードの供給源)。"""
+    out = []
+    for e in re.split(r"(?=^@\w+\{)", text, flags=re.M):
+        if not e.startswith("@"):
+            continue
+
+        def field(name: str) -> str:
+            m = re.search(rf'{name}\s*=\s*[{{"](.+?)[}}"],?\s*$', e, re.M | re.S)
+            return " ".join(m.group(1).split()) if m else ""
+
+        title = field("title")
+        if not title:
+            continue
+        year_m = re.search(r'year\s*=\s*[{"]?(\d{4})', e)
+        pmid_m = re.search(r'pmid\s*=\s*[{"]?(\d+)', e)
+        authors = [a.strip() for a in field("author").split(" and ") if a.strip()]
+        out.append({
+            "pmid": pmid_m.group(1) if pmid_m else "",
+            "doi": field("doi").lower(),
+            "title": title,
+            "authors": authors,
+            "journal": field("journal") or field("booktitle") or field("publisher"),
+            "year": year_m.group(1) if year_m else "",
+            "abstract": field("abstract"),
+            "keywords": field("keywords"),
+        })
+    return out
+
+
+def library_matches(cfg: dict, topic: dict) -> list[dict]:
+    """蔵書 (library_sources / dedupe_sources の .bib/.jsonl) からトピック該当分を拾う。
+
+    マッチは topic の "library_query" (正規表現・大文字小文字無視) をタイトル+keywords に
+    当てる。未指定なら title (例: "虫垂炎") では英文文献に当たらないので、蔵書モードでは
+    library_query を書くことを README で推奨している。"""
+    pat = topic.get("library_query") or re.escape(topic.get("title", topic["slug"]))
+    rx = re.compile(pat, re.I)
+    hits = []
+    for rel in cfg.get("library_sources", cfg.get("dedupe_sources", [])):
+        path = ROOT / rel
+        if not path.exists():
+            continue
+        entries: list[dict] = []
+        if path.suffix == ".bib":
+            entries = parse_bib_entries(path.read_text(encoding="utf-8", errors="replace"))
+        elif path.suffix == ".jsonl":
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    j = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if j.get("title"):
+                    entries.append({
+                        "pmid": str(j.get("pmid", "") or ""),
+                        "doi": str(j.get("doi", "") or "").lower(),
+                        "title": j["title"],
+                        "authors": [a for a in j.get("authors", []) if a],
+                        "journal": j.get("container", "") or "",
+                        "year": str(j.get("year", "") or ""),
+                        "abstract": "", "keywords": "",
+                    })
+        hits += [e for e in entries if rx.search(e["title"] + " " + e.get("keywords", ""))]
+    return hits
+
+
 def _http_json(url: str) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": "living-notes/1.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -188,10 +256,19 @@ def efetch(pmids: list[str]) -> list[dict]:
     return parse_efetch_xml(_http_text(f"{EUTILS}/efetch.fcgi?{params}"))
 
 
+def entry_key(e: dict) -> str:
+    """seen 照合用の同一性キー: PMID > DOI > タイトル。蔵書由来は PMID を欠くことがある。"""
+    if e.get("pmid"):
+        return e["pmid"]
+    if e.get("doi"):
+        return "doi:" + e["doi"]
+    return "title:" + e.get("title", "").lower()[:80]
+
+
 def filter_new(entries: list[dict], seen_pmids: set[str], lib: set[str]) -> list[dict]:
     fresh = []
     for e in entries:
-        if e["pmid"] in seen_pmids or ("pmid:" + e["pmid"]) in lib:
+        if entry_key(e) in seen_pmids or (e["pmid"] and ("pmid:" + e["pmid"]) in lib):
             continue
         if e["doi"] and ("doi:" + e["doi"]) in lib:
             continue
@@ -199,14 +276,16 @@ def filter_new(entries: list[dict], seen_pmids: set[str], lib: set[str]) -> list
     return fresh
 
 
-def format_log_block(entries: list[dict], date: str) -> str:
-    lines = [f"### ⏳ {date} 収集分 ({len(entries)}件・織り待ち)", ""]
+def format_log_block(entries: list[dict], date: str, source: str = "収集分") -> str:
+    lines = [f"### ⏳ {date} {source} ({len(entries)}件・織り待ち)", ""]
     for e in entries:
         au = ", ".join(e["authors"][:3]) + (" et al." if len(e["authors"]) > 3 else "")
         head = f"- **{e['title']}** — {au} *{e['journal']}* ({e['year']})."
-        links = f" PMID [{e['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/)"
+        links = ""
+        if e.get("pmid"):
+            links += f" PMID [{e['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/)"
         if e["doi"]:
-            links += f" / [DOI](https://doi.org/{e['doi']})"
+            links += f" / [DOI](https://doi.org/{e['doi']})" if links else f" [DOI](https://doi.org/{e['doi']})"
         lines.append(head + links)
         if e["abstract"]:
             snippet = e["abstract"][:300] + ("…" if len(e["abstract"]) > 300 else "")
@@ -340,46 +419,68 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
         return 0
 
     today = now.strftime("%Y-%m-%d")
-    maxdate = now.strftime("%Y/%m/%d")
-    if ts.get("last_edat"):
-        # edat の反映ラグ対策に3日重ねる (重複は seen_pmids が吸収する)
-        mindate = (datetime.strptime(ts["last_edat"], "%Y/%m/%d")
-                   - timedelta(days=3)).strftime("%Y/%m/%d")
-    else:
-        mindate = (now - timedelta(days=int(cfg.get("initial_lookback_days", 180)))).strftime("%Y/%m/%d")
-
-    pmids: list[str] = []
-    for q in topic["queries"]:
-        try:
-            pmids.extend(esearch(q, mindate, maxdate))
-        except Exception as e:
-            print(f"[{slug}] esearch failed: {e}", file=sys.stderr)
-    pmids = list(dict.fromkeys(pmids))  # 順序保持で重複除去
-
+    mode = topic.get("mode", "latest")  # latest=最新知見 / library=蔵書のみ / both=融合
     seen = set(ts.get("seen_pmids", []))
-    cand_ids = [p for p in pmids if p not in seen]
     max_per_run = int(cfg.get("max_per_run", 25))
-    dropped = max(0, len(cand_ids) - max_per_run)
-    cand_ids = cand_ids[:max_per_run]
 
-    try:
-        entries = efetch(cand_ids)
-    except Exception as e:
-        print(f"[{slug}] efetch failed: {e}", file=sys.stderr)
-        return 0
-    fresh = filter_new(entries, seen, lib)
+    # ── 蔵書モード: 手持ちの .bib/.jsonl からトピック該当分を種にする ──
+    fresh_lib: list[dict] = []
+    if mode in ("library", "both"):
+        # 蔵書由来なので lib dedupe は通さない (蔵書に在るのが前提)。seen とだけ照合。
+        # 上限あふれ分は seen に入らないため、毎回の再スキャンで自然に次回候補になる
+        fresh_lib = filter_new(library_matches(cfg, topic), seen, lib=set())[:max_per_run]
+        print(f"[{slug}] 蔵書スキャン: 新規 {len(fresh_lib)} 件")
 
-    print(f"[{slug}] 検索窓 {mindate}→{maxdate}: hits={len(pmids)} 新規候補={len(fresh)}"
-          + (f" (上限超過で{dropped}件を次回送り)" if dropped else ""))
+    # ── 最新知見モード: PubMed 新着 ──
+    fresh: list[dict] = []
+    entries: list[dict] = []
+    dropped = 0
+    if mode in ("latest", "both"):
+        maxdate = now.strftime("%Y/%m/%d")
+        if ts.get("last_edat"):
+            # edat の反映ラグ対策に3日重ねる (重複は seen_pmids が吸収する)
+            mindate = (datetime.strptime(ts["last_edat"], "%Y/%m/%d")
+                       - timedelta(days=3)).strftime("%Y/%m/%d")
+        else:
+            mindate = (now - timedelta(days=int(cfg.get("initial_lookback_days", 180)))).strftime("%Y/%m/%d")
+
+        pmids: list[str] = []
+        for q in topic["queries"]:
+            try:
+                pmids.extend(esearch(q, mindate, maxdate))
+            except Exception as e:
+                print(f"[{slug}] esearch failed: {e}", file=sys.stderr)
+        pmids = list(dict.fromkeys(pmids))  # 順序保持で重複除去
+
+        cand_ids = [p for p in pmids if p not in seen]
+        dropped = max(0, len(cand_ids) - max_per_run)
+        cand_ids = cand_ids[:max_per_run]
+
+        try:
+            entries = efetch(cand_ids)
+        except Exception as e:
+            print(f"[{slug}] efetch failed: {e}", file=sys.stderr)
+            return 0
+        fresh = filter_new(entries, seen, lib)
+
+        print(f"[{slug}] 検索窓 {mindate}→{maxdate}: hits={len(pmids)} 新規候補={len(fresh)}"
+              + (f" (上限超過で{dropped}件を次回送り)" if dropped else ""))
+
     if dry_run:
+        for e in fresh_lib:
+            print(f"  - (蔵書) {e['title'][:80]}")
         for e in fresh:
             print(f"  - {e['pmid']} {e['title'][:80]}")
         print(f"[{slug}] dry-run: 書き込みなし")
-        return len(fresh)
+        return len(fresh) + len(fresh_lib)
 
-    if fresh:
+    if fresh or fresh_lib:
         text = note_path.read_text(encoding="utf-8")
-        text = insert_after_anchor(text, "<!-- LN:LOG:START -->", format_log_block(fresh, today))
+        if fresh:
+            text = insert_after_anchor(text, "<!-- LN:LOG:START -->", format_log_block(fresh, today))
+        if fresh_lib:
+            text = insert_after_anchor(text, "<!-- LN:LOG:START -->",
+                                       format_log_block(fresh_lib, today, source="蔵書より"))
         text = bump_updated(text, today)
         atomic_write(note_path, text)
         ts["weave_pending"] = True
@@ -401,13 +502,14 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
         atomic_write(note_path, pruned)
         print(f"[{slug}] ログ整理: 古い✅ブロックを {arch.relative_to(ROOT)} へ退避")
 
-    # fetch した分だけ seen に積む。上限超過の積み残しがある間は last_edat を進めない —
+    # fetch/採用した分だけ seen に積む。上限超過の積み残しがある間は last_edat を進めない —
     # 窓を進めると積み残しが検索窓の外に落ちて静かに消える (2026-08-07 実走で検出したバグ)
-    ts["seen_pmids"] = sorted(seen | {e["pmid"] for e in entries})
+    ts["seen_pmids"] = sorted(seen | {entry_key(e) for e in entries}
+                              | {entry_key(e) for e in fresh_lib})
     ts["last_run"] = now.isoformat(timespec="seconds")
-    if dropped == 0:
-        ts["last_edat"] = maxdate
-    return len(fresh)
+    if mode in ("latest", "both") and dropped == 0:
+        ts["last_edat"] = now.strftime("%Y/%m/%d")
+    return len(fresh) + len(fresh_lib)
 
 
 def main() -> int:

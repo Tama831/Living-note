@@ -301,3 +301,67 @@ def test_process_topic_respects_library_dedupe(monkeypatch, tmp_path):
     assert "New paper one" not in text and "New paper two" in text
     # 蔵書済みでも seen には積む (次回以降 fetch し直さない)
     assert state["t"]["seen_pmids"] == ["111", "222"]
+
+
+# ── 蔵書モード ──────────────────────────────────────────────
+
+BIB_SAMPLE = """
+@ARTICLE{Talan2021-hm,
+  title   = {Treatment of acute uncomplicated appendicitis},
+  author  = {Talan, David A and Di Saverio, Salomone},
+  journal = {The New England Journal of Medicine},
+  year    = 2021,
+  doi     = {10.1056/NEJMcp2107675},
+  pmid    = 34525287,
+  keywords = {appendix}
+}
+
+@ARTICLE{Other2020-x,
+  title   = {Completely unrelated cardiology paper},
+  author  = {Someone, Else},
+  journal = {J Unrelated},
+  year    = 2020,
+  doi     = {10.1/xyz}
+}
+"""
+
+
+def test_parse_bib_entries_fields():
+    es = ln.parse_bib_entries(BIB_SAMPLE)
+    assert len(es) == 2
+    a = es[0]
+    assert a["title"] == "Treatment of acute uncomplicated appendicitis"
+    assert a["doi"] == "10.1056/nejmcp2107675"  # 小文字化
+    assert a["pmid"] == "34525287"
+    assert a["authors"][0] == "Talan, David A"
+    assert a["year"] == "2021"
+
+
+def test_library_mode_seeds_from_bib_and_is_idempotent(monkeypatch, tmp_path):
+    topic, cfg, note = _topic_env(monkeypatch, tmp_path)
+    (tmp_path / "lib.bib").write_text(BIB_SAMPLE, encoding="utf-8")
+    cfg["dedupe_sources"] = ["lib.bib"]
+    topic["mode"] = "library"
+    topic["library_query"] = "appendicitis|appendix"
+
+    def boom(*a, **k):
+        raise AssertionError("library モードで PubMed を呼んではいけない")
+    monkeypatch.setattr(ln, "esearch", boom)
+    state = {}
+    n1 = ln.process_topic(topic, cfg, state, lib=set(), dry_run=False, force=True, weave=False)
+    assert n1 == 1  # マッチは appendicitis の1本だけ
+    text = note.read_text(encoding="utf-8")
+    assert "Treatment of acute uncomplicated appendicitis" in text
+    assert "蔵書より" in text
+    assert "Completely unrelated" not in text
+    n2 = ln.process_topic(topic, cfg, state, lib=set(), dry_run=False, force=True, weave=False)
+    assert n2 == 0  # 蔵書の再スキャンで増えない (冪等)
+
+
+def test_format_log_block_without_pmid():
+    e = {"pmid": "", "doi": "10.1/x", "title": "T", "authors": ["A"],
+         "journal": "J", "year": "2020", "abstract": ""}
+    block = ln.format_log_block([e], "2026-08-07", source="蔵書より")
+    assert "pubmed.ncbi.nlm.nih.gov" not in block
+    assert "doi.org/10.1/x" in block
+    assert "蔵書より" in block

@@ -26,7 +26,10 @@ cp notes/template.md notes/appendicitis.md   # slug と合わせたファイル�
 | `interval_days` | 実行間隔ゲート (既定7日 — 毎日呼んでも週1回しか動かない) |
 | `initial_lookback_days` | 初回にさかのぼる日数 (既定180日) |
 | `max_per_run` | 1回の取り込み上限。あふれた分は消えず次回に回る |
-| `dedupe_sources` | 手持ち文献リスト (.bib / .jsonl) のパス。Paperpile/Zotero の export を置くと既読論文を取り込まない |
+| `dedupe_sources` | 手持ち文献リスト (.bib / .jsonl) のパス。Paperpile/Zotero の export を置くと既読論文を取り込まない + 蔵書モードの供給源になる |
+| `topics[].mode` | `latest` (既定・PubMed新着) / `library` (蔵書該当分のみ) / `both` (融合)。README「自分の文献管理ツールとつなぐ」参照 |
+| `topics[].library_query` | 蔵書モードで拾う条件 (正規表現、タイトル+keywords に当たる)。英語文献には英語で |
+| `library_sources` | 蔵書モードの供給源を dedupe と分けたい時だけ指定 (省略時は dedupe_sources を使う) |
 | `weave_command` | 織り手 LLM CLI (省略時は `claude -p`) |
 
 ## 動かす

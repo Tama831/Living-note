@@ -125,6 +125,45 @@ PubMed 新着収集 ──→ 重複判定 (手持ち文献と照合) ──→ 
                 (任意) 合法OA全文の取得 → ローカル全文ストア → 「その中から解答」
 ```
 
+## 🔗 自分の文献管理ツールとつなぐ (Paperpile / Zotero など)
+
+手持ちの文献リスト (BibTeX export) を置くと、Living-note は**あなたの蔵書**とつながります。
+
+**export の作り方** — Paperpile: 論文を選択 → Export → BibTeX / Zotero: File → Export Library → BibTeX。
+できた .bib をリポジトリ内 (例: `library/my-library.bib`) に置き、config の `dedupe_sources` に登録します。
+
+つながると、トピックごとに**3つのモード**が選べます (`"mode"` フィールド):
+
+| mode | 何をするか |
+|---|---|
+| `latest` (既定) | PubMed の新着を集めて織る — **「最新の知見を中心に」** |
+| `library` | **自分が集めた蔵書の中から**トピック該当分だけを拾って織る。PubMed は見ない |
+| `both` | 融合 — 蔵書を土台に、新着がその上に編み込まれていく |
+
+```json
+{
+  "dedupe_sources": ["library/my-library.bib"],
+  "topics": [
+    {
+      "slug": "appendicitis",
+      "title": "虫垂炎",
+      "mode": "both",
+      "library_query": "appendicitis|appendix",
+      "queries": ["appendicitis[Title] AND (systematic[sb] OR review[pt])"],
+      "note": "notes/appendicitis.md"
+    }
+  ]
+}
+```
+
+- `library_query` は蔵書から拾う条件 (正規表現・大文字小文字無視、タイトル+keywords に当たる)。
+  英語文献には英語で書きます — 日本語トピック名のままでは当たりません
+- `latest` モードでも `dedupe_sources` は効きます: **すでに蔵書にある論文は新着として
+  取り込まない** (二重登録しない)
+- 蔵書モードで拾った論文は新着ログに「蔵書より」と表示され、区別が付きます
+- 正直な注意: .bib は**手動 export** です。蔵書に論文を足したら、たまに export し直して
+  ください (文献管理ツール側に公開 API が無いための制約)
+
 ## 🔧 困ったとき
 
 | 症状 | 対処 |
