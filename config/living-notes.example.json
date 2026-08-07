@@ -1,0 +1,17 @@
+{
+  "interval_days": 7,
+  "initial_lookback_days": 180,
+  "max_per_run": 25,
+  "max_log_blocks": 8,
+  "dedupe_sources": [],
+  "topics": [
+    {
+      "slug": "appendicitis",
+      "title": "虫垂炎",
+      "queries": [
+        "appendicitis[Title] AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])"
+      ],
+      "note": "notes/appendicitis.md"
+    }
+  ]
+}

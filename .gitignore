@@ -1,0 +1,12 @@
+# 論文全文 (著作権物) — 公開リポジトリに載せない
+data/fulltext/
+
+# 実行状態 (各自のローカル運用)
+data/status/
+
+# 各自の設定 (example からコピーして使う)
+config/living-notes.json
+
+__pycache__/
+*.pyc
+.DS_Store
