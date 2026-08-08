@@ -29,6 +29,7 @@ cp notes/template.md notes/appendicitis.md   # slug と合わせたファイル�
 | `dedupe_sources` | 手持ち文献リスト (.bib / .jsonl) のパス。Paperpile/Zotero の export を置くと既読論文を取り込まない + 蔵書モードの供給源になる |
 | `topics[].mode` | `latest` (既定・PubMed新着) / `library` (蔵書該当分のみ) / `both` (融合)。README「自分の文献管理ツールとつなぐ」参照 |
 | `topics[].library_query` | 蔵書モードで拾う条件 (正規表現、タイトル+keywords に当たる)。英語文献には英語で |
+| `topics[].lang` | `ja` (既定) / `en` — ノート雛形は `notes/template.en.md`、織りとログ見出しが英語になる |
 | `library_sources` | 蔵書モードの供給源を dedupe と分けたい時だけ指定 (省略時は dedupe_sources を使う) |
 | `weave_command` | 織り手 LLM CLI (省略時は `claude -p`) |
 

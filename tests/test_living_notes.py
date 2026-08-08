@@ -384,3 +384,23 @@ def test_note_contents_count_as_seen(monkeypatch, tmp_path):
     assert n == 1  # 111 は PMID で、333 は DOI でノート済み → 追加は 222 のみ
     out = note.read_text(encoding="utf-8")
     assert "New paper two" in out and "New paper one" not in out and "Doi dup" not in out
+
+
+# ── 言語対応 (lang: en) ─────────────────────────────────────
+
+def test_weave_prompt_english_variant():
+    p = ln.weave_prompt("---\nnote body", "Appendicitis", lang="en")
+    assert "You are the weaver" in p
+    assert "Write in English" in p
+    assert "織り手" not in p
+    # 既定は日本語のまま
+    assert "織り手" in ln.weave_prompt("---\nnote body", "虫垂炎")
+
+
+def test_format_log_block_english_labels():
+    e = {"pmid": "42", "doi": "10.1/x", "title": "T", "authors": ["A B"],
+         "journal": "J", "year": "2026", "abstract": "some abstract"}
+    block = ln.format_log_block([e], "2026-08-08", source="collected", lang="en")
+    assert "### ⏳ 2026-08-08 collected (1 papers, awaiting weave)" in block
+    assert "  - Abstract: some abstract" in block
+    assert "抄録" not in block and "織り待ち" not in block

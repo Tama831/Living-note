@@ -280,8 +280,15 @@ def filter_new(entries: list[dict], seen_pmids: set[str], lib: set[str]) -> list
     return fresh
 
 
-def format_log_block(entries: list[dict], date: str, source: str = "収集分") -> str:
-    lines = [f"### ⏳ {date} {source} ({len(entries)}件・織り待ち)", ""]
+def format_log_block(entries: list[dict], date: str, source: str = "収集分",
+                     lang: str = "ja") -> str:
+    if lang == "en":
+        heading = f"### ⏳ {date} {source} ({len(entries)} papers, awaiting weave)"
+        abst = "Abstract"
+    else:
+        heading = f"### ⏳ {date} {source} ({len(entries)}件・織り待ち)"
+        abst = "抄録"
+    lines = [heading, ""]
     for e in entries:
         au = ", ".join(e["authors"][:3]) + (" et al." if len(e["authors"]) > 3 else "")
         head = f"- **{e['title']}** — {au} *{e['journal']}* ({e['year']})."
@@ -293,7 +300,7 @@ def format_log_block(entries: list[dict], date: str, source: str = "収集分") 
         lines.append(head + links)
         if e["abstract"]:
             snippet = e["abstract"][:300] + ("…" if len(e["abstract"]) > 300 else "")
-            lines.append(f"  - 抄録: {snippet}")
+            lines.append(f"  - {abst}: {snippet}")
     lines.append("")
     return "\n".join(lines)
 
@@ -328,7 +335,21 @@ def run_claude(prompt: str, timeout: int = 600, cmd: list[str] | None = None) ->
     return result.stdout.strip()
 
 
-def weave_prompt(note_text: str, topic_title: str) -> str:
+def weave_prompt(note_text: str, topic_title: str, lang: str = "ja") -> str:
+    if lang == "en":
+        return (
+            f"You are the weaver of a 'living note'. Topic: {topic_title}.\n"
+            "The Markdown note below contains newly collected entries marked '⏳ awaiting weave'. Do the following:\n"
+            "1. Weave the new content into the relevant themes of the Cross-cutting synthesis "
+            "(integrate and rewrite with the existing text — do not just append a list)\n"
+            "2. Add the incorporated papers to the Bibliography (with PMID/DOI links)\n"
+            "3. Rewrite the Five-line summary to reflect the current whole (strictly 5 lines or fewer)\n"
+            "4. Change ⏳ to ✅ in the arrivals log (keep the log itself as history)\n"
+            "Constraints: never delete or reorder any of the 8 anchor comments <!-- LN:...:START/END -->.\n"
+            "In the frontmatter (between --- lines), change nothing except 'updated'.\n"
+            "Write in English. Output ONLY the complete note Markdown — no preamble, no code fences.\n\n"
+            "=== FULL NOTE ===\n" + note_text
+        )
     return (
         f"あなたは「生きたノート」の織り手です。対象トピック: {topic_title}。\n"
         "以下の Markdown ノートには『⏳織り待ち』の新着ログが含まれます。次の作業をしてください:\n"
@@ -343,10 +364,10 @@ def weave_prompt(note_text: str, topic_title: str) -> str:
     )
 
 
-def weave_note(note_text: str, topic_title: str, runner=run_claude) -> str | None:
+def weave_note(note_text: str, topic_title: str, runner=run_claude, lang: str = "ja") -> str | None:
     """織り直したノート全文を返す。検証に落ちたら None (呼び元は fail-soft)。"""
     try:
-        woven = runner(weave_prompt(note_text, topic_title))
+        woven = runner(weave_prompt(note_text, topic_title, lang))
     except Exception as e:
         print(f"  [weave] failed: {e}", file=sys.stderr)
         return None
@@ -424,6 +445,7 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
 
     today = now.strftime("%Y-%m-%d")
     mode = topic.get("mode", "latest")  # latest=最新知見 / library=蔵書のみ / both=融合
+    lang = topic.get("lang", "ja")      # ノートとログの言語 (織りの指示言語も連動)
     seen = set(ts.get("seen_pmids", []))
     # ノート自身に既に載っている論文は、state が無くても seen 扱いにする。
     # fresh clone / state 消失 / 手書きで種を蒔いたノートを二重に収集・織りしないための
@@ -488,16 +510,22 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
     if fresh or fresh_lib:
         text = note_path.read_text(encoding="utf-8")
         if fresh:
-            text = insert_after_anchor(text, "<!-- LN:LOG:START -->", format_log_block(fresh, today))
+            text = insert_after_anchor(text, "<!-- LN:LOG:START -->",
+                                       format_log_block(fresh, today,
+                                                        source="collected" if lang == "en" else "収集分",
+                                                        lang=lang))
         if fresh_lib:
             text = insert_after_anchor(text, "<!-- LN:LOG:START -->",
-                                       format_log_block(fresh_lib, today, source="蔵書より"))
+                                       format_log_block(fresh_lib, today,
+                                                        source="from library" if lang == "en" else "蔵書より",
+                                                        lang=lang))
         text = bump_updated(text, today)
         atomic_write(note_path, text)
         ts["weave_pending"] = True
         if weave:
             woven = weave_note(note_path.read_text(encoding="utf-8"), topic.get("title", slug),
-                               runner=lambda p: run_claude(p, cmd=cfg.get("weave_command")))
+                               runner=lambda p: run_claude(p, cmd=cfg.get("weave_command")),
+                               lang=lang)
             if woven is not None:
                 atomic_write(note_path, bump_updated(woven, today))
                 ts["weave_pending"] = False
@@ -543,7 +571,7 @@ def main() -> int:
         for t in cfg.get("topics", []):
             if t["slug"] == args.print_weave_prompt:
                 note = (ROOT / t["note"]).read_text(encoding="utf-8")
-                print(weave_prompt(note, t.get("title", t["slug"])))
+                print(weave_prompt(note, t.get("title", t["slug"]), t.get("lang", "ja")))
                 return 0
         print(f"unknown topic: {args.print_weave_prompt}", file=sys.stderr)
         return 1

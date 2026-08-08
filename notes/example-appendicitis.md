@@ -130,10 +130,9 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 32. **Han T, Borman T, Vanhatalo S et al.** Uncomplicated and Complicated Acute Appendicitis Induce Different Cytokine Patterns. *APMIS* 2026;134(2):e70168. PMID [41711118](https://pubmed.ncbi.nlm.nih.gov/41711118/) / [DOI](https://doi.org/10.1111/apm.70168)
 33. **Spota A, Englesakis M, Chadi S et al.** Acute Appendicitis as a Harbinger of Colorectal Neoplasms in Patients Aged 40 or Older: A Scoping Review. *Surg Laparosc Endosc Percutan Tech* 2026. PMID [41707661](https://pubmed.ncbi.nlm.nih.gov/41707661/) / [DOI](https://doi.org/10.1097/SLE.0000000000001451)
 
-> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便の編み込み分。書誌はいずれも PubMed メタデータ
-> (get_article_metadata) と全件照合済み。収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、
-> 第2便でも2件 (No.29, 30 相当) に別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。
-> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は引き続き要修理。
+> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便の編み込み分。書誌は全件 PubMed メタデータと
+> 照合済み。収集時に混入していた別論文の DOI (計11件) は PMID を正として訂正済みで、原因だった
+> DOI 抽出バグ (参考文献欄からの誤拾い) も同日修理済み (regression test あり)。
 
 <!-- LN:BIB:END -->
 
