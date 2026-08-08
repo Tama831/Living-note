@@ -1,46 +1,47 @@
 ---
 name: living-note
-description: 生きたノート (Living-note) の操作。「◯◯をノートにして」「ノートに聞く」「ノート更新して」「◯◇ノートおやすみ/起こして」で発動。関心トピックの新設・PubMed収集と織りの実行・ノートと全文ストアからの根拠付きQ&A・休眠/再開を担う。
+description: Operate Living-note living literature notes. Triggers - "make a living note for X", "ask the notes", "update the notes", "put the X note to sleep / wake it". Handles topic creation, PubMed collection + weave runs, cited Q&A over notes and the full-text store, and pause/resume.
 ---
 
-# living-note — 生きたノートの操作
+# living-note — operating the living notes
 
-このスキルは Living-note リポジトリ (このリポジトリ) 内での操作を定義する。
-パスはすべてリポジトリルート相対。
+This skill defines operations inside the Living-note repository (this repository).
+All paths are repo-root relative.
 
-## インテント別の手順
+## Intents
 
-### 「◯◯をノートにして」(トピック新設)
-1. slug を決める (英小文字ハイフン)。`notes/template.md` を `notes/<slug>.md` にコピー
-2. frontmatter (topic/slug) とタイトルを書き換える
-3. `config/living-notes.json` の `topics` に {slug, title, queries, note} を追記。
-   検索式はユーザーと相談して絞る (広すぎると雑音、狭すぎると空振り。
-   例: `<topic>[Title] AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])`)
-4. `python3 scripts/living_notes_update.py --topic <slug> --force` で初回実行
-5. 結果 (何本入ったか・サマリ) を短く報告する
+### "Make a living note for TOPIC"
+1. Pick a slug (lowercase, hyphens). Copy `notes/template.md` (English) or
+   `notes/template.ja.md` (Japanese) to `notes/<slug>.md`
+2. Fill in the frontmatter (topic/slug/lang) and title
+3. Add {slug, title, queries, note, lang} to `topics` in `config/living-notes.json`.
+   Discuss the query with the user (too broad = noise, too narrow = silence; a good start:
+   `<topic>[Title] AND (systematic[sb] OR guideline[pt] OR randomized controlled trial[pt] OR review[pt])`)
+4. First run: `python3 scripts/living_notes_update.py --topic <slug> --force`
+5. Report briefly: how many papers landed, and the summary
 
-### 「ノート更新して」
-`python3 scripts/living_notes_update.py --force` (全トピック) または `--topic <slug>`。
-実行後、新着件数と5行サマリの変化点だけ報告する。
+### "Update the notes"
+`python3 scripts/living_notes_update.py --force` (all topics) or `--topic <slug>`.
+Afterwards report only the arrival count and what changed in the five-line summary.
 
-### 「ノートに聞く」「◯◯ってどうだっけ」(Q&A)
-1. まず該当ノートの 📌 サマリと 🧵 横断まとめを読む
-2. 足りなければ `data/fulltext/*.txt` を grep して全文の該当箇所を読む
-   (全文が無ければ `python3 scripts/fulltext_fetch.py --note notes/<slug>.md` を提案)
-3. **必ず出典 (PMID/DOI リンク) 付きで**回答する。ノートに無い知識で埋めない —
-   蔵書に無いことは「蔵書には無い」と言う
-4. 医学的内容には「臨床判断は原著と現場の判断で」を添える
+### "Ask the notes" / "What do we know about X?"
+1. Read the relevant note's 📌 summary and 🧵 synthesis first
+2. If more depth is needed, grep `data/fulltext/*.txt` and read the matching passages
+   (if no full text exists, offer `python3 scripts/fulltext_fetch.py --note notes/<slug>.md`)
+3. **Always answer with sources (PMID/DOI links).** Never fill gaps from your own knowledge —
+   if the corpus doesn't cover it, say so
+4. For medical content, add: clinical decisions belong with the original papers and treating clinicians
 
-### 「◯◯ノートおやすみ」/「起こして」
-`--sleep <slug>` / `--wake <slug>`。おやすみ時は「ノートは残っていて読めます」を必ず添える。
+### "Put the X note to sleep" / "Wake it"
+`--sleep <slug>` / `--wake <slug>`. When sleeping, always mention the note remains readable.
 
-### 「全文取ってきて」
-`export UNPAYWALL_EMAIL=...` が必要 (未設定ならユーザーに聞く)。
-`python3 scripts/fulltext_fetch.py --note notes/<slug>.md`。
-取得は合法 OA のみ — 取れなかった分は「ペイウォール内 (正当な限界)」と報告する。
+### "Fetch the full texts"
+Requires `export UNPAYWALL_EMAIL=...` (ask the user if unset).
+`python3 scripts/fulltext_fetch.py --note notes/<slug>.md`.
+Legal OA only — report unfetched papers as "paywalled (a legitimate limit)".
 
-## 原則
+## Principles
 
-- ノートの手編集は自由だが、8つの `<!-- LN:...-->` アンカーは消さない (機械編集の目印)
-- 報告は短く: 件数・変化点・次に読むべき1本、まで
-- 収集も回答も、静かな欠落を作らない (取り漏らしは明示、蔵書に無いことも明示)
+- Hand-editing notes is fine, but never delete the 8 `<!-- LN:...-->` anchors (machine-edit markers)
+- Keep reports short: counts, what changed, and the one paper worth reading next
+- Never create silent gaps — surface what was dropped, and what the corpus doesn't contain

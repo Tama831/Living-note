@@ -1,69 +1,81 @@
-# 設計ノート — なぜこの形か
+# Design notes — why this shape
 
-## 出発点の欲求
+> 🇯🇵 日本語版: [design.ja.md](design.ja.md)
 
-> 「関心領域を伝えたら、関係する論文を自律的に集めて、新しい話題が入るたびに横断的に
-> まとめ直して、定期的に更新される**生きたノート**が欲しい。頭に簡単なサマリも」
+## The two wishes this started from
 
-> 「雑に論文PDFを放り込んでおけば AI が整理して、その中から解答してくれるサービス。
-> NotebookLM の、ノートに分かれていないバージョンのようなもの」
+> "I want to declare an interest area and have related papers collect themselves, get re-woven
+> into one cross-cutting summary whenever something new arrives, updated on a schedule — a
+> **living note**. With a short summary at the top."
 
-## 先行ツール調査 (2026-08 時点、14ツール)
+> "A service where I can just dump paper PDFs and AI organizes them and answers from them — like
+> NotebookLM, but without being split into notebooks."
 
-4条件 — **自律収集 / 単一ノートの継続的な再統合 / 個人コーパスへの Q&A / PDF 雑投入** —
-を同時に満たす既存ツールは見つからなかった。
+## Prior-art survey (14 tools, as of 2026-08)
 
-| ツール群 | 自律収集 | 継続再統合 | コーパスQA | PDF投入 |
+No existing tool satisfied all four conditions at once — **autonomous collection / continuous
+re-synthesis into a single note / Q&A over a personal corpus / tolerance for casually dumped
+PDFs**.
+
+| Tool family | Autonomous collection | Continuous re-synthesis | Corpus Q&A | PDF dump |
 |---|---|---|---|---|
-| Scholar / PubMed アラート | ✅ | ❌ (リストが届くだけ) | ❌ | ❌ |
-| Elicit (Alerts + Notebooks) | ✅ | ⚠️ 統合は手動 | ✅ | ✅ |
-| LivingMeta | ✅ | ✅ | ✅ | ❌ (分野単位・個人PDF不可) |
-| NotebookLM / Gemini Notebook | ❌ | ❌ | ✅ (ノートブック内のみ) | ✅ |
+| Scholar / PubMed alerts | ✅ | ❌ (a growing list arrives) | ❌ | ❌ |
+| Elicit (Alerts + Notebooks) | ✅ | ⚠️ integration is manual | ✅ | ✅ |
+| LivingMeta | ✅ | ✅ | ✅ | ❌ (field-level, no personal PDFs) |
+| NotebookLM / Gemini Notebook | ❌ | ❌ | ✅ (within one notebook) | ✅ |
 | PaperQA2 / Zotero+GPT / SciSpace | ❌ | ❌ | ✅ | ✅ |
 | ResearchRabbit / Litmaps | ✅ | ❌ | ❌ | ❌ |
-| リビングSR系 (RobotReviewer等) | ✅ | ✅ | ❌ | ❌ (チーム制・重装備) |
+| Living-systematic-review tooling (RobotReviewer etc.) | ✅ | ✅ | ❌ | ❌ (team-scale, heavyweight) |
 
-とくに NotebookLM は 2026 年現在も**ノートブック単位のサイロ設計**で、「ノートに分かれて
-いないバージョン」は本家では実現できない。Living-note は「蔵書は単一プール、ノートは
-関心ごとのビュー」という逆の形でこの欲求に応える。
+NotebookLM in particular remains **siloed per notebook** in 2026 — "the version without notebook
+walls" cannot be built inside it. Living-note answers the wish from the opposite direction:
+**one corpus as a single pool, with notes as views onto it**.
 
-## アーキテクチャの選択
+## Architectural choices
 
-### なぜ Markdown + HTML コメントアンカーか
-- ノートは人間の読み物であり、同時に機械の編集対象であり、同時に LLM の書き換え対象。
-  3者が衝突しない最小の構造が「見出しの外に置いた8つのアンカーコメント」だった
-- `<!-- LN:SUMMARY/SYNTHESIS/BIB/LOG:START/END -->` — 機械は LOG に追記だけし、
-  LLM は全文を書き直すが**アンカーを保存しているか検証ゲートで確認**してから採用する
-- 検証に落ちたら破棄して収集ログだけ残す (fail-soft)。「AI の出力を信用する前に検証する」
+### Why Markdown with HTML-comment anchors
+- A note is simultaneously a human document, a machine-edit target, and an LLM-rewrite target.
+  The smallest structure where those three don't collide turned out to be "eight anchor comments
+  placed outside the headings"
+- `<!-- LN:SUMMARY/SYNTHESIS/BIB/LOG:START/END -->` — the machine only appends inside LOG; the
+  LLM rewrites everything but is **checked by a validation gate for anchor preservation** before
+  its output is accepted
+- Output that fails validation is discarded and the collected log survives (fail-soft). Never
+  trust AI output before verifying it.
 
-### なぜ PubMed E-utilities 素の HTTP か
-- 無認証・鍵不要・標準ライブラリのみ → cron / launchd のやせた環境でもそのまま動く
-- MCP や SDK に依存すると、ヘッドレス環境で静かに空振りする事故が起きる (実測に基づく教訓)
+### Why bare PubMed E-utilities HTTP
+- Keyless, no auth, stdlib-only → runs as-is in thin cron/launchd environments
+- Depending on MCP servers or SDKs invites silent no-ops in headless contexts (a lesson from
+  real measurements)
 
-### なぜ「窓を進めない」か (取り漏らし防止)
-- 1回の取り込み上限 (max_per_run) を超えた分は次回に回す。このとき検索窓 (last_edat) を
-  進めてしまうと、積み残しが窓の外に落ちて**静かに消える** — 初日の実走で実際に起きた
-  バグで、「積み残しがある間は窓を固定する」規則として修正した
-- 静かな欠落はリストの信頼を壊す。「取りこぼさない」ことはこの道具の存在理由そのもの
+### Why the window never advances past a backlog (no silent loss)
+- Overflow beyond the per-run cap (max_per_run) carries to the next run. If the search window
+  (last_edat) advanced anyway, the overflow would fall outside the window and **silently
+  disappear** — a real bug caught during first-day live verification, fixed as the rule "the
+  window stays put while a backlog remains"
+- Silent gaps corrode trust in a list. "Not losing things" is this tool's reason to exist.
 
-### なぜ合法 OA だけか
-- 全文取得は Unpaywall の `best_oa_location` のみ。ペイウォール迂回 (Sci-Hub 等) はしない
-- 医療者が同僚に堂々と配れる道具であるためには、入手経路の正当性が機能要件になる
+### Why legal OA only
+- Full texts come exclusively from Unpaywall's `best_oa_location`. No paywall circumvention
+  (no Sci-Hub)
+- A tool clinicians can hand to colleagues in the open needs legitimacy of acquisition as a
+  functional requirement
 
-### なぜベクタ DB を使わないか
-- 個人蔵書 (数百〜千本) の全文テキストは数十 MB — **grep が一瞬で終わる規模**
-- 「grep で当たりをつけて、LLM が該当ファイルを読む」で PaperQA2 型の引用付き回答が
-  成立することを実走で確認済み (妊婦の虫垂炎画像評価を、取得済み全文から回答)
-- 埋め込み・インデックス・同期という運用コストを、規模が要求するまで払わない
+### Why no vector database
+- The full text of a personal library (hundreds to a thousand papers) is tens of megabytes —
+  **grep finishes instantly at this scale**
+- "Grep to locate, then let the LLM read the matching files" delivers PaperQA2-style cited answers,
+  confirmed in practice (a pregnancy-imaging question answered from fetched full texts)
+- Embeddings, indexes and their sync costs are not paid until scale demands them
 
-### なぜ「降ろしても失われない」か
-- 関心は移ろう。止めるコストが高いと、人は止めずに溜め込むか、罪悪感ごと捨てる
-- `--sleep` は収集だけを止め、ノートは読み物として残る。再開は `--wake` 一語。
-  「タスクは閉じる、ノートは開いたまま」
+### Why letting go loses nothing
+- Interests drift. When stopping is expensive, people either hoard or discard with guilt
+- `--sleep` stops only collection; the note lives on as a document. Resuming is one word
+  (`--wake`). Tasks close; notes stay open.
 
-## 拡張の余地 (未実装)
+## Room to grow (not yet built)
 
-- PubMed 以外の収集器 (arXiv / medRxiv / 学会抄録) — esearch/efetch と同じ形で足せる
-- 403 で弾く出版社 (MDPI 等) への全文リトライ、PMC フォールバック
-- 放り込んだ PDF のトピック自動振り分け
-- ノート間の相互リンク (蔵書が単一プールなので、トピック横断の参照は自然に成立する)
+- Collectors beyond PubMed (arXiv / medRxiv / conference abstracts) — same esearch/efetch shape
+- Full-text retry for 403-ing publishers, PMC fallback
+- Automatic topic routing for dumped PDFs
+- Cross-links between notes (a single corpus makes cross-topic references natural)

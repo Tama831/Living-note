@@ -1,45 +1,49 @@
-# コードを書かずに「ノートに聞く」— NotebookLM ガイド
+# Ask your notes questions — without writing code (NotebookLM guide)
 
-このガイドは、プログラミングをしない人向けです。必要なのは **ノートの .md ファイル**と
-**Google アカウント**だけ。5分で「自分の文献に質問して、引用付きで答えが返る」状態になります。
+> 🇯🇵 日本語版: [notebooklm-guide.ja.md](notebooklm-guide.ja.md)
 
-## 手順 (初回5分)
+This guide is for people who don't program. All you need is **a note (.md file)** and a
+**Google account**. Five minutes gets you to "ask my own literature questions, get answers with
+citations".
 
-1. **ノートを手に入れる**
-   - このリポジトリのサンプル: [notes/example-appendicitis.md](../notes/example-appendicitis.md)
-     (GitHub 画面右上の ⬇ ボタンか、Raw 表示からコピー)
-   - あるいは、Living-note を運用している人から .md を受け取る
-2. **[NotebookLM](https://notebooklm.google.com/) を開く** (Google の無料サービス。2026年7月から
-   「Gemini Notebook」に改称されていますが同じものです)
-3. **新規ノートブック → ソースを追加 → ファイルをアップロード** で .md を追加
-   - .md がそのまま上がらない場合は、中身を Google ドキュメントに貼り付けて、
-     そのドキュメントをソースに指定すれば同じことです
-4. **質問する** — たとえば:
-   - 「妊婦の虫垂炎、画像評価はどうする？」
-   - 「抗菌薬で手術を回避できるのはどんな患者？」
-   - 「このノートで意見が割れている論点は？」
+## Steps (5 minutes, once)
 
-回答には**引用マーク**が付き、クリックするとノートの該当箇所へジャンプします。
-ノートの各記述には元論文へのリンクが付いているので、そこから原文に当たれます。
+1. **Get a note**
+   - A sample from this repository: [notes/example-appendicitis.md](../notes/example-appendicitis.md)
+     (use the ⬇ button on GitHub, or copy from the Raw view)
+   - Or receive a .md from someone who runs Living-note
+2. **Open [NotebookLM](https://notebooklm.google.com/)** (Google's free service — renamed
+   "Gemini Notebook" in July 2026; same thing)
+3. **New notebook → Add source → upload the file**
+   - If the .md won't upload directly, paste its contents into a Google Doc and add that as the
+     source — same effect
+4. **Ask questions** — for example:
+   - "How should appendicitis be imaged in a pregnant patient?"
+   - "Which patients can avoid surgery with antibiotics?"
+   - "Where does the evidence in this note disagree?"
 
-## 同僚と共有する
+Answers carry **citation markers** that jump to the exact passage in the note; each claim in the
+note links onward to the original paper.
 
-NotebookLM のノートブックは**リンク共有**できます (閲覧者は質問し放題・ソース編集は不可)。
-つまり「ノートを1枚作る → ノートブックにする → リンクを配る」で、
-チーム全員が同じ文献ベースに質問できる状態になります。
+## Sharing with colleagues
 
-## ノートが更新されたら
+NotebookLM notebooks can be **shared by link** (viewers can ask unlimited questions; they cannot
+edit sources). So: build one note → make it a notebook → share the link — and a whole team can
+question the same evidence base.
 
-Living-note のノートは生きているので、週ごとに中身が育ちます。
-ソースの .md を新しい版に**差し替える**だけで、Q&A も最新の状態に追いつきます。
+## When the note updates
 
-## NotebookLM を使わない選択肢
+Living-note notes are alive — they grow week by week. **Replace the source .md with the new
+version** and the Q&A catches up.
 
-.md はただのテキストです。**ChatGPT / Claude / Gemini のチャット画面に全文を貼り付けて**
-「このノートを踏まえて◯◯を教えて」でも、ほぼ同じ体験になります。
-ツールに縛られないことが、Markdown を選んだ理由です。
+## If you'd rather not use NotebookLM
 
-## ⚠️ 大事な断り
+A .md file is just text. **Paste the whole note into ChatGPT / Claude / Gemini** and ask "using
+this note, tell me about ..." — nearly the same experience. Not being tied to any one tool is why
+Markdown was chosen.
 
-ノートも Q&A の回答も AI の生成物です。**臨床判断の根拠には、必ずリンク先の原著を
-確認してください。** 「答えの出どころに必ず飛べる」ことが、この仕組みの信頼性の柱です。
+## ⚠️ The important caveat
+
+Both the notes and the Q&A answers are AI-generated. **For clinical decisions, always follow the
+links to the original papers.** "You can always reach the source" is the pillar of trust here —
+not the summary itself.

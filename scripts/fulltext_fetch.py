@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""fulltext_fetch.py — 生きたノートの文献リストから合法 OA 全文を取得してテキスト化する。
+"""fulltext_fetch.py — fetch legal open-access full texts for a living note's bibliography.
 
-設計 (2026-08-07, living-notes 層③「その中から解答」の土台):
-- ノート .md から PMID / DOI を抽出 → Unpaywall API で OA 版の所在を引く (合法 OA のみ、
-  ペイウォール迂回はしない) → PDF を取得 → pdftotext で .txt 化
-- 置き場: data/fulltext/ (**.gitignore 対象** — 全文は著作権物なので repo に push しない。
-  ローカル grep + AI セッションでの読解が用途)
-- manifest.jsonl に来歴 (doi/pmid/取得元/日時/結果) を記録。再実行は取得済みをスキップ (冪等)
+Design:
+- Extract PMID/DOI pairs from the note .md -> resolve OA locations via the Unpaywall API
+  (legal OA only — no paywall circumvention) -> download PDF -> pdftotext
+- Store: data/fulltext/ (**gitignored** — copyrighted content stays local; used for
+  grep + AI-session reading)
+- manifest.jsonl records provenance (doi/pmid/source/license/date). Re-runs skip
+  already-fetched texts (idempotent)
 
-使い方:
-    export UNPAYWALL_EMAIL=you@example.com   # 初回のみ (認証ではなく利用者識別)
+Usage:
+    export UNPAYWALL_EMAIL=you@example.com   # once (identifies you to the API; no signup)
     python3 scripts/fulltext_fetch.py --note notes/appendicitis.md
     python3 scripts/fulltext_fetch.py --doi 10.7759/cureus.107410
     python3 scripts/fulltext_fetch.py --note ... --dry-run
@@ -80,7 +81,7 @@ def download(url: str, dest: Path) -> bool:
         print(f"  [download] {url[:80]}: {e}", file=sys.stderr)
         return False
     if not data.startswith(b"%PDF"):
-        print(f"  [download] PDF でない応答 (HTML壁の可能性): {url[:80]}", file=sys.stderr)
+        print(f"  [download] response is not a PDF (possibly an HTML wall): {url[:80]}", file=sys.stderr)
         return False
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(data)
@@ -133,28 +134,28 @@ def fetch_one(ref: dict, dry_run: bool) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--note", help="生きたノート .md から文献を抽出して一括取得")
-    ap.add_argument("--doi", action="append", default=[], help="単発 DOI (複数可)")
+    ap.add_argument("--note", help="extract references from a living note .md and fetch in bulk")
+    ap.add_argument("--doi", action="append", default=[], help="single DOI (repeatable)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     if not UNPAYWALL_EMAIL:
-        print("UNPAYWALL_EMAIL が未設定です: export UNPAYWALL_EMAIL=you@example.com\n"
-              "(Unpaywall API の利用者識別に使われるだけで、登録や認証は不要です)", file=sys.stderr)
+        print("UNPAYWALL_EMAIL is not set: export UNPAYWALL_EMAIL=you@example.com\n"
+              "(used only to identify you to the Unpaywall API — no signup or auth)", file=sys.stderr)
         return 1
 
     refs: list[dict] = [{"pmid": "", "doi": d} for d in args.doi]
     if args.note:
         refs += extract_refs((ROOT / args.note).read_text(encoding="utf-8"))
     if not refs:
-        print("nothing to fetch (--note か --doi を指定)", file=sys.stderr)
+        print("nothing to fetch (pass --note or --doi)", file=sys.stderr)
         return 1
 
     counts: dict[str, int] = {}
     for ref in refs:
         status = fetch_one(ref, args.dry_run)
         counts[status] = counts.get(status, 0) + 1
-    print(f"done: {counts} (合法OAのみ。no_oa はペイウォール内 = 取得しない)")
+    print(f"done: {counts} (legal OA only; no_oa = paywalled, not fetched)")
     return 0
 
 

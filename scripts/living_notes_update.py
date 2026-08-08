@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""living_notes_update.py — 生きたノート: 関心領域の新着論文を収集し、ノートを織り直す。
+"""living_notes_update.py — living notes: collect new papers for your declared interests and re-weave the note.
 
-設計:
-- config/living-notes.json にトピックを登録 (slug / queries / note path)
-- cron / launchd から毎日呼んでよい — スクリプト自身が interval_days ゲートを持つ
-- 収集は PubMed E-utilities の素の HTTP API (無認証・鍵不要)。依存は Python 標準ライブラリのみ
-- 重複判定は PMID / DOI を、手持ちの文献リスト (config の dedupe_sources: .bib / .jsonl) と
-  既収集分 (state の seen_pmids) の両方に対して行う
-- 織り (weave) = LLM CLI (既定: claude -p) にノート全文+新着を渡して編み直す。失敗しても
-  収集済みの新着ログは残る (fail-soft — 定期実行を道連れにしない)。LLM CLI が無い環境は
-  --no-weave で収集だけ回し、--print-weave-prompt で出るプロンプトを任意の AI チャットに貼る
+Design:
+- Register topics in config/living-notes.json (slug / queries / note path)
+- Safe to call daily from cron/launchd — the script carries its own interval_days gate
+- Collection uses bare PubMed E-utilities HTTP (keyless). Standard library only
+- Dedupe checks PMID/DOI against your reference lists (dedupe_sources: .bib / .jsonl)
+  and against already-collected state (seen_pmids)
+- The weave = an LLM CLI (default: claude -p) rewrites the full note. If it fails, the
+  collected arrivals log survives (fail-soft — never takes the scheduled run down).
+  No LLM CLI? Collect with --no-weave and paste --print-weave-prompt into any AI chat
 
-使い方:
-    python3 scripts/living_notes_update.py                # 通常 (7日ゲートあり)
-    python3 scripts/living_notes_update.py --force        # ゲート無視で今すぐ
-    python3 scripts/living_notes_update.py --dry-run      # 書き込みなしで新着候補を表示
-    python3 scripts/living_notes_update.py --no-weave     # 収集のみ (織りは後でセッションで)
-    python3 scripts/living_notes_update.py --status       # 保存済みの状態を表示
-    python3 scripts/living_notes_update.py --topic SLUG   # 1トピックだけ処理
-    python3 scripts/living_notes_update.py --sleep SLUG   # 🛏️休眠 (収集停止、ノートは残る)
-    python3 scripts/living_notes_update.py --wake SLUG    # 🟢再稼働
-    python3 scripts/living_notes_update.py --print-weave-prompt SLUG  # 織りプロンプトを表示
+Usage:
+    python3 scripts/living_notes_update.py                # normal (interval gate applies)
+    python3 scripts/living_notes_update.py --force        # ignore the gate, run now
+    python3 scripts/living_notes_update.py --dry-run      # show candidates, write nothing
+    python3 scripts/living_notes_update.py --no-weave     # collect only
+    python3 scripts/living_notes_update.py --status       # print saved state
+    python3 scripts/living_notes_update.py --topic SLUG   # one topic only
+    python3 scripts/living_notes_update.py --sleep SLUG   # 🛏️ pause (note remains)
+    python3 scripts/living_notes_update.py --wake SLUG    # 🟢 resume
+    python3 scripts/living_notes_update.py --print-weave-prompt SLUG  # print the weave prompt
 """
 from __future__ import annotations
 
@@ -325,7 +325,7 @@ def run_claude(prompt: str, timeout: int = 600, cmd: list[str] | None = None) ->
     else:
         binary = next((c for c in CLAUDE_CANDIDATES if c and Path(c).exists()), None)
         if binary is None:
-            raise RuntimeError("LLM CLI not found (claude が無ければ config の weave_command を設定)")
+            raise RuntimeError("LLM CLI not found (install claude, or set weave_command in the config)")
         argv = [binary, "-p", "--output-format", "text", prompt]
     result = subprocess.run(
         argv, capture_output=True, text=True, timeout=timeout, cwd=str(ROOT),
@@ -431,16 +431,16 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
     now = now or datetime.now()
     slug = topic["slug"]
     if topic.get("status") == "dormant":
-        print(f"[{slug}] 🛏️ 休眠中 (since {topic.get('since', '?')}) — 収集スキップ。再開: --wake {slug}")
+        print(f"[{slug}] 🛏️ dormant (since {topic.get('since', '?')}) — collection skipped. Resume: --wake {slug}")
         return 0
     ts = state.setdefault(slug, {})
     if not should_run(ts, int(cfg.get("interval_days", 7)), force, now):
-        print(f"[{slug}] gate: {cfg.get('interval_days', 7)}日未満なのでスキップ (--force で無視可)")
+        print(f"[{slug}] gate: last run < {cfg.get('interval_days', 7)} days ago — skipped (--force to override)")
         return 0
 
     note_path = ROOT / topic["note"]
     if not note_path.exists():
-        print(f"[{slug}] note not found: {note_path} — スキップ", file=sys.stderr)
+        print(f"[{slug}] note not found: {note_path} — skipped", file=sys.stderr)
         return 0
 
     today = now.strftime("%Y-%m-%d")
@@ -462,7 +462,7 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
         # 蔵書由来なので lib dedupe は通さない (蔵書に在るのが前提)。seen とだけ照合。
         # 上限あふれ分は seen に入らないため、毎回の再スキャンで自然に次回候補になる
         fresh_lib = filter_new(library_matches(cfg, topic), seen, lib=set())[:max_per_run]
-        print(f"[{slug}] 蔵書スキャン: 新規 {len(fresh_lib)} 件")
+        print(f"[{slug}] library scan: {len(fresh_lib)} new")
 
     # ── 最新知見モード: PubMed 新着 ──
     fresh: list[dict] = []
@@ -496,15 +496,15 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
             return 0
         fresh = filter_new(entries, seen, lib)
 
-        print(f"[{slug}] 検索窓 {mindate}→{maxdate}: hits={len(pmids)} 新規候補={len(fresh)}"
-              + (f" (上限超過で{dropped}件を次回送り)" if dropped else ""))
+        print(f"[{slug}] window {mindate}->{maxdate}: hits={len(pmids)} new candidates={len(fresh)}"
+              + (f" ({max_per_run}-cap overflow: {dropped} carried to next run)" if dropped else ""))
 
     if dry_run:
         for e in fresh_lib:
-            print(f"  - (蔵書) {e['title'][:80]}")
+            print(f"  - (library) {e['title'][:80]}")
         for e in fresh:
             print(f"  - {e['pmid']} {e['title'][:80]}")
-        print(f"[{slug}] dry-run: 書き込みなし")
+        print(f"[{slug}] dry-run: nothing written")
         return len(fresh) + len(fresh_lib)
 
     if fresh or fresh_lib:
@@ -539,7 +539,7 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
         with arch.open("a", encoding="utf-8") as f:
             f.write(overflow if overflow.endswith("\n") else overflow + "\n")
         atomic_write(note_path, pruned)
-        print(f"[{slug}] ログ整理: 古い✅ブロックを {arch.relative_to(ROOT)} へ退避")
+        print(f"[{slug}] log pruned: old ✅ blocks archived to {arch.relative_to(ROOT)}")
 
     # fetch/採用した分だけ seen に積む。上限超過の積み残しがある間は last_edat を進めない —
     # 窓を進めると積み残しが検索窓の外に落ちて静かに消える (2026-08-07 実走で検出したバグ)
@@ -553,15 +553,15 @@ def process_topic(topic: dict, cfg: dict, state: dict, lib: set[str], *,
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--dry-run", action="store_true", help="書き込みなしで新着候補を表示")
-    ap.add_argument("--force", action="store_true", help="7日ゲートを無視して今すぐ実行")
-    ap.add_argument("--no-weave", action="store_true", help="収集のみ (claude 織りを呼ばない)")
-    ap.add_argument("--status", action="store_true", help="保存済みの状態を表示して終了")
-    ap.add_argument("--topic", help="このslugのトピックだけ処理")
-    ap.add_argument("--sleep", metavar="SLUG", help="トピックを🛏️休眠にする (収集停止、ノートは残る)")
-    ap.add_argument("--wake", metavar="SLUG", help="休眠トピックを🟢再稼働する")
+    ap.add_argument("--dry-run", action="store_true", help="show new candidates without writing anything")
+    ap.add_argument("--force", action="store_true", help="ignore the interval gate and run now")
+    ap.add_argument("--no-weave", action="store_true", help="collect only (skip the LLM weave)")
+    ap.add_argument("--status", action="store_true", help="print saved state and exit")
+    ap.add_argument("--topic", help="process only the topic with this slug")
+    ap.add_argument("--sleep", metavar="SLUG", help="put a topic to 🛏️ sleep (collection stops, the note remains)")
+    ap.add_argument("--wake", metavar="SLUG", help="🟢 wake a dormant topic")
     ap.add_argument("--print-weave-prompt", metavar="SLUG",
-                    help="織りプロンプトを表示 (任意の AI チャットに貼って手動で織る用)")
+                    help="print the weave prompt (paste into any AI chat to weave manually)")
     args = ap.parse_args()
 
     cfg = load_json(CONFIG, {})
@@ -583,11 +583,11 @@ def main() -> int:
                 if args.sleep:
                     t["status"] = "dormant"
                     t["since"] = datetime.now().strftime("%Y-%m-%d")
-                    print(f"🛏️ {slug} を休眠にしました。ノートはそのまま読めます。再開: --wake {slug}")
+                    print(f"🛏️ {slug} is now dormant. The note remains readable. Resume: --wake {slug}")
                 else:
                     t.pop("status", None)
                     t.pop("since", None)
-                    print(f"🟢 {slug} を再稼働しました。次の nightly (7日ゲート明け) から収集再開")
+                    print(f"🟢 {slug} is active again. Collection resumes at the next scheduled run (after the gate)")
                 CONFIG.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 return 0
         print(f"unknown topic: {slug}", file=sys.stderr)
@@ -598,9 +598,9 @@ def main() -> int:
         for t in cfg.get("topics", []):
             s = state.get(t["slug"], {})
             out[t["slug"]] = {
-                "稼働": (f"🛏️ 休眠 (since {t.get('since', '?')})"
-                        if t.get("status") == "dormant" else "🟢 稼働中"),
-                **{k: (f"{len(v)}件" if k == "seen_pmids" else v) for k, v in s.items()},
+                "state": (f"🛏️ dormant (since {t.get('since', '?')})"
+                         if t.get("status") == "dormant" else "🟢 active"),
+                **{k: (f"{len(v)} items" if k == "seen_pmids" else v) for k, v in s.items()},
             }
         print(json.dumps(out, ensure_ascii=False, indent=2))
         return 0
@@ -619,7 +619,7 @@ def main() -> int:
                                force=args.force, weave=not args.no_weave)
     if not args.dry_run:
         save_state(state)
-    print(f"done: 新規 {total} 件")
+    print(f"done: {total} new")
     return 0
 
 

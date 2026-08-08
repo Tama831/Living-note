@@ -1,31 +1,33 @@
 ---
-topic: トピック名をここに
+topic: your topic here
 slug: your-slug
+lang: en
 updated: 1970-01-01
 ---
 
-# 🌱 生きたノート: トピック名
+# 🌱 Living note: Your topic
 
-> このノートは自動更新されます。定期的に PubMed の新着を収集し (`scripts/living_notes_update.py`)、
-> 織り手が「📌 5行サマリ」「🧵 横断まとめ」「📚 文献リスト」を編み直します。
-> ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
-> 内容は AI が論文から編んだ要約です。重要な判断は必ず出典リンクから原文に当たってください。
+> This note updates itself. New PubMed arrivals are collected periodically
+> (`scripts/living_notes_update.py`) and a weaver rewrites the Five-line summary, the
+> Cross-cutting synthesis and the Bibliography.
+> ⏳ = collected, awaiting weave / ✅ = woven into the text.
+> The content is an AI-woven summary — for any decision that matters, follow the source links.
 
-## 📌 5行サマリ
+## 📌 Five-line summary
 <!-- LN:SUMMARY:START -->
-- (まだ空です — 初回の織りでここに現在地の要点が5行入ります)
+- (empty for now — the first weave will put the current state of the field here, in 5 lines)
 <!-- LN:SUMMARY:END -->
 
-## 🧵 横断まとめ
+## 🧵 Cross-cutting synthesis
 <!-- LN:SYNTHESIS:START -->
-(まだ空です — 新着が編み込まれるとテーマ別の本文がここに育ちます)
+(empty for now — as arrivals are woven in, a themed synthesis grows here)
 <!-- LN:SYNTHESIS:END -->
 
-## 📚 文献リスト
+## 📚 Bibliography
 <!-- LN:BIB:START -->
-(まだ空です)
+(empty for now)
 <!-- LN:BIB:END -->
 
-## 🆕 新着ログ
+## 🆕 Arrivals log
 <!-- LN:LOG:START -->
 <!-- LN:LOG:END -->
