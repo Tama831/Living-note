@@ -71,7 +71,7 @@ Follow the quickstart below. If you use Claude Code, this repository also works 
 | Item / 項目 | Purpose / 用途 | How to get it / 入れ方 |
 |---|---|---|
 | Python 3.10+ | collector script, no extra libraries / 収集スクリプト (追加ライブラリ不要) | usually preinstalled on macOS/Linux: `python3 --version` |
-| LLM CLI (optional / 任意) | automating the weave / 織りの自動化 | e.g. [Claude Code](https://claude.com/claude-code). **Works without one** — see step 4 / **無くても動く** (手順4) |
+| LLM CLI (optional / 任意) | automating the weave / 織りの自動化 | e.g. [Claude Code](https://claude.com/claude-code). **Works without one** — see step 4 / **無くても動く** (手順4)。Options & real costs / 選択肢と費用の実際: [docs/operations.md](docs/operations.md) |
 | pdftotext (optional / 任意) | full-text layer / 全文レイヤー | macOS: `brew install poppler` / Ubuntu: `sudo apt install poppler-utils` |
 
 ### 1. Clone and declare your interest / 取得して、関心を宣言する
