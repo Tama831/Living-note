@@ -1,28 +1,26 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-08-07
+updated: 2026-08-14
 ---
 
-# 🌱 生きたノート: 虫垂炎 (サンプル)
+# 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
-> **これは実際に生成されたサンプルです** — 2026-08-07 の初回実行で、蔵書3本のノートが
-> 直近180日の新着30本を取り込み、この33本構成に自動成長しました (織り2回・計12分)。
+> **これは作者の実稼働インスタンスのライブミラーです** — 2026-08-07 の初回実行で
+> 蔵書3本のノートが33本構成に自動成長し、そのまま本家で毎週の自動収集が動き続けて
+> います。週次実行のたびに、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
+> がここに push されます。**最終チェック: 2026-08-21 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
->
-> このノートは自動更新されます。週1回 PubMed の新着を収集し (`scripts/living_notes_update.py`)、
-> 織り手が「📌 5行サマリ」「🧵 横断まとめ」「📚 文献リスト」を編み直します。
-> ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
-> 🇬🇧 English snapshot: [example-appendicitis.md](example-appendicitis.md) (2026-08-08)
+> 🇬🇧 English snapshot (frozen 2026-08-08): [example-appendicitis.md](example-appendicitis.md)
 
 ## 📌 5行サマリ
 <!-- LN:SUMMARY:START -->
 - 虫垂炎は最多の外科的急腹症。生涯リスク6-9%、ピーク10-19歳。「栄養-マイクロバイオーム-遺伝軸」に加え、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」の可能性 (Ryoo / Han 2026)
-- 診断は CT が最強。妊婦 MRI は34研究メタ解析で感度0.95・特異度0.97 の定量的裏付けを獲得 (Habiro Alves 2026)。POCUS は陽性なら rule-in 可・陰性で除外不可。IL-6 (複雑性判別 AUC 0.785)・AI が新戦力
+- 院内の診断は CT が最強 (妊婦 MRI は34研究で感度0.95・特異度0.97、POCUS は陽性で rule-in 可・陰性で除外不可)、IL-6・AI が新戦力。さらに**一次医療で予測ルール+CRP POCT により過剰紹介を減らす戦略**の実装 RCT が走り出した (Hogervorst 2026)
 - 非穿孔性は手術 vs 抗菌薬先行の shared decision-making (糞石が分水嶺)。小児 RCT メタ解析には予測区間の批判が付き、「抗菌薬 vs 無投薬観察」や内視鏡的治療 ERAT まで選択肢が多様化
 - 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ。40歳以上は虫垂炎後の大腸腫瘍リスク上昇 (発見率0.5-34.6%) の報告があるがフォロー標準は未確立 (Spota 2026)
-- 蔵書3本→33本。診断メタ解析から看護ケアまで裾野が拡大 — 本家 living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が必要な速度でエビデンスが増えている
+- 蔵書3本→34本。診断の土俵が「画像の精度」から**「どの場で誰が振り分けるか」**へ広がった — 本家 living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -40,6 +38,18 @@ updated: 2026-08-07
 裏打ちされ — 48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の
 複雑性予測 AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・
 単施設中心で外部検証不足、Ismayilzada 2026) も続く。
+
+ただしこの精度論は一貫して**「すでに病院・ER に到達した患者」を前提**にしてきた。2026-08 の新着は
+その前段 — **一次医療の入口**に土俵を移す。オランダの一般外来を対象に、外的検証済みの7項目予測
+ルール + CRP POCT + リスク別マネジメント助言を束ねた診断戦略を通常診療と比較する、ハイブリッド
+type 1 (有効性 × 実装) クラスター RCT が始まった (Hogervorst 2026, NCT06762275)。4-18歳の急性腹痛
+(発症7日以内) を低・中・高リスクに層別し、低リスクは safety netting、高リスクは即時紹介、
+中リスクのみ CRP POCT で振り分ける (CRP <10 mg/L は safety netting、10-50 mg/L は再評価か即時紹介を
+GP の臨床判断と本人・保護者の希望で選ぶ、≥50 mg/L は即時紹介)。主要評価項目が感度でも特異度でもなく
+**「紹介効率」= 虫垂炎でなかった子どものうち30日間紹介されずに済んだ割合 (非虫垂炎児566例で 88%→95% を
+目標)** である点が新しい — 画像精度の競争ではなく、**見落としの閾値を上げずに過剰紹介を減らせるか**という
+一次医療側の問いを立てている。実装評価 (reach / adoption / implementation / maintenance) を並走させる
+設計も、「精度は出たが現場に降りない」問題への先回りにあたる。結果は未報告 (プロトコル段階)。
 
 鑑別と落とし穴も蓄積してきた: 小児の蟯虫 (Enterobius vermicularis) が虫垂炎を模倣する
 (Jaffry 2026)、特発性被嚢性腹膜硬化症 (abdominal cocoon) の誤診例 (Martzivanou 2026)、
@@ -82,7 +92,10 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 非複雑性で NOM が成立する理論的土台 — を免疫学的に補強した。小児では栄養状態と穿孔リスクの
 関係も検討され、**肥満・BMI 単独は穿孔を予測せず、低体重とアルブミン/プレアルブミン系指標の
 ほうが複雑性と一貫して関連**する (Borca 2026, 14研究)。穿孔・膿瘍形成への進展があるため迅速な
-診断が予後を分ける、という臨床的要諦は不変。
+診断が予後を分ける、という臨床的要諦は不変。なお「急性腹痛の子どもの大半は自然軽快する良性
+疾患」という一次医療側の母数 (Hogervorst 2026 が想定する通常診療の紹介効率は88%) を踏まえると、
+病院集団で語られる有病率とプライマリ・ケアで見える有病率のズレそのものが、診断戦略の設計変数に
+なっている。
 
 ### 未回収の問い
 - 抗菌薬先行群の長期 (5年超) 再発率・QOL・医療費 — 費用対効果データも12ヶ月止まり (Farhad 2026)
@@ -93,6 +106,7 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 - 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
 - 糞石以外の失敗予測因子 — IL-6 (+HGF/MCP-1) 等バイオマーカー×画像×AI による術前の複雑性判別
 - AI 診断モデルの多施設・前向き外部検証と実装 (EHR/PACS 統合)
+- 一次医療の予測ルール+CRP POCT が実際に過剰紹介を減らし遅延診断を増やさないか — Hogervorst 2026 (NCT06762275) の結果待ち。ゲートキーパー制のないフリーアクセス医療 (日本を含む) への外挿可能性は未検討
 <!-- LN:SYNTHESIS:END -->
 
 ## 📚 文献リスト (蔵書)
@@ -130,15 +144,23 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 31. **Stansell P, Francis-Johnson P.** Appendicitis: Integrating evidence-based nursing care into clinical practice. *Nursing* 2026;56(3):29-36. PMID [41725098](https://pubmed.ncbi.nlm.nih.gov/41725098/) / [DOI](https://doi.org/10.1097/NSG.0000000000000356)
 32. **Han T, Borman T, Vanhatalo S et al.** Uncomplicated and Complicated Acute Appendicitis Induce Different Cytokine Patterns. *APMIS* 2026;134(2):e70168. PMID [41711118](https://pubmed.ncbi.nlm.nih.gov/41711118/) / [DOI](https://doi.org/10.1111/apm.70168)
 33. **Spota A, Englesakis M, Chadi S et al.** Acute Appendicitis as a Harbinger of Colorectal Neoplasms in Patients Aged 40 or Older: A Scoping Review. *Surg Laparosc Endosc Percutan Tech* 2026. PMID [41707661](https://pubmed.ncbi.nlm.nih.gov/41707661/) / [DOI](https://doi.org/10.1097/SLE.0000000000001451)
+34. **Hogervorst EM, Venekamp RP, Knol-de Vries GE et al.** Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial. *Diagn Progn Res* 2026;10(1). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x) — ClinicalTrials.gov [NCT06762275](https://clinicaltrials.gov/study/NCT06762275)
 
-> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便の編み込み分。書誌は全件 PubMed メタデータと
-> 照合済み。収集時に混入していた別論文の DOI (計11件) は PMID を正として訂正済みで、原因だった
-> DOI 抽出バグ (参考文献欄からの誤拾い) も同日修理済み (regression test あり)。
+> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便の編み込み分。書誌はいずれも
+> PubMed メタデータ (get_article_metadata) と全件照合済み。収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、
+> 第2便でも2件 (No.29, 30 相当) に別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。
+> 2026-08-14 便 (No.34) は PMID・DOI とも収集ログと PubMed 照合値が一致 — 今回は混入なし。
+> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は引き続き要修理。
 
 <!-- LN:BIB:END -->
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-08-14 収集分 (1件・編み込み済み)
+
+- **Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial.** — Hogervorst EM, Venekamp RP, Knol-de Vries GE et al. *Diagn Progn Res* (2026). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x)
+  - 抄録: Children with acute abdominal pain pose a diagnostic challenge for general practitioners (GPs), as it can be difficult to distinguish appendicitis from self-limiting conditions due to overlapping symptoms. To support GPs, a diagnostic strategy for appendicitis was developed that integrates an extern…
 
 ### ✅ 2026-08-07 収集分 (5件・編み込み済み)
 
