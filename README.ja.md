@@ -30,10 +30,14 @@ Living-note は、医学文献の「生きたレビュー」を個人サイズ�
 | [感染性心内膜炎](notes/infective-endocarditis.ja.md) | [Infective endocarditis](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 |
 | [IgG4関連疾患](notes/igg4-related-disease.ja.md) | — | 免疫・リウマチ |
 | [脂質異常症](notes/dyslipidemia.ja.md) | — | プライマリケア・予防 |
+| [コーヒーの楽しみ方](notes/coffee.ja.md) ☕ | — | 番外編 (医学外) — コーヒーの楽しみ方、初心者〜上級者 |
 
 虫垂炎ノートは**ライブミラー** 🫀 — 作者の実稼働インスタンスが週次収集の結果を
 (新着ゼロの週も鼓動 heartbeat commit として) このリポに直接 push しています。
 commit 履歴がそのまま「生きている証拠」、冒頭のバッジが最終チェック日です。
+
+コーヒーノートは**手織りの番外編** ☕ — PubMed 収集なし、ノートの「型」だけを趣味に転用
+したもの。この形が医学以外のどんな関心にも使える、という見本です。
 
 ## ふたつの入口
 
