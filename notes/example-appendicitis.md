@@ -17,7 +17,9 @@ lang: en
 > (`scripts/living_notes_update.py`) and a weaver rewrites the five-line summary, the cross-cutting
 > synthesis and the bibliography. ⏳ = collected, awaiting weave / ✅ = woven into the text.
 >
-> 🇯🇵 The living original is Japanese: [example-appendicitis.ja.md](example-appendicitis.ja.md).
+> 🇯🇵 The living original is Japanese and is a 🫀 **live mirror**, updated weekly by the author's
+> running instance: [example-appendicitis.ja.md](example-appendicitis.ja.md). This English version
+> is a frozen snapshot (2026-08-08).
 > This English file is a translated snapshot (2026-08-08).
 
 ## 📌 Five-line summary

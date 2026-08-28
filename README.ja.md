@@ -1,5 +1,7 @@
 # 🌱 Living-note — 生きたノート
 
+![living heartbeat](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FTama831%2FLiving-note%2Fmain%2Fdata%2Fheartbeat.json)
+
 > 🇬🇧 English (primary) → **[README.md](README.md)**
 
 **関心を宣言すると、論文が自分で集まり、1枚のノートが編み直され続ける。**
@@ -24,10 +26,14 @@ Living-note は、医学文献の「生きたレビュー」を個人サイズ�
 
 | 日本語 (原本) | English snapshot | 領域 |
 |---|---|---|
-| [虫垂炎](notes/example-appendicitis.ja.md) | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 |
+| [虫垂炎](notes/example-appendicitis.ja.md) **(live 🫀)** | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 |
 | [感染性心内膜炎](notes/infective-endocarditis.ja.md) | [Infective endocarditis](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 |
 | [IgG4関連疾患](notes/igg4-related-disease.ja.md) | — | 免疫・リウマチ |
 | [脂質異常症](notes/dyslipidemia.ja.md) | — | プライマリケア・予防 |
+
+虫垂炎ノートは**ライブミラー** 🫀 — 作者の実稼働インスタンスが週次収集の結果を
+(新着ゼロの週も鼓動 heartbeat commit として) このリポに直接 push しています。
+commit 履歴がそのまま「生きている証拠」、冒頭のバッジが最終チェック日です。
 
 ## ふたつの入口
 
