@@ -24,20 +24,25 @@ Living-note は、医学文献の「生きたレビュー」を個人サイズ�
 すべて実際にこのパイプラインで生成されたものです。生きた原本は日本語 (作者の作業言語) で、
 2本には照合検証済みの英語スナップショットがあります。
 
-| 日本語 (原本) | English snapshot | 領域 |
-|---|---|---|
-| [虫垂炎](notes/example-appendicitis.ja.md) **(live 🫀)** | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 |
-| [感染性心内膜炎](notes/infective-endocarditis.ja.md) | [Infective endocarditis](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 |
-| [IgG4関連疾患](notes/igg4-related-disease.ja.md) | — | 免疫・リウマチ |
-| [脂質異常症](notes/dyslipidemia.ja.md) | — | プライマリケア・予防 |
-| [コーヒーの楽しみ方](notes/coffee.ja.md) ☕ | — | 番外編 (医学外) — コーヒーの楽しみ方、初心者〜上級者 |
+| 日本語 (原本) | English snapshot | 領域 | 更新 |
+|---|---|---|---|
+| [虫垂炎](notes/example-appendicitis.ja.md) | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 | 🫀 live (毎週自動) |
+| [GLP-1受容体作動薬](notes/glp1.ja.md) | — | 代謝 — いま最速で動く領域の定点観測 | 🫀 live (毎週自動) |
+| [フッ化水素酸曝露](notes/hydrofluoric-acid.ja.md) | — | 救急・中毒 — HF曝露の治療とマネジメント | 🫀 live (毎週自動) |
+| [感染性心内膜炎](notes/infective-endocarditis.ja.md) | [Infective endocarditis](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 | 凍結サンプル |
+| [IgG4関連疾患](notes/igg4-related-disease.ja.md) | — | 免疫・リウマチ | 凍結サンプル |
+| [脂質異常症](notes/dyslipidemia.ja.md) | — | プライマリケア・予防 | 凍結サンプル |
+| [コーヒーの楽しみ方](notes/coffee.ja.md) | — | 番外編 (医学外) — 初心者〜上級者 | ☕ 手織り (依頼ベース) |
 
-虫垂炎ノートは**ライブミラー** 🫀 — 作者の実稼働インスタンスが週次収集の結果を
-(新着ゼロの週も鼓動 heartbeat commit として) このリポに直接 push しています。
-commit 履歴がそのまま「生きている証拠」、冒頭のバッジが最終チェック日です。
+**🫀 live 行の更新のしくみ (自動同期)**: 作者の実稼働インスタンスが週1回 PubMed 新着を収集して
+ノートを織り直し、その結果をこのリポへ直接 push します。新着ゼロの週も鼓動 (heartbeat) commit が
+打たれるので、「更新がない」と「死んでいる」が外から区別できます。commit 履歴がそのまま
+「生きている証拠」、冒頭のバッジが最終チェック日。GLP-1 ノートはわざと進歩の激しい領域を
+選んでいます — 初回スキャンだけで対象論文が180日で約100本 (25本収集・75本持ち越し)。
+バックログが毎週消化されていく様子を、そのまま定点観測できます。
 
 コーヒーノートは**手織りの番外編** ☕ — PubMed 収集なし、ノートの「型」だけを趣味に転用
-したもの。この形が医学以外のどんな関心にも使える、という見本です。
+したもの (作者の依頼ベースで織り直し)。この形が医学以外のどんな関心にも使える、という見本です。
 
 ## ふたつの入口
 
