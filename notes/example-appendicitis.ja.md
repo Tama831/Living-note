@@ -1,26 +1,26 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-08-14
+updated: 2026-08-29
 ---
 
 # 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
-> **これは作者の実稼働インスタンスのライブミラーです** — 2026-08-07 の初回実行で
-> 蔵書3本のノートが33本構成に自動成長し、そのまま本家で毎週の自動収集が動き続けて
-> います。週次実行のたびに、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-08-21 JST — ノート更新あり。**
+> **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
+> (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
+> がここに push されます。**最終チェック: 2026-08-29 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
+> ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
 > 🇬🇧 English snapshot (frozen 2026-08-08): [example-appendicitis.md](example-appendicitis.md)
 
 ## 📌 5行サマリ
 <!-- LN:SUMMARY:START -->
 - 虫垂炎は最多の外科的急腹症。生涯リスク6-9%、ピーク10-19歳。「栄養-マイクロバイオーム-遺伝軸」に加え、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」の可能性 (Ryoo / Han 2026)
-- 院内の診断は CT が最強 (妊婦 MRI は34研究で感度0.95・特異度0.97、POCUS は陽性で rule-in 可・陰性で除外不可)、IL-6・AI が新戦力。さらに**一次医療で予測ルール+CRP POCT により過剰紹介を減らす戦略**の実装 RCT が走り出した (Hogervorst 2026)
-- 非穿孔性は手術 vs 抗菌薬先行の shared decision-making (糞石が分水嶺)。小児 RCT メタ解析には予測区間の批判が付き、「抗菌薬 vs 無投薬観察」や内視鏡的治療 ERAT まで選択肢が多様化
-- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ。40歳以上は虫垂炎後の大腸腫瘍リスク上昇 (発見率0.5-34.6%) の報告があるがフォロー標準は未確立 (Spota 2026)
-- 蔵書3本→34本。診断の土俵が「画像の精度」から**「どの場で誰が振り分けるか」**へ広がった — 本家 living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
+- 診断はスコア単独からの脱却が共通線: Alvarado は単独使用不可 (特異度57-76%)、連続型 pARC > 固定加点式、CRP・NLR・選択的画像を重ねる段階戦略へ (Tchouala Tchakoute 2026)。院内では CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用、一次医療では予測ルール+CRP POCT の実装 RCT が進行中 (Hogervorst 2026)
+- 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡 (中央値33.6ヶ月) では NOM 失敗38.9%・RCT限定44.4%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)
+- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ。40歳以上の虫垂炎後大腸腫瘍 (発見率0.5-34.6%) はフォロー標準が未確立、NOM 後の虫垂腫瘍は約0.3% (Spota / Kahana 2026)
+- 蔵書3本→36本。土俵は「画像の精度」から**「どの場で誰が振り分けるか」**、さらに**「何年で測るか」**へ広がった — living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -33,11 +33,20 @@ updated: 2026-08-14
 定量的裏付け**を得て、「超音波不確定例に続く第二選択の標準」として推奨されるに至った。
 「US は術者依存」という指摘は POCUS 時代に定量化された: 救急医による POCUS は感度0.78・
 特異度0.89 で、**陽性なら rule-in に使えるが陰性では除外できず**、fellowship 訓練の有無で
-精度が変わる (Kamal 2026, 15研究メタ解析)。Alvarado 等のスコアはリスク層別化用という位置づけの
-まま、新戦力が加わりつつある: 小児で有望とされた IL-6 (Tan & Bo 2026) は成人前向きデータでも
-裏打ちされ — 48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の
-複雑性予測 AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・
-単施設中心で外部検証不足、Ismayilzada 2026) も続く。
+精度が変わる (Kamal 2026, 15研究メタ解析)。
+
+臨床スコアの位置づけも「補助」から**「単独使用禁・段階的マルチモーダルの一部品」**へ明確化された。
+小児で Alvarado と代替ツールを突き合わせたレビュー (Tchouala Tchakoute 2026, 2016-2026年の文献)
+によれば、Alvarado は感度は良いが**カットオフ≥7で特異度57-76%**にとどまり単独では使えない。
+小児特化スコアでは **PAS が感度で、AIR が特異度で勝り、AIR は壊疽・蜂窩織炎・穿孔といった
+複雑性の判別にも強い**。さらに**固定加点式より連続型リスクモデル (pARC) が小児コホートで上回る**
+— スコアを「点数の足し算」から「確率の推定」へ移す方向である。ここに CRP・好中球/リンパ球比 (NLR)・
+選択的超音波を重ね、CT は不確定例に限って投入するのが最適解、というのがこのレビューの結論で、
+**「一つの検査で決めない」という設計思想は後述の一次医療戦略と同型**である。バイオマーカーの
+新戦力も揃ってきた: 小児で有望とされた IL-6 (Tan & Bo 2026) は成人前向きデータでも裏打ちされ —
+48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の複雑性予測
+AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・単施設中心で
+外部検証不足、Ismayilzada 2026) も続く。
 
 ただしこの精度論は一貫して**「すでに病院・ER に到達した患者」を前提**にしてきた。2026-08 の新着は
 その前段 — **一次医療の入口**に土俵を移す。オランダの一般外来を対象に、外的検証済みの7項目予測
@@ -63,12 +72,22 @@ shared decision-making が型 (Talan & Di Saverio 2021) — この骨格は不�
 (Allocati 2026) が、予測区間を考慮すると結論の頑健性に疑義との指摘が付いた (Nasri & Dziri
 2026)。(2) さらに一歩進んで**「抗菌薬自体が要るのか」を問う抗菌薬 vs 無投薬観察のメタ解析**
 (Lin 2026) が現れ、小児の至適レジメン比較 (Kakar 2026) も続く。(3) **費用対効果**は保存的
-治療が優位 (手術は16.5-83%高コスト、Farhad 2026) — ただし追跡は12ヶ月が主で長期は未解決。
-患者選択・アルゴリズムの整理は narrative review 群 (Rincon Mora / Baana / Lehovsky & Hall /
-小児は Hong, いずれも2026) で進み、小児では**内視鏡的虫垂治療 (ERAT) が手術・抗菌薬に続く
-第三の選択肢**として論じられ始めた (Hong 2026)。エビデンス増加が速すぎるため、分野全体を
-living systematic review で追う evidence map (Kleindienst 2026) まで登場した。手術は依然
-第一選択の位置で腹腔鏡が標準 (Vidarsdottir 2025)。
+治療が優位 (手術は16.5-83%高コスト、Farhad 2026)。患者選択・アルゴリズムの整理は narrative
+review 群 (Rincon Mora / Baana / Lehovsky & Hall / 小児は Hong, いずれも2026) で進み、小児では
+**内視鏡的虫垂治療 (ERAT) が手術・抗菌薬に続く第三の選択肢**として論じられ始めた (Hong 2026)。
+エビデンス増加が速すぎるため、分野全体を living systematic review で追う evidence map
+(Kleindienst 2026) まで登場した。手術は依然第一選択の位置で腹腔鏡が標準 (Vidarsdottir 2025)。
+
+そしてこの議論には**時間軸という第四の軸**が加わった。従来の RCT の多くは1年時点の非劣性を語って
+きたが、**追跡2年以上の研究だけを集めたメタ解析** (Kahana 2026, 1635研究をスクリーニングして9研究・
+3883例・うち3件が RCT、5件が小児、追跡中央値33.6ヶ月/最長312ヶ月) は別の像を返す:
+**NOM の長期失敗率は 38.9% (95%CI 31.1-46.7)、RCT に限れば 44.4% (41.4-47.4)、NOM 後に虫垂切除へ
+至った割合は 36.3% (28.9-43.7)**。つまり「1年時点で8割成功」の話は、**数年単位では『4割前後が結局
+手術に行き着く』という説明に置き換わる** — SDM で患者に渡す数字そのものが変わる。一方で費用は
+長期でも NOM 優位が保たれ (**差 €1535, 95%CI -1892〜-1178**)、Farhad 2026 の「12ヶ月止まり」という
+限界を一段延ばした。NOM 中に見つかる虫垂腫瘍は約0.3%で、後述の腫瘍リスク軸とも接続する。
+ただし非 RCT 6件が混在し「失敗」の定義も研究間で揺れるため、この4割という数字は**再発の重症度・
+QOL・満足度を伴わない粗い指標**である点は留意が要る。
 
 **複雑性 (complicated)**: 小児では膿瘍合併例でも腹腔鏡は安全 (Wang 2026, 前向きコホート)。
 保存的治療後の **interval appendectomy の判断軸は「再発予防」から「年齢連動の腫瘍リスク+
@@ -98,9 +117,12 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 なっている。
 
 ### 未回収の問い
-- 抗菌薬先行群の長期 (5年超) 再発率・QOL・医療費 — 費用対効果データも12ヶ月止まり (Farhad 2026)
+- 抗菌薬先行群の**5年超**の再発率・QOL・満足度 — 2年超は Kahana 2026 が埋めた (失敗38.9%・中央値33.6ヶ月) が、
+  「失敗」の定義が研究間で揺れており、再発の重症度と患者体験は依然ブラックボックス
 - 抗菌薬 vs 無投薬観察 (Lin 2026 が提起) の大規模 RCT — 「抗菌薬先行」の中身そのものの再検証
-- 小児 NOM 推奨の頑健性 — 予測区間問題 (Nasri & Dziri 2026) をクリアする追試
+- 小児 NOM 推奨の頑健性 — 予測区間問題 (Nasri & Dziri 2026) をクリアする追試。長期失敗率4割 (Kahana 2026, 9研究中5件が小児) との統合も要る
+- 連続型リスクモデル pARC の外部検証と他集団への移植 — 固定加点式より優れるという知見 (Tchouala Tchakoute 2026) が
+  欧米以外・成人でも成り立つか、そして EHR に載せて実際に使えるか
 - ERAT (内視鏡的虫垂治療) の小児での位置づけ — 手術・抗菌薬との比較試験 (Hong 2026 が提起)
 - interval appendectomy 適応を決める年齢閾値・画像所見の定量化 (腫瘍リスクの層別)
 - 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
@@ -145,17 +167,28 @@ living systematic review で追う evidence map (Kleindienst 2026) まで登場�
 32. **Han T, Borman T, Vanhatalo S et al.** Uncomplicated and Complicated Acute Appendicitis Induce Different Cytokine Patterns. *APMIS* 2026;134(2):e70168. PMID [41711118](https://pubmed.ncbi.nlm.nih.gov/41711118/) / [DOI](https://doi.org/10.1111/apm.70168)
 33. **Spota A, Englesakis M, Chadi S et al.** Acute Appendicitis as a Harbinger of Colorectal Neoplasms in Patients Aged 40 or Older: A Scoping Review. *Surg Laparosc Endosc Percutan Tech* 2026. PMID [41707661](https://pubmed.ncbi.nlm.nih.gov/41707661/) / [DOI](https://doi.org/10.1097/SLE.0000000000001451)
 34. **Hogervorst EM, Venekamp RP, Knol-de Vries GE et al.** Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial. *Diagn Progn Res* 2026;10(1). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x) — ClinicalTrials.gov [NCT06762275](https://clinicaltrials.gov/study/NCT06762275)
+35. **Tchouala Tchakoute P, Iuhas A, Nechita VI et al.** Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review. *Pediatr Rep* 2026;18(4):115. PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115) — [PMC13516179](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13516179/) (無料全文)
+36. **Kahana N, Boaz E, Emile SH et al.** Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis — a systematic review and meta-analysis. *Am J Surg* 2026;261:117203. PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
 
-> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便の編み込み分。書誌はいずれも
-> PubMed メタデータ (get_article_metadata) と全件照合済み。収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、
-> 第2便でも2件 (No.29, 30 相当) に別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。
-> 2026-08-14 便 (No.34) は PMID・DOI とも収集ログと PubMed 照合値が一致 — 今回は混入なし。
-> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は引き続き要修理。
+> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便の
+> 編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。収集ログ側の DOI は第1便で9件
+> (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に別論文の DOI が混入していたため、
+> 本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34) と 2026-08-29 便 (No.35-36) は PMID・DOI とも
+> 収集ログと PubMed 照合値が一致 — **2便連続で混入なし**。
+> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は引き続き要修理だが、
+> 混入が古い便に偏っている可能性も出てきたため、次便で再発しなければ収集ロジックの変更時期と突き合わせる。
 
 <!-- LN:BIB:END -->
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-08-29 収集分 (2件・編み込み済み)
+
+- **Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review.** — Tchouala Tchakoute P, Iuhas A, Nechita VI et al. *Pediatr Rep* (2026). PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115)
+  - 抄録: Acute appendicitis is a leading pediatric surgical emergency. Timely diagnosis remains challenging, particularly in young children with atypical presentations. Clinical evaluation alone yields variable diagnostic performance, prompting the use of risk stratification tools. To evaluate and compare th…
+- **Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis - a systematic review and meta-analysis.** — Kahana N, Boaz E, Emile SH et al. *Am J Surg* (2026). PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
+  - 抄録: We evaluated long-term outcomes of non-operative management (NOM) versus surgical management of acute uncomplicated appendicitis. Systematic review of studies comparing NOM versus surgery with ≥2 years follow-up. Primary outcome was long-term failure rate. 9/1635 studies were included (3 RCTs; 6 non…
 
 ### ✅ 2026-08-14 収集分 (1件・編み込み済み)
 
