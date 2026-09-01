@@ -29,10 +29,12 @@ Living-note は、医学文献の「生きたレビュー」を個人サイズ�
 | [虫垂炎](notes/example-appendicitis.ja.md) | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 | 🫀 live (毎週自動) |
 | [GLP-1受容体作動薬](notes/glp1.ja.md) | — | 代謝 — いま最速で動く領域の定点観測 | 🫀 live (毎週自動) |
 | [フッ化水素酸曝露](notes/hydrofluoric-acid.ja.md) | — | 救急・中毒 — HF曝露の治療とマネジメント | 🫀 live (毎週自動) |
+| [Copilot活用 (ヘルスケア)](notes/copilot-healthcare.ja.md) | — | AI・医療DX — ambient scribe の実証研究と製品・制度の定点観測 | 🫀 live (毎週自動) + 手織りハイブリッド |
 | [感染性心内膜炎](notes/infective-endocarditis.ja.md) | [Infective endocarditis](notes/infective-endocarditis.md) | 感染症・循環器 — 診断基準/経口スイッチ/デバイス感染 | 凍結サンプル |
 | [IgG4関連疾患](notes/igg4-related-disease.ja.md) | — | 免疫・リウマチ | 凍結サンプル |
 | [脂質異常症](notes/dyslipidemia.ja.md) | — | プライマリケア・予防 | 凍結サンプル |
 | [コーヒーの楽しみ方](notes/coffee.ja.md) | — | 番外編 (医学外) — 初心者〜上級者 | ☕ 手織り (依頼ベース) |
+| [電子カルテ情報共有サービス](notes/ehr-sharing-service.ja.md) | — | 番外編 (制度ウォッチ) — 3文書6情報・全国展開の見通し | 🗂 手織り (節目ベース) |
 
 **🫀 live 行の更新のしくみ (自動同期)**: 作者の実稼働インスタンスが週1回 PubMed 新着を収集して
 ノートを織り直し、その結果をこのリポへ直接 push します。新着ゼロの週も鼓動 (heartbeat) commit が
