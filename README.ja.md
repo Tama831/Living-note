@@ -24,9 +24,9 @@ Living-note は、医学文献の「生きたレビュー」を個人サイズ�
 すべて実際にこのパイプラインで生成されたものです。生きた原本は日本語 (作者の作業言語) で、
 2本には照合検証済みの英語スナップショットがあります。
 
-| 日本語 (原本) | English snapshot | 領域 | 更新 |
+| 日本語 (原本) | English 版 | 領域 | 更新 |
 |---|---|---|---|
-| [虫垂炎](notes/example-appendicitis.ja.md) | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 | 🫀 live (毎週自動) |
+| [虫垂炎](notes/example-appendicitis.ja.md) | [Appendicitis](notes/example-appendicitis.md) | 救急・外科 — 診断/抗菌薬 vs 手術/小児 | 🫀 live (毎週自動・EN は日本語版の翻訳ミラー) |
 | [GLP-1受容体作動薬](notes/glp1.ja.md) | — | 代謝 — いま最速で動く領域の定点観測 | 🫀 live (毎週自動) |
 | [フッ化水素酸曝露](notes/hydrofluoric-acid.ja.md) | — | 救急・中毒 — HF曝露の治療とマネジメント | 🫀 live (毎週自動) |
 | [Copilot活用 (ヘルスケア)](notes/copilot-healthcare.ja.md) | — | AI・医療DX — ambient scribe の実証研究と製品・制度の定点観測 | 🫀 live (毎週自動) + 手織りハイブリッド |
