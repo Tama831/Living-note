@@ -1,26 +1,26 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-08-29
+updated: 2026-09-13
 ---
 
 # 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-09-06 JST — 新着なし (ノートは前回のまま)。**
+> がここに push されます。**最終チェック: 2026-09-13 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
-> 🇬🇧 English snapshot (frozen 2026-08-08): [example-appendicitis.md](example-appendicitis.md)
+> 🇬🇧 English (live translated mirror): [example-appendicitis.md](example-appendicitis.md)
 
 ## 📌 5行サマリ
 <!-- LN:SUMMARY:START -->
 - 虫垂炎は最多の外科的急腹症。生涯リスク6-9%、ピーク10-19歳。「栄養-マイクロバイオーム-遺伝軸」に加え、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」の可能性 (Ryoo / Han 2026)
-- 診断はスコア単独からの脱却が共通線: Alvarado は単独使用不可 (特異度57-76%)、連続型 pARC > 固定加点式、CRP・NLR・選択的画像を重ねる段階戦略へ (Tchouala Tchakoute 2026)。院内では CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用、一次医療では予測ルール+CRP POCT の実装 RCT が進行中 (Hogervorst 2026)
+- 診断は「**一つの検査で決めない・一時点で決めない**」へ収束: Alvarado は単独使用不可 (特異度57-76%)、連続型 pARC > 固定加点式、さらに早期の曖昧例は**観察して測り直す** — 単発 AAS の AUROC 0.629 が最終 AAS 0.936・∆AAS 0.932 に跳ねる (Tchouala Tchakoute / Lastunen 2026)
+- 画像は院内 CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用。土俵は精度競争から**「どの場で誰が振り分け、過剰 (画像・紹介) をどう減らすか」**へ移り、一次医療での予測ルール+CRP POCT 実装 RCT が進行中 (Hogervorst 2026, NCT06762275)
 - 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡 (中央値33.6ヶ月) では NOM 失敗38.9%・RCT限定44.4%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)
-- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ。40歳以上の虫垂炎後大腸腫瘍 (発見率0.5-34.6%) はフォロー標準が未確立、NOM 後の虫垂腫瘍は約0.3% (Spota / Kahana 2026)
-- 蔵書3本→36本。土俵は「画像の精度」から**「どの場で誰が振り分けるか」**、さらに**「何年で測るか」**へ広がった — living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
+- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%・フォロー標準未確立)。蔵書3本→37本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -41,12 +41,24 @@ updated: 2026-08-29
 小児特化スコアでは **PAS が感度で、AIR が特異度で勝り、AIR は壊疽・蜂窩織炎・穿孔といった
 複雑性の判別にも強い**。さらに**固定加点式より連続型リスクモデル (pARC) が小児コホートで上回る**
 — スコアを「点数の足し算」から「確率の推定」へ移す方向である。ここに CRP・好中球/リンパ球比 (NLR)・
-選択的超音波を重ね、CT は不確定例に限って投入するのが最適解、というのがこのレビューの結論で、
-**「一つの検査で決めない」という設計思想は後述の一次医療戦略と同型**である。バイオマーカーの
-新戦力も揃ってきた: 小児で有望とされた IL-6 (Tan & Bo 2026) は成人前向きデータでも裏打ちされ —
-48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の複雑性予測
-AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・単施設中心で
-外部検証不足、Ismayilzada 2026) も続く。
+選択的超音波を重ね、CT は不確定例に限って投入するのが最適解、というのがこのレビューの結論である。
+
+2026-09 の新着は、この脱・スコア単独の流れに**「時間」という次元**を加えた。成人の早期・判断困難例
+(early equivocal) だけを集めた DIAMOND trial 観察群の二次解析 (Lastunen 2026, 83例) によれば、
+**受診時点の Adult Appendicitis Score (AAS) 単発の AUROC は 0.629 (95%CI 0.498-0.760) と
+ほとんど使いものにならない**のに対し、短時間の経過観察後に付け直した**最終 AAS は 0.936
+(0.886-0.987)、観察中のスコア変化量 ∆AAS は 0.932 (0.868-0.996)** へ一気に跳ね上がる (∆CRP は
+0.796 と中間)。抄録の示す閾値 (低 ≤ -2 / 中 -1〜0 / 高 ≥ 1) で切ると、**低確率群の陰性的中率 97%・
+高確率群の陽性的中率 94%**。つまり早期の曖昧な腹痛では、検査を足すより**「もう一度測って差を見る」**
+ほうが効く場面がある — そしてそれは同時に、早期 CT による**過剰診断と被曝を減らす**戦略でもある。
+ただし n=83 の単一試験二次解析であり、閾値は同じデータ上の ROC から引かれていて (外部検証なし)、
+最適な観察時間も示されていない。スコアを「点数の足し算」→「確率の推定」→「**時間の関数**」へ
+移すこの二段の移動は、後述の一次医療戦略が掲げる「一つの検査で決めない」と同じ設計思想の別の顔である。
+
+バイオマーカーの新戦力も揃ってきた: 小児で有望とされた IL-6 (Tan & Bo 2026) は成人前向きデータでも
+裏打ちされ — 48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の
+複雑性予測 AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・
+単施設中心で外部検証不足、Ismayilzada 2026) も続く。
 
 ただしこの精度論は一貫して**「すでに病院・ER に到達した患者」を前提**にしてきた。2026-08 の新着は
 その前段 — **一次医療の入口**に土俵を移す。オランダの一般外来を対象に、外的検証済みの7項目予測
@@ -59,6 +71,9 @@ GP の臨床判断と本人・保護者の希望で選ぶ、≥50 mg/L は即時
 目標)** である点が新しい — 画像精度の競争ではなく、**見落としの閾値を上げずに過剰紹介を減らせるか**という
 一次医療側の問いを立てている。実装評価 (reach / adoption / implementation / maintenance) を並走させる
 設計も、「精度は出たが現場に降りない」問題への先回りにあたる。結果は未報告 (プロトコル段階)。
+**低リスクを safety netting に置いて時間を味方につけ、再評価で振り分ける**というこの構造は、場は
+一次医療と ER で違えど、Lastunen 2026 の「観察して測り直す」と地続きである — **過剰 (紹介・画像) を
+時間で削る**という同じ答え方をしている。
 
 鑑別と落とし穴も蓄積してきた: 小児の蟯虫 (Enterobius vermicularis) が虫垂炎を模倣する
 (Jaffry 2026)、特発性被嚢性腹膜硬化症 (abdominal cocoon) の誤診例 (Martzivanou 2026)、
@@ -114,7 +129,8 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 診断が予後を分ける、という臨床的要諦は不変。なお「急性腹痛の子どもの大半は自然軽快する良性
 疾患」という一次医療側の母数 (Hogervorst 2026 が想定する通常診療の紹介効率は88%) を踏まえると、
 病院集団で語られる有病率とプライマリ・ケアで見える有病率のズレそのものが、診断戦略の設計変数に
-なっている。
+なっている。発症から受診までの時点によって所見が動く (だからこそ ∆AAS が効く, Lastunen 2026)
+という事実も、「虫垂炎という一枚の疾患像」ではなく**時間の関数として動く過程**を見ている証拠である。
 
 ### 未回収の問い
 - 抗菌薬先行群の**5年超**の再発率・QOL・満足度 — 2年超は Kahana 2026 が埋めた (失敗38.9%・中央値33.6ヶ月) が、
@@ -122,7 +138,9 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 - 抗菌薬 vs 無投薬観察 (Lin 2026 が提起) の大規模 RCT — 「抗菌薬先行」の中身そのものの再検証
 - 小児 NOM 推奨の頑健性 — 予測区間問題 (Nasri & Dziri 2026) をクリアする追試。長期失敗率4割 (Kahana 2026, 9研究中5件が小児) との統合も要る
 - 連続型リスクモデル pARC の外部検証と他集団への移植 — 固定加点式より優れるという知見 (Tchouala Tchakoute 2026) が
-  欧米以外・成人でも成り立つか、そして EHR に載せて実際に使えるか
+  欧米以外・成人でも成り立つか、そして EHR に載せて実際に使えるか (成人側では AAS の反復測定が同じ空白を別経路で埋めつつある)
+- **∆AAS (観察して測り直す) の外部検証** — 最適な観察時間、閾値の妥当性 (Lastunen 2026 は n=83 の単一試験二次解析で
+  閾値が内部データ由来)、小児・妊婦への移植、そして「時間差分」を pARC 型の連続モデルに組み込めるか
 - ERAT (内視鏡的虫垂治療) の小児での位置づけ — 手術・抗菌薬との比較試験 (Hong 2026 が提起)
 - interval appendectomy 適応を決める年齢閾値・画像所見の定量化 (腫瘍リスクの層別)
 - 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
@@ -169,19 +187,26 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 34. **Hogervorst EM, Venekamp RP, Knol-de Vries GE et al.** Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial. *Diagn Progn Res* 2026;10(1). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x) — ClinicalTrials.gov [NCT06762275](https://clinicaltrials.gov/study/NCT06762275)
 35. **Tchouala Tchakoute P, Iuhas A, Nechita VI et al.** Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review. *Pediatr Rep* 2026;18(4):115. PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115) — [PMC13516179](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13516179/) (無料全文)
 36. **Kahana N, Boaz E, Emile SH et al.** Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis — a systematic review and meta-analysis. *Am J Surg* 2026;261:117203. PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
+37. **Lastunen KS, Leppäniemi AK, Mentula PJ.** Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis. *Eur J Trauma Emerg Surg* 2026;52(1). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x) — [PMC13541895](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13541895/) (無料全文)・DIAMOND trial [NCT02742402](https://clinicaltrials.gov/study/NCT02742402) の観察群二次解析
 
-> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便の
-> 編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。収集ログ側の DOI は第1便で9件
-> (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に別論文の DOI が混入していたため、
-> 本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34) と 2026-08-29 便 (No.35-36) は PMID・DOI とも
-> 収集ログと PubMed 照合値が一致 — **2便連続で混入なし**。
-> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は引き続き要修理だが、
-> 混入が古い便に偏っている可能性も出てきたため、次便で再発しなければ収集ロジックの変更時期と突き合わせる。
+> ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便、
+> No.37 は 2026-09-13 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
+> 収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に
+> 別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34)・2026-08-29 便
+> (No.35-36)・2026-09-13 便 (No.37) は PMID・DOI とも収集ログと PubMed 照合値が一致 — **3便連続で混入なし**。
+> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は形式上まだ未修理だが、混入は第1・第2便
+> (2026-08-07) に限局しており、収集ロジックかソース側の変化で自然解消した可能性が高い。次便も一致すれば
+> 「修理不要・監視のみ」に格下げしてよい。
 
 <!-- LN:BIB:END -->
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-09-13 収集分 (1件・編み込み済み)
+
+- **Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis.** — Lastunen KS, Leppäniemi AK, Mentula PJ *Eur J Trauma Emerg Surg* (2026). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x)
+  - 抄録: The utilization of computed tomography in the early stage of acute appendicitis may result in overdiagnosis and unnecessarily expose patients to ionising radiation. The Adult Appendicitis Score (AAS) can be used to select patients for imaging. Observation and re-scoring in the DIAMOND trial reduced …
 
 ### ✅ 2026-08-29 収集分 (2件・編み込み済み)
 
