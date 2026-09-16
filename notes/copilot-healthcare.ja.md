@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-09-08
+updated: 2026-09-16
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-09-08 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-09-16 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -188,6 +188,55 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-09-16 収集分 (25件・織り待ち)
+
+- **When the scribe does the reasoning: ambient artificial intelligence, inference impersonation, and the development of trainees' clinical judgment.** — McGaughey S, Abernethy J, Wackett J et al. *Acad Med* (2026). PMID [42745555](https://pubmed.ncbi.nlm.nih.gov/42745555/) / [DOI](https://doi.org/10.1093/acamed/wvag287)
+  - 抄録: Ambient artificial intelligence (AI) scribes are entering clinical practice on aligned incentives, with physicians gaining relief from documentation burden and health systems gaining revenue through more complete coding. Yet adoption has outpaced evaluation. This paper identifies a specific phenomen…
+- **The Use of Ambient Dictation Artificial Intelligence in Clinical Spaces in Surgery: A Scoping Review.** — Weiss O, Steinbaum A, Fiest C et al. *World J Otorhinolaryngol Head Neck Surg* (2026). PMID [42741333](https://pubmed.ncbi.nlm.nih.gov/42741333/) / [DOI](https://doi.org/10.1002/wjo2.70135)
+  - 抄録: To determine the current scope of knowledge regarding ambient listening artificial intelligence (AI) tools for documentation in surgical clinical environments. Literature search was performed using EMBASE, PubMed (MEDLINE), CINAHL, SCOPUS, and Cochrane databases. Citation searching was utilized to i…
+- **Ambient artificial intelligence scribe implementation in inpatient setting.** — Stults CD, Deng S, Martinez MC et al. *J Hosp Med* (2026). PMID [42734144](https://pubmed.ncbi.nlm.nih.gov/42734144/) / [DOI](https://doi.org/10.1002/jhm.70451)
+  - 抄録: Ambient artificial intelligence (AI) scribes have shown promise to aid ambulatory clinicians with the documentation burden, but little has been shown about the inpatient experience. Understand inpatient physician experiences before and after ambient AI scribes implementation. Quality improvement pil…
+- **Implementation of Ambient AI Scribes in Hospitals: Lessons for Healthcare Leadership, Governance, and Change Management.** — Zhou KX, Ng QX, Tan HK et al. *J Healthc Leadersh* (2026). PMID [42732411](https://pubmed.ncbi.nlm.nih.gov/42732411/) / [DOI](https://doi.org/10.2147/jhl.s622179)
+  - 抄録: Ambient artificial intelligence (AI) scribes are increasingly being adopted to address the clinical documentation burden associated with electronic health records (EHRs), which contributes to physician burnout, after-hours work, and reduced patient-clinician interaction. These systems capture clinic…
+- **The representational bottleneck in rehabilitation AI: from human-cognitive proxies to pathway-based clinical representations.** — Yang EJ, Chung SH *Front Digit Health* (2026). PMID [42712551](https://pubmed.ncbi.nlm.nih.gov/42712551/) / [DOI](https://doi.org/10.3389/fdgth.2026.1917999)
+  - 抄録: Artificial intelligence (AI) in healthcare is often framed as a problem of model performance. This view overlooks a prior representational problem: many clinical data are human-cognitive proxies built for communication, documentation, classification, or administration rather than high-fidelity compu…
+- **Clinical AI Scribes in primary care: accuracy, error severity and implications for clinical practice.** — Draper TC, Cox T, Lamb-Riddell K et al. *BMJ Digit Health Ai* (2025). PMID [42712320](https://pubmed.ncbi.nlm.nih.gov/42712320/) / [DOI](https://doi.org/10.1136/bmjdhai-2025-000092)
+  - 抄録: To investigate the performance of commercially available Clinical Artificial Intelligence Scribes (CAISs), assessing their accuracy, potential clinical impact of errors, and documentation quality, given growing concerns around errors and safety. Seven CAIS products were investigated, using eight sta…
+- **Impact of acoustic and informational noise on AI-generated clinical summaries.** — Draper TC, Leake J, Lamb-Riddell K et al. *BMJ Digit Health Ai* (2025). PMID [42712284](https://pubmed.ncbi.nlm.nih.gov/42712284/) / [DOI](https://doi.org/10.1136/bmjdhai-2025-000057)
+  - 抄録: To investigate the effect of introducing environmental noise, microphone identity and position, and informational noise on the accuracy of a commercial Clinical AI Scribe (CAIS). Consultations on five medical conditions (memory loss, diarrhoea, headaches, skin rash or prostate symptoms) were recorde…
+- **Digital morphine: why AI scribes are symptomatic relief for a broken system.** — Segal B, Allen L, Fieggen J et al. *BMJ Digit Health Ai* (2026). PMID [42712277](https://pubmed.ncbi.nlm.nih.gov/42712277/) / [DOI](https://doi.org/10.1136/bmjdh-2026-000030)
+- **The Promise of Ambient AI Technology in Medical Education: Opportunities and Guardrails.** — Shafazand S, Bowers U, Jayaraman S *JMIR Med Inform* (2026). PMID [42710044](https://pubmed.ncbi.nlm.nih.gov/42710044/) / [DOI](https://doi.org/10.2196/88725)
+  - 抄録: Ambient AI technologies, commonly known as AI scribes, are transforming clinical practice by autonomously capturing patient-provider conversations and structuring them into clinical notes. Short-term studies suggest that ambient AI can significantly reduce documentation time and improve job satisfac…
+- **Adoption and utility of digital scribes in clinical practice - A scoping review.** — Yu SHT, Li J, Carland JE et al. *Int J Med Inform* (2026). PMID [42492420](https://pubmed.ncbi.nlm.nih.gov/42492420/) / [DOI](https://doi.org/10.1016/j.ijmedinf.2026.106630)
+  - 抄録: Digital scribes use automatic speech recognition to transcribe a clinician-patient conversation and use generative artificial intelligence (AI) technology to summarise the transcript into relevant documentation templates. To survey and summarise recent literature published on the factors affecting t…
+- **The application of artificial intelligence in healthcare practice: A mapping review of systematic reviews.** — Andersen A, Huang R, Liu EJ *Artif Intell Med* (2026). PMID [42492159](https://pubmed.ncbi.nlm.nih.gov/42492159/) / [DOI](https://doi.org/10.1016/j.artmed.2026.103495)
+  - 抄録: Artificial intelligence (AI) is rapidly transforming healthcare practice, with growing evidence supporting its use in diagnosis, prognosis, treatment planning, and operational decision-making. The proliferation of systematic reviews in recent years underscores the need for an updated synthesis of th…
+- **A Tale of Two Systems: Ambient AI Scribes and Australia's Healthcare Documentation Divide.** — McGee RG, Bhurawala H *J Paediatr Child Health* (2026). PMID [42489436](https://pubmed.ncbi.nlm.nih.gov/42489436/) / [DOI](https://doi.org/10.1111/jpc.70512)
+- **Bridging the trust-adoption gap for AI scribes in rural communities: A machine learning approach using the 2024 Canadian digital health survey.** — Zhou Z, Geracitano J, Hatoum S et al. *Int J Med Inform* (2026). PMID [42468397](https://pubmed.ncbi.nlm.nih.gov/42468397/) / [DOI](https://doi.org/10.1016/j.ijmedinf.2026.106609)
+  - 抄録: Ambient AI scribe tools that capture clinician-patient conversations and generate draft notes are increasingly deployed to reduce documentation burden, but patient-facing acceptance may influence implementation success, especially in rural areas. To characterize rural respondents' attitudes toward A…
+- **Artificial Intelligence and Clinician Burnout in the United States: A Narrative Review.** — Sucharitrak C *Cureus* (2026). PMID [42465700](https://pubmed.ncbi.nlm.nih.gov/42465700/) / [DOI](https://doi.org/10.7759/cureus.112814)
+  - 抄録: Burnout remains one of the defining occupational hazards of healthcare in the United States, and it spares no one on the care team: physicians, nurses, trainees, and assistants all report it at high rates. When generative AI entered healthcare around 2023, it arrived quickly and carried a promise of…
+- **The rise of AI companions: From prediction to surgery in the digital twin era.** — Gauci MO, Duval G, Rony L *Orthop Traumatol Surg Res* (2026). PMID [42462815](https://pubmed.ncbi.nlm.nih.gov/42462815/) / [DOI](https://doi.org/10.1016/j.otsr.2026.104796)
+  - 抄録: Artificial intelligence (AI) is rapidly reshaping orthopaedic surgery, supported by advances in data science, computational power, and perioperative digitalization. Within this evolving landscape, five "AI companions" structure the surgeon's workflow. The "AI Scribe" maximizes administrative efficie…
+- **The art of fidelity: clinical documentation and ambient AI.** — Ekstrom V, Launer J *Lancet* (2026). PMID [42462730](https://pubmed.ncbi.nlm.nih.gov/42462730/) / [DOI](https://doi.org/10.1016/s0140-6736(26)01388-7)
+- **Cross-model disagreement as a reference-free signal for prioritizing human review in medical speech transcription.** — Karbalaie A, Seoane F, Abtahi F *Front Artif Intell* (2026). PMID [42459765](https://pubmed.ncbi.nlm.nih.gov/42459765/) / [DOI](https://doi.org/10.3389/frai.2026.1829902)
+  - 抄録: Ambient AI scribes generate transcripts at scale, but routine quality assurance is constrained by the absence of human-verified reference transcripts in most deployment settings. We evaluated whether disagreement among heterogeneous automatic speech recognition (ASR) systems can serve as an informat…
+- **Evaluating the informational accuracy of large language models in patient‑directed orthodontic retainer guidance: a cross‑sectional comparison of Chat GPT‑4.1, Gemini 2.5, Microsoft Copilot GPT-4.1 and DeepSeek‑V3.** — Mughni M, Ilyas MR, Gilani SMA et al. *BMC Oral Health* (2026). PMID [42458476](https://pubmed.ncbi.nlm.nih.gov/42458476/) / [DOI](https://doi.org/10.1186/s12903-026-08960-w)
+  - 抄録: The use of artificial intelligence (AI) in orthodontic practice is increasing rapidly; however, there is a notable lack of research evaluating the accuracy of large language models (LLMs) in educating patients about orthodontic retainers and related guidelines. This study utilized a cross-sectional,…
+- **Deployment of an ambient AI scribe in emergency care: A 12-month evaluation in a large Spanish hospital network.** — Alcázar-Peral JM, Álvaro-de la Parra JA, Ciardo P et al. *Int J Med Inform* (2026). PMID [42456601](https://pubmed.ncbi.nlm.nih.gov/42456601/) / [DOI](https://doi.org/10.1016/j.ijmedinf.2026.106584)
+  - 抄録: Ambient artificial intelligence (AI) scribes have the potential to reduce documentation burden and improve efficiency, clinician experience, and care quality. However, evidence from large-scale implementations in emergency departments (EDs), particularly regarding patient experience and documentatio…
+- **Ambient AI scribe in pediatric outpatient visits: documentation burden, quality, and scale-up limits.** — Vallejo V, Farreras J, Valero L et al. *Med Clin (Barc)* (2026). PMID [42447762](https://pubmed.ncbi.nlm.nih.gov/42447762/) / [DOI](https://doi.org/10.1016/j.medcli.2026.107541)
+  - 抄録: Artificial intelligence (AI) medical scribes are an emerging technology intended to reduce the documentation burden. In pediatrics, evidence on implementation in the Spanish context is very limited. To evaluate the implementation of an AI medical scribe in pediatric outpatient clinics, examining its…
+- **Surgeon-validated AI-generated consultation letters in plastic surgery.** — Kapila AK, Pessemier A, Potvlieghe L et al. *J Plast Reconstr Aesthet Surg* (2026). PMID [42431016](https://pubmed.ncbi.nlm.nih.gov/42431016/) / [DOI](https://doi.org/10.1016/j.bjps.2026.07.002)
+- **Evidence on artificial intelligence-assisted clinical documentation and healthcare workers' emotional wellbeing at work: a scoping review.** — Xiao N, He L, Chen L et al. *Front Psychol* (2026). PMID [42421723](https://pubmed.ncbi.nlm.nih.gov/42421723/) / [DOI](https://doi.org/10.3389/fpsyg.2026.1840884)
+  - 抄録: This scoping review mapped evidence on artificial intelligence-assisted clinical documentation for healthcare workers' emotional wellbeing at work, including tool types, reported favorable, adverse, or mixed findings, and evidence gaps. We also considered how these tools may shape documentation-rela…
+- **Strategies to Ensure a Resilient Health Care Workforce: International Models on Health Professions.** — Graunke H, Saunders R, McBride T et al. *NEJM Catal Innov Care Deliv* (2026). PMID [42418548](https://pubmed.ncbi.nlm.nih.gov/42418548/) / [DOI](https://doi.org/10.1056/cat.25.0263)
+  - 抄録: The health care workforce faces challenges globally, including shortages driven by aging populations and workforce burnout, compounded by rapid technological and care delivery transformations. This article examines international case studies developed by the Future of Health, a global network of sen…
+- **Evaluating the impact of artificial intelligence scribes on clinical documentation in primary care: a simulation study.** — Murray L, Ha E, Wang Q et al. *JAMIA Open* (2026). PMID [42416857](https://pubmed.ncbi.nlm.nih.gov/42416857/) / [DOI](https://doi.org/10.1093/jamiaopen/ooag101)
+  - 抄録: To investigate the performance of artificial intelligence (AI) scribes and their impact on clinical documentation time. Artificial intelligence scribes were assessed using clinical simulations with 9 primary care physicians, each conducting 4 simulated encounters with standardized patients with and …
+- **Exploring the Potential of Ambient AI for Inpatient Documentation: A Qualitative Study with Junior Doctors.** — Bracken A, Whelehan S, Babu AR et al. *J Med Syst* (2026). PMID [42414701](https://pubmed.ncbi.nlm.nih.gov/42414701/) / [DOI](https://doi.org/10.1007/s10916-026-02437-7)
+  - 抄録: Clinical documentation is essential for safe and effective patient care but places a substantial clerical burden on doctors, particularly those early in training. Ambient artificial intelligence (AI) systems, which passively capture clinical conversations and generate structured notes, have demonstr…
 
 ### ✅ 2026-09-08 収集分 (25件・編み込み済み)
 
