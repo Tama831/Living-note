@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "label": "🌱 living note",
-  "message": "last check 2026-09-16",
+  "message": "last check 2026-09-26",
   "color": "brightgreen",
-  "lastRun": "2026-09-16T21:39:49",
+  "lastRun": "2026-09-26T21:49:02",
   "topics": {
-    "appendicitis": "2026-09-13T21:40:02",
-    "glp1": "2026-09-11T21:36:42",
-    "hydrofluoric-acid": "2026-09-11T21:46:23",
-    "copilot-healthcare": "2026-09-16T21:39:49"
+    "appendicitis": "2026-09-26T21:39:00",
+    "glp1": "2026-09-26T21:39:01",
+    "hydrofluoric-acid": "2026-09-26T21:48:59",
+    "copilot-healthcare": "2026-09-26T21:49:02"
   }
 }
