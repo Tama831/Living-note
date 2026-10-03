@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-09-26
+updated: 2026-10-04
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-09-26 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-04 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -188,6 +188,14 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-04 収集分 (4件・織り待ち)
+
+- **AI-Assisted Clinical Documentation in Routine Danish General Practice: Quantitative Pre-Post Study.** — Olsen LN, Harbig P, Laurberg AB et al. *JMIR Hum Factors* (2026). PMID [42826248](https://pubmed.ncbi.nlm.nih.gov/42826248/) / [DOI](https://doi.org/10.2196/94431)
+  - 抄録: Administrative workload in general practice limits time for direct patient care. AI-assisted documentation has been proposed as a way to reduce the documentation burden, but evidence from routine primary care settings remains limited. This study aimed to evaluate general practitioners' (GPs) accepta…
+- **From Documentation to Recommendation: Is AI a Helper or Healer in the Exam Room?** — Huynh PP, Rivero A, Garritano FG *Otolaryngol Head Neck Surg* (2026). PMID [42820466](https://pubmed.ncbi.nlm.nih.gov/42820466/) / [DOI](https://doi.org/10.1002/ohn.70475)
+- **Preserving Nursing Observations in Ambient AI Documentation on Psychiatric Wards.** — Wei Y, Wei LC *J Med Syst* (2026). PMID [42814204](https://pubmed.ncbi.nlm.nih.gov/42814204/) / [DOI](https://doi.org/10.1007/s10916-026-02467-1)
+- **What Parents Need to Know About AI as a New Kind of Listener.** — Modave F, Huq MS, Thompson LA *JAMA Pediatr* (2026). PMID [42804215](https://pubmed.ncbi.nlm.nih.gov/42804215/) / [DOI](https://doi.org/10.1001/jamapediatrics.2026.4424)
 
 ### ⏳ 2026-09-26 収集分 (25件・織り待ち)
 

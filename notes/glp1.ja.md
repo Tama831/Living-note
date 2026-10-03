@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-09-26
+updated: 2026-10-04
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-09-26 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-04 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,19 @@ updated: 2026-09-26
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-04 収集分 (5件・織り待ち)
+
+- **Efficacy and Safety of Dual GLP-1/Glucagon Receptor Agonism in Overweight and Obesity: A Class-Specific Systematic Review and Meta-Analysis.** — Amjad MM, Khan MM, Sarwar F et al. *Diabetes Obes Metab* (2026). PMID [42811393](https://pubmed.ncbi.nlm.nih.gov/42811393/) / [DOI](https://doi.org/10.1111/dom.71400)
+  - 抄録: Dual glucagon-like peptide-1/glucagon receptor (GLP-1/GCGR) agonists represent a novel obesity treatment class, but existing meta-analyses often conflate them with GIP-containing agents (tirzepatide, retatrutide) or restrict analysis to one or two drugs, leaving class-specific efficacy and safety in…
+- **GLP-1 receptor agonist exposure in the periconceptional period and adverse obstetric outcomes: A systematic review and meta-analysis.** — D'Antonio F, Flacco ME, Manzoli L et al. *Med* (2026). PMID [42810337](https://pubmed.ncbi.nlm.nih.gov/42810337/) / [DOI](https://doi.org/10.1016/j.medj.2026.101267)
+  - 抄録: This systematic review and meta-analysis assesses whether exposure to glucagon-like peptide-1 receptor agonists (GLP-1 RAs) during pregnancy or the periconceptional period is associated with adverse maternal and perinatal outcomes. Medline, Embase, and the Cochrane Library were searched for observat…
+- **Chilean Multidisciplinary Consensus on the Use of GLP-1 Receptor Agonists: Recommendations Based on the GRADE Methodology.** — Cabrera S, Walbaum M, Bórquez T et al. *Rev Med Chil* (2026). PMID [42809786](https://pubmed.ncbi.nlm.nih.gov/42809786/) / [DOI](https://doi.org/10.4067/s0034-98872026000701070)
+  - 抄録: Type 2 diabetes (T2DM), obesity, chronic kidney disease (CKD), and heart failure (HF) pose a major public health burden in Chile and Latin America. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) provide glycemic, cardiovascular, renal, and weight-loss benefits, extending their therapeutic rol…
+- **EASL-EASD-EASO Guidance for the Use of Resmetirom and Semaglutide as MASH-Targeted Therapy.** — European Association for the Study of the Liver (EASL). Electronic address: easloffice@easloffice.eu, European Association for the Study of Diabetes (EASD), European Association for the Study of Obesity (EASO) *J Hepatol* (2026). PMID [42805503](https://pubmed.ncbi.nlm.nih.gov/42805503/) / [DOI](https://doi.org/10.1016/j.jhep.2026.08.028)
+  - 抄録: Adults with metabolic dysfunction-associated steatotic liver disease (MASLD) and steatohepatitis (MASH) are at risk for cardiometabolic complications and major adverse liver-related outcomes (MALO), including cirrhosis, cancer, and liver transplantation. Non-invasive tests (NIT) for hepatic fibrosis…
+- **Incretin-based injectable strategies versus intensified insulin for treatment intensification and simplification in type 2 diabetes: a systematic review and meta-analysis.** — Mahmood T, Myrtziou I, Kanakis I *J Diabetes Metab Disord* (2026). PMID [42802751](https://pubmed.ncbi.nlm.nih.gov/42802751/) / [DOI](https://doi.org/10.1007/s40200-026-02089-x)
+  - 抄録: Prandial insulin intensification in Type 2 Diabetes (T2D) improves glycaemia but increases regimen complexity, weight gain, and hypoglycaemia risk. Our aim was to evaluate if Incretin-based injectable strategies offer a lower-burden alternative across intensification and simplification pathways. Pub…
 
 ### ⏳ 2026-09-26 収集分 (25件・織り待ち)
 
