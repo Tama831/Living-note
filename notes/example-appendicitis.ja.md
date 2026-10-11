@@ -1,14 +1,14 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-09-13
+updated: 2026-10-11
 ---
 
 # 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-04 JST — 新着なし (ノートは前回のまま)。**
+> がここに push されます。**最終チェック: 2026-10-11 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -16,11 +16,11 @@ updated: 2026-09-13
 
 ## 📌 5行サマリ
 <!-- LN:SUMMARY:START -->
-- 虫垂炎は最多の外科的急腹症。生涯リスク6-9%、ピーク10-19歳。「栄養-マイクロバイオーム-遺伝軸」に加え、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」の可能性 (Ryoo / Han 2026)
+- 虫垂炎は外科的急腹症で最も多い。生涯リスク6-9%、ピーク10-19歳。病態は「栄養-マイクロバイオーム-遺伝軸」で捉えられ、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」かもしれない (Ryoo / Han 2026)。小児複雑性の起炎菌は大腸菌が最多だが、確実性は低い (Almeida-Gomes 2026)
 - 診断は「**一つの検査で決めない・一時点で決めない**」へ収束: Alvarado は単独使用不可 (特異度57-76%)、連続型 pARC > 固定加点式、さらに早期の曖昧例は**観察して測り直す** — 単発 AAS の AUROC 0.629 が最終 AAS 0.936・∆AAS 0.932 に跳ねる (Tchouala Tchakoute / Lastunen 2026)
 - 画像は院内 CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用。土俵は精度競争から**「どの場で誰が振り分け、過剰 (画像・紹介) をどう減らすか」**へ移り、一次医療での予測ルール+CRP POCT 実装 RCT が進行中 (Hogervorst 2026, NCT06762275)
 - 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡 (中央値33.6ヶ月) では NOM 失敗38.9%・RCT限定44.4%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)
-- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%・フォロー標準未確立)。蔵書3本→37本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
+- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%・フォロー標準未確立)。蔵書3本→38本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -116,6 +116,16 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 進んでいる — 疼痛管理・感染予防・退院支援を担う**看護ケアの evidence-based 統合** (Stansell
 2026) もこの列に加わった。
 
+抗菌薬を「どれだけ短く」使うかの議論の手前には、「何を狙うか」という問いがある。小児複雑性虫垂炎の
+起炎菌を集めた系統的レビュー (Almeida-Gomes 2026, 12年間・観察コホート23研究) によれば、**最多は
+大腸菌 (Escherichia coli)** で、Streptococcus 属・Bacteroides 属・Pseudomonas 属・Enterococcus 属・
+Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas・Enterococcus まで視野に入れる
+経験的治療の前提を、小児複雑性に絞って並べ直した形になる。単回投与で足りるかを問う stewardship
+(Ozen 2026) や、術後膿瘍の予防 (Borca 2026) の議論もこの菌像を土台にしている。ただし著者自身が
+**エビデンスの確実性は低い**とし、検体採取・微生物学的手法・アウトカム報告の異質性が大きいため、
+研究間の比較も一般化も難しい。抄録からは感受性パターンも読み取れないので、レジメン選択を
+直接動かす知見ではなく「狙う相手の大まかな目録」として読むのが妥当である。
+
 ### 疫学・病態
 生涯リスクは 6-7% (Vidarsdottir 2025) 〜 7-9% (Kleindienst 2026) と資料間で幅があり、ピークは
 10-19歳。従来から地域差・食事・社会経済状態の関与が示唆されてきたが、この食事仮説を機序に
@@ -123,7 +133,12 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 内腔閉塞説を置き換えるのでなく補完する病態モデル。この見取り図と響き合う形で、**非複雑性と
 複雑性ではサイトカインプロファイルが明確に異なる** (複雑性で IL-6・HGF・MCP-1 上昇、Han 2026,
 前向き113例) ことが示され、「複雑性は非複雑性の単なる進行形ではなく別の病気」という見方 —
-非複雑性で NOM が成立する理論的土台 — を免疫学的に補強した。小児では栄養状態と穿孔リスクの
+非複雑性で NOM が成立する理論的土台 — を免疫学的に補強した。マイクロバイオーム軸を「どの菌が
+いるか」の水準で確かめる試みも現れた (Almeida-Gomes 2026, 小児複雑性で大腸菌が優位) が、量的に
+統合されたのは**培養法で患者単位の有病率を報告した研究に限られる**。培養で見えるのは「育つ菌」の
+目録であって、Ryoo 2026 が描く腸内細菌叢の群集構造の変化と同じものを測っているわけではない —
+病態モデルの「マイクロバイオーム」と臨床検体の「起炎菌」の間には、まだ橋が架かっていない。
+小児では栄養状態と穿孔リスクの
 関係も検討され、**肥満・BMI 単独は穿孔を予測せず、低体重とアルブミン/プレアルブミン系指標の
 ほうが複雑性と一貫して関連**する (Borca 2026, 14研究)。穿孔・膿瘍形成への進展があるため迅速な
 診断が予後を分ける、という臨床的要諦は不変。なお「急性腹痛の子どもの大半は自然軽快する良性
@@ -145,6 +160,8 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 - interval appendectomy 適応を決める年齢閾値・画像所見の定量化 (腫瘍リスクの層別)
 - 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
 - 糞石以外の失敗予測因子 — IL-6 (+HGF/MCP-1) 等バイオマーカー×画像×AI による術前の複雑性判別
+- 起炎菌研究の標準化 — 検体採取・培養/配列解析の手法を揃えた多施設研究 (Almeida-Gomes 2026 が要請)。
+  感受性データと結びつけて小児複雑性の経験的レジメンを根拠づけられるか、腸内細菌叢の変化 (Ryoo 2026) と臨床検体の菌像をつなげられるか
 - AI 診断モデルの多施設・前向き外部検証と実装 (EHR/PACS 統合)
 - 一次医療の予測ルール+CRP POCT が実際に過剰紹介を減らし遅延診断を増やさないか — Hogervorst 2026 (NCT06762275) の結果待ち。ゲートキーパー制のないフリーアクセス医療 (日本を含む) への外挿可能性は未検討
 <!-- LN:SYNTHESIS:END -->
@@ -188,20 +205,26 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 35. **Tchouala Tchakoute P, Iuhas A, Nechita VI et al.** Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review. *Pediatr Rep* 2026;18(4):115. PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115) — [PMC13516179](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13516179/) (無料全文)
 36. **Kahana N, Boaz E, Emile SH et al.** Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis — a systematic review and meta-analysis. *Am J Surg* 2026;261:117203. PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
 37. **Lastunen KS, Leppäniemi AK, Mentula PJ.** Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis. *Eur J Trauma Emerg Surg* 2026;52(1). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x) — [PMC13541895](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13541895/) (無料全文)・DIAMOND trial [NCT02742402](https://clinicaltrials.gov/study/NCT02742402) の観察群二次解析
+38. **Almeida-Gomes RF, Massini RB, Bronzato JD, Gomes BPFA, Garcia IGO.** Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis. *Eur J Clin Microbiol Infect Dis* 2026 (2026-10-08 オンライン公開). PMID [42848117](https://pubmed.ncbi.nlm.nih.gov/42848117/) / [DOI](https://doi.org/10.1007/s10096-026-05662-7)
 
 > ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便、
-> No.37 は 2026-09-13 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
+> No.37 は 2026-09-13 便、No.38 は 2026-10-11 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
 > 収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に
 > 別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34)・2026-08-29 便
-> (No.35-36)・2026-09-13 便 (No.37) は PMID・DOI とも収集ログと PubMed 照合値が一致 — **3便連続で混入なし**。
-> `living_notes_update.py` の DOI 抽出 (参考文献欄からの誤拾い疑い) は形式上まだ未修理だが、混入は第1・第2便
-> (2026-08-07) に限局しており、収集ロジックかソース側の変化で自然解消した可能性が高い。次便も一致すれば
-> 「修理不要・監視のみ」に格下げしてよい。
+> (No.35-36)・2026-09-13 便 (No.37)・2026-10-11 便 (No.38) は PMID・DOI とも収集ログと PubMed 照合値が一致 —
+> **4便連続で混入なし**。混入は第1・第2便 (2026-08-07) に限られ、収集ロジックかソース側の変化で自然に解消したと
+> 判断し、前便の取り決めどおり `living_notes_update.py` の DOI 抽出は**「修理不要・監視のみ」に格下げ**する
+> (今後も編み込み時の PubMed 照合は続け、再発したら修理に戻す)。
 
 <!-- LN:BIB:END -->
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-10-11 収集分 (1件・編み込み済み)
+
+- **Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis.** — Almeida-Gomes RF, Massini RB, Bronzato JD et al. *Eur J Clin Microbiol Infect Dis* (2026). PMID [42848117](https://pubmed.ncbi.nlm.nih.gov/42848117/) / [DOI](https://doi.org/10.1007/s10096-026-05662-7)
+  - 抄録: Appendicitis, characterized by inflammation of the vermiform appendix, remains the leading cause of acute abdomen worldwide. Emerging evidence suggests that alterations in the intestinal microbiota may play a role in its pathogenesis. This study aimed to analyze the prevalence and microbiological pr…
 
 ### ✅ 2026-09-13 収集分 (1件・編み込み済み)
 
@@ -282,5 +305,5 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 - **Artificial intelligence for acute appendicitis diagnosis: A systematic review of current evidence, challenges, and future directions.** — Ismayilzada K *Medicine (Baltimore)* (2026). PMID [41861187](https://pubmed.ncbi.nlm.nih.gov/41861187/) / [DOI](https://doi.org/10.1097/md.0000000000048094)
   - 抄録: Acute appendicitis remains one of the most common surgical emergencies, yet its diagnosis continues to pose challenges due to overlapping clinical presentations and variable imaging findings. Artificial intelligence (AI) has recently emerged as a promising tool to enhance diagnostic accuracy, assist…
 - **Diagnostic Accuracy of Point-of-Care Ultrasound (POCUS) for Suspected Acute Appendicitis in Pediatric and Adult Emergency Departments: A Systematic Review and Meta-Analysis.** — Kamal MM, Al Reshidi BM, Bedier HM et al. *Cureus* (2026). PMID [41841098](https://pubmed.ncbi.nlm.nih.gov/41841098/) / [DOI](https://doi.org/10.7759/cureus.103503)
-  - 抄録: Acute appendicitis is a common surgical emergency that often requires diagnostic imaging. While computed tomography (CT) is highly accurate, it involves ionizing radiation and potential delays. Point-of-care ultrasound (POCUS), performed by emergency physicians, offers a rapid, radiation-free altern…
+  - 抄録: Postpone-free. Acute appendicitis is a common surgical emergency that often requires diagnostic imaging. While computed tomography (CT) is highly accurate, it involves ionizing radiation and potential delays. Point-of-care ultrasound (POCUS), performed by emergency physicians, offers a rapid, radiation-free alternative…
 <!-- LN:LOG:END -->

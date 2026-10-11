@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-10-04
+updated: 2026-10-11
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-04 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-11 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,19 @@ updated: 2026-10-04
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-11 収集分 (5件・織り待ち)
+
+- **Status Of GLP-1 drugs and their application in treating substance use disorders: A systematic review.** — Inban P, Agrawal A, Rushika K et al. *Dis Mon* (2026). PMID [42855378](https://pubmed.ncbi.nlm.nih.gov/42855378/) / [DOI](https://doi.org/10.1016/j.disamonth.2026.102231)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) have an exciting future potential beyond metabolic disorders. This review gauges their effectiveness, safety, and clinical role in the management of substance use disorders in diverse populations. A PRISMA-guided systematic review searched PubMed,…
+- **GLP-1 Receptor Agonist Therapy for Glucocorticoid-Induced Dysglycaemia: A Systematic Review.** — Jędrasek A, Ulicka W, Lisowska K et al. *Diabetes Obes Metab* (2026). PMID [42850058](https://pubmed.ncbi.nlm.nih.gov/42850058/) / [DOI](https://doi.org/10.1111/dom.71418)
+  - 抄録: Glucocorticoids (GCs) commonly induce glycaemic disturbance, from transient steroid-induced hyperglycaemia to steroid-induced diabetes and contribute to post-transplant diabetes mellitus (PTDM). Insulin remains the standard treatment for GC-induced glycaemic dysregulation. Glucagon-like peptide-1 re…
+- **GLP-1 receptor agonists for obstructive sleep apnea: a meta-analysis of randomized controlled trials.** — Carvalhal G, Mora MMR, Peralta-Jiménez GA et al. *Sleep Breath* (2026). PMID [42837024](https://pubmed.ncbi.nlm.nih.gov/42837024/) / [DOI](https://doi.org/10.1007/s11325-026-03826-5)
+  - 抄録: Weight reduction is recommended in all overweight and obese patients with obstructive sleep apnea (OSA). Glucagon-like peptide-1 (GLP-1) receptor agonists-based therapies have demonstrated clinical benefits in reducing weight and could potentially improve OSA outcomes. We aim to analyze the efficacy…
+- **Comparative Efficacy and Safety of Liraglutide Versus Metformin in Women With Polyendocrine Metabolic Ovarian Syndrome (PMOS): A Systematic Review and Meta-Analysis of Randomized Controlled Trials.** — Banerjee I, Krissheeven M, Pandey N et al. *Cureus* (2026). PMID [42830876](https://pubmed.ncbi.nlm.nih.gov/42830876/) / [DOI](https://doi.org/10.7759/cureus.115758)
+  - 抄録: Polyendocrine metabolic ovarian syndrome (PMOS), previously known by the name 'polycystic ovary syndrome (PCOS),' is a common and complex endocrine-metabolic disorder affecting approximately one in eight women. PMOS is increasingly regarded as a multisystem disorder rather than only a gynaecological…
+- **Impact of Glucagon-Like Peptide-1 Receptor Agonists on Mental Health: A Systematic Review of Psychiatric Safety and Antidepressant Potential.** — Quadir A, Devi R, Jad Allah B et al. *Cureus* (2026). PMID [42829595](https://pubmed.ncbi.nlm.nih.gov/42829595/) / [DOI](https://doi.org/10.7759/cureus.115703)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) are increasingly used for type 2 diabetes mellitus (T2DM) and obesity, but concerns about their mental health effects have been raised. Early safety reports linked them to suicidal thoughts and worsening depression; however, evidence remained mixe…
 
 ### ⏳ 2026-10-04 収集分 (5件・織り待ち)
 

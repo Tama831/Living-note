@@ -1,7 +1,7 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-09-13
+updated: 2026-10-11
 lang: en
 ---
 
@@ -9,7 +9,7 @@ lang: en
 
 > **Live translated mirror** — the author's working note is the Japanese
 > [example-appendicitis.ja.md](example-appendicitis.ja.md); each weekly collection & re-weave is
-> machine-translated into English here by the weaver AI. **Last check: 2026-09-13 JST.**
+> machine-translated into English here by the weaver AI. **Last check: 2026-10-11 JST.**
 > **The content is an AI-woven summary of the literature — do not take it at face value.**
 > Clinical decisions must follow the original papers and the judgment of treating
 > clinicians. ⏳ = collected, awaiting weave / ✅ = woven into the body.
@@ -18,168 +18,53 @@ lang: en
 
 ## 📌 Five-line summary
 <!-- LN:SUMMARY:START -->
-- Appendicitis is the most common surgical acute abdomen. Lifetime risk 6-9%, peak at 10-19 years. Beyond the "nutrition-microbiome-genetic axis," uncomplicated and complicated disease may be "two different diseases" with distinct cytokine profiles (Ryoo / Han 2026)
-- Diagnosis is converging on "**don't decide with one test, don't decide at one time point**": Alvarado cannot be used alone (specificity 57-76%), the continuous pARC model beats fixed point-scoring, and for early equivocal cases the move is to **observe and re-measure** — the AUROC of a single AAS, 0.629, jumps to 0.936 for the final AAS and 0.932 for ∆AAS (Tchouala Tchakoute / Lastunen 2026)
-- On imaging, in-hospital CT is strongest, MRI is the pillar in pregnancy (sensitivity 0.95 / specificity 0.97), and POCUS is rule-in only. The arena has shifted from a contest over accuracy to **"who triages, and where, and how to cut overuse (imaging, referral)"**, with an implementation RCT of a prediction rule + CRP POCT in primary care now underway (Hogervorst 2026, NCT06762275)
-- For non-perforated disease, surgery vs antibiotics is shared decision-making — but **the picture changes along the time axis**: with follow-up beyond 2 years (median 33.6 months), NOM failure is 38.9%, 44.4% when restricted to RCTs, and 36.3% end up undergoing appendectomy; meanwhile the cost advantage of €1535 holds even in the long run (Kahana 2026)
-- For complicated disease, the decision axis for interval appendectomy has moved to "age-linked neoplasm risk" (colorectal neoplasm after appendicitis in those aged 40 or older: 0.5-34.6%; no established follow-up standard). The library has gone from 3 to 37 papers — a pace that demands a "living review" of the same kind as the living evidence map (Kleindienst 2026)
+- Appendicitis is the most common surgical acute abdomen. Lifetime risk is 6-9%, peaking at ages 10-19. Its pathogenesis can be framed as a "nutrition-microbiome-genetic axis," and uncomplicated and complicated disease, with their distinct cytokine profiles, may be "two different diseases" (Ryoo / Han 2026). In pediatric complicated appendicitis, *E. coli* is the most frequent causative organism, though certainty is low (Almeida-Gomes 2026)
+- Diagnosis is converging on "**don't decide on a single test, and don't decide at a single time point**": Alvarado must not be used alone (specificity 57-76%), the continuous pARC model outperforms fixed-point additive scores, and early equivocal cases should be **observed and re-scored** — a single AAS has an AUROC of 0.629, which jumps to 0.936 for the final AAS and 0.932 for ∆AAS (Tchouala Tchakoute / Lastunen 2026)
+- For imaging, in-hospital CT is the strongest, MRI is the choice in pregnancy (sensitivity 0.95 / specificity 0.97), and POCUS is for rule-in only. The arena has shifted from an accuracy contest to **"in which setting, who triages, and how to reduce overuse (imaging, referral)"**, and an RCT implementing a prediction rule + CRP POCT in primary care is under way (Hogervorst 2026, NCT06762275)
+- Surgery vs antibiotics for non-perforated disease is a matter of shared decision-making, but **the picture changes along the time axis** — with >2 years of follow-up (median 33.6 months), NOM failure is 38.9% (44.4% in RCTs only) and 36.3% eventually undergo appendectomy, while the cost advantage of €1535 holds even in the long term (Kahana 2026)
+- For complicated disease, the decision axis for interval appendectomy is moving toward "age-linked neoplasm risk" (colorectal neoplasia after appendicitis in patients ≥40: 0.5-34.6%; no follow-up standard established). With the library growing from 3 to 38 papers, the pace calls for a "living review" of the same kind as the living evidence map (Kleindienst 2026)
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 Cross-cutting synthesis
 <!-- LN:SYNTHESIS:START -->
 ### Diagnosis
-The conclusion of the AHRQ systematic review that comprehensively covered diagnostic accuracy for right
-lower quadrant pain (Dahabreh 2015, over 1000 studies) — **"symptoms, physical findings, and blood tests
-are not powerful enough on their own; confirmation comes from imaging"** — is still the skeleton. CT is the
-strongest across every target population, with sensitivity 0.96-1.0 and specificity 0.91-1.0. In pregnancy,
-MRI is the alternative pillar (Danawar 2026) — and that position has now gained **quantitative backing of
-sensitivity 0.95 and specificity 0.97 (AUC 0.961)** in an updated meta-analysis of 34 studies (Habiro Alves
-2026), reaching the point of being recommended as "the standard second-line choice after inconclusive
-ultrasound." The familiar caveat that "US is operator-dependent" has been quantified in the POCUS era:
-POCUS performed by emergency physicians has sensitivity 0.78 and specificity 0.89, meaning **a positive
-scan can be used to rule in but a negative scan cannot exclude**, and accuracy shifts with whether the
-operator has fellowship training (Kamal 2026, meta-analysis of 15 studies).
+The conclusion of the AHRQ systematic review that comprehensively covered diagnostic accuracy for right lower quadrant pain (Dahabreh 2015, >1000 studies) — **"symptoms, physical findings, and blood tests are insufficient on their own; confirmation comes from imaging"** — remains the backbone. CT is the strongest across all populations, with sensitivity 0.96-1.0 and specificity 0.91-1.0. In pregnancy, MRI is the main alternative (Danawar 2026) — a position that gained **quantitative support of sensitivity 0.95 and specificity 0.97 (AUC 0.961)** in an updated meta-analysis of 34 studies (Habiro Alves 2026), which led to its recommendation as "the standard second-line modality after an inconclusive ultrasound." The observation that "US is operator-dependent" has been quantified in the POCUS era: POCUS performed by emergency physicians has a sensitivity of 0.78 and specificity of 0.89, so **a positive result can be used to rule in, but a negative result cannot rule out**, and accuracy varies with fellowship training (Kamal 2026, meta-analysis of 15 studies).
 
-The standing of clinical scores has likewise been clarified, from "adjunct" to **"not to be used alone — one
-component of a stepwise, multimodal approach."** According to a review comparing Alvarado with alternative
-tools in children (Tchouala Tchakoute 2026, literature from 2016-2026), Alvarado has good sensitivity but
-**specificity of only 57-76% at a cutoff of ≥7**, and so cannot stand alone. Among pediatric-specific scores,
-**PAS wins on sensitivity and AIR on specificity, and AIR is also strong at discriminating complicated
-disease such as gangrene, phlegmon, and perforation**. Furthermore, **a continuous risk model (pARC)
-outperforms fixed point-scoring in pediatric cohorts** — a move that shifts scoring from "adding up points"
-to "estimating a probability." Layering CRP, the neutrophil-to-lymphocyte ratio (NLR), and selective
-ultrasound on top of this, and deploying CT only for indeterminate cases, is the optimal solution — that is
-this review's conclusion.
+The role of clinical scores has also been clarified, from "adjunct" to **"never to be used alone; one component of a stepwise multimodal approach."** According to a review comparing Alvarado with alternative tools in children (Tchouala Tchakoute 2026, literature from 2016-2026), Alvarado has good sensitivity but **specificity of only 57-76% at a cutoff of ≥7**, so it cannot be used on its own. Among pediatric-specific scores, **PAS wins on sensitivity and AIR on specificity, and AIR is also strong at discriminating complicated disease such as gangrene, phlegmon, and perforation**. Moreover, **continuous risk models (pARC) outperform fixed-point additive scores in pediatric cohorts** — a move from "adding up points" to "estimating probability." The review concludes that the optimal approach is to layer CRP, the neutrophil-to-lymphocyte ratio (NLR), and selective ultrasound on top of this, reserving CT for indeterminate cases.
 
-The 2026-09 arrival adds **a dimension of time** to this move away from scores used alone. According to a
-secondary analysis of the observation arm of the DIAMOND trial, restricted to adults with early, difficult-to-
-judge presentations (early equivocal) (Lastunen 2026, 83 patients), **a single Adult Appendicitis Score (AAS)
-at presentation has an AUROC of 0.629 (95%CI 0.498-0.760), barely usable**, whereas the **final AAS
-re-scored after a short period of observation reaches 0.936 (0.886-0.987), and ∆AAS, the change in score
-during observation, 0.932 (0.868-0.996)** (∆CRP sits in between at 0.796). Cut at the thresholds given in the
-abstract (low ≤ -2 / intermediate -1 to 0 / high ≥ 1), the **negative predictive value in the low-probability
-group is 97% and the positive predictive value in the high-probability group is 94%**. In other words, for
-early equivocal abdominal pain there are situations where **"measure again and look at the difference"**
-works better than adding another test — and that is simultaneously a strategy for **reducing overdiagnosis
-and radiation exposure from early CT**. That said, this is a secondary analysis of a single trial with n=83, the
-thresholds were derived from the ROC on the same data (no external validation), and the optimal observation
-interval is not specified. This two-step migration of scoring — from "adding up points" → "estimating a
-probability" → **"a function of time"** — is another face of the same design philosophy as the "don't decide
-with one test" stance of the primary-care strategy described below.
+The 2026-09 arrival added **the dimension of "time"** to this move away from stand-alone scores. According to a secondary analysis of the DIAMOND trial observation group limited to early, equivocal adult cases (Lastunen 2026, 83 patients), **a single Adult Appendicitis Score (AAS) at presentation has an AUROC of 0.629 (95% CI 0.498-0.760), which is barely useful**, whereas the **final AAS re-scored after a short period of observation rises sharply to 0.936 (0.886-0.987), and the change in score during observation, ∆AAS, to 0.932 (0.868-0.996)** (∆CRP was intermediate at 0.796). Using the thresholds given in the abstract (low ≤ -2 / intermediate -1 to 0 / high ≥ 1), **the negative predictive value in the low-probability group is 97% and the positive predictive value in the high-probability group is 94%**. In other words, for early, equivocal abdominal pain there are situations where **"measuring again and looking at the difference"** works better than adding tests — and this is at the same time a strategy for **reducing overdiagnosis and radiation exposure** from early CT. However, this is a secondary analysis of a single trial with n=83; the thresholds were derived from ROC analysis on the same data (no external validation), and the optimal observation time is not stated. This two-step move of scores — from "adding up points" → "estimating probability" → "**a function of time**" — is another face of the same design philosophy as the "don't decide on a single test" stance of the primary care strategy described below.
 
-New biomarker forces have also assembled: IL-6, promising in children (Tan & Bo 2026), is now backed by
-prospective adult data — in an analysis of 48 cytokines, complicated appendicitis showed significantly higher
-IL-6, HGF, and MCP-1, with IL-6 alone predicting complicated disease at AUC 0.785 (Han 2026) — followed by
-AI models (AUC 0.85-0.96, with CT deep learning most accurate but predominantly retrospective, single-
-center, and lacking external validation; Ismayilzada 2026).
+New biomarkers are also coming into place: IL-6, considered promising in children (Tan & Bo 2026), has been supported by prospective adult data — in an analysis of 48 cytokines, complicated appendicitis had significantly higher IL-6, HGF, and MCP-1, and IL-6 alone predicted complicated disease with an AUC of 0.785 (Han 2026) — followed by AI models (AUC 0.85-0.96; CT deep learning has the highest accuracy, but studies are mostly retrospective and single-center with insufficient external validation, Ismayilzada 2026).
 
-However, this accuracy debate has consistently **presumed patients who have already reached a hospital or
-ER**. The 2026-08 arrival moves the arena upstream — to **the entrance of primary care**. In Dutch general
-practice, a hybrid type 1 (effectiveness × implementation) cluster RCT has begun, comparing usual care with a
-diagnostic strategy bundling an externally validated 7-item prediction rule, CRP POCT, and risk-stratified
-management advice (Hogervorst 2026, NCT06762275). Children aged 4-18 with acute abdominal pain (onset
-within 7 days) are stratified into low, intermediate, and high risk; low risk gets safety netting, high risk
-immediate referral, and only the intermediate group is triaged with CRP POCT (CRP <10 mg/L → safety netting;
-10-50 mg/L → either re-evaluation or immediate referral, chosen by the GP's clinical judgement together with
-the child's and parents' preference; ≥50 mg/L → immediate referral). What is new is that the primary outcome
-is neither sensitivity nor specificity but **"referral efficiency" = the proportion of children without appendicitis
-who avoided referral over 30 days (target 88%→95% among 566 children without appendicitis)** — the question
-posed is not a competition over imaging accuracy but a primary-care one: **can over-referral be reduced without
-raising the threshold for missed cases?** Running an implementation evaluation (reach / adoption / implementation
-/ maintenance) in parallel is likewise a pre-emptive move against the "accuracy achieved but never lands in
-practice" problem. Results are not yet reported (protocol stage). This structure — **placing low risk into safety
-netting to make time an ally, then triaging at re-evaluation** — is continuous with Lastunen 2026's "observe and
-re-measure," different settings (primary care vs ER) notwithstanding: both answer in the same way, by **using
-time to cut overuse (referral, imaging)**.
+However, this accuracy debate has consistently **assumed "patients who have already reached the hospital/ER."** The 2026-08 arrival moves the arena to the stage before that — **the entrance of primary care**. A hybrid type 1 (effectiveness × implementation) cluster RCT has begun in Dutch general practice, comparing usual care with a diagnostic strategy that bundles an externally validated 7-item prediction rule + CRP POCT + risk-stratified management advice (Hogervorst 2026, NCT06762275). Children aged 4-18 with acute abdominal pain (onset within 7 days) are stratified into low, intermediate, and high risk: low risk receives safety netting, high risk is referred immediately, and only intermediate risk is triaged by CRP POCT (CRP <10 mg/L → safety netting; 10-50 mg/L → reassessment or immediate referral, chosen by the GP's clinical judgment and the preferences of the child/parents; ≥50 mg/L → immediate referral). What is new is that the primary outcome is neither sensitivity nor specificity but **"referral efficiency" = the proportion of children without appendicitis who avoided referral for 30 days (target 88%→95% among 566 children without appendicitis)** — rather than a contest of imaging accuracy, it poses a primary-care question: **can over-referral be reduced without raising the threshold for missed diagnoses?** Running an implementation evaluation (reach / adoption / implementation / maintenance) in parallel also pre-empts the problem of "accuracy achieved but never reaching practice." Results have not yet been reported (protocol stage). This structure — **placing low risk under safety netting to make time an ally, and triaging on reassessment** — is continuous with Lastunen 2026's "observe and re-score," even though the setting differs (primary care vs ER): both give the same answer of **trimming overuse (referral, imaging) with time**.
 
-Differentials and pitfalls have also accumulated: pinworm (Enterobius vermicularis) in children mimicking
-appendicitis (Jaffry 2026), a misdiagnosed case of idiopathic encapsulating peritoneal sclerosis (abdominal
-cocoon) (Martzivanou 2026), and the fact that **stump appendicitis can occur even after a previous
-appendectomy** (Gupta 2026, 25-year review) — "already had an appendectomy" does not rule appendicitis out.
+Differential diagnoses and pitfalls have also accumulated: pinworm (*Enterobius vermicularis*) in children mimics appendicitis (Jaffry 2026), a misdiagnosed case of idiopathic encapsulating peritoneal sclerosis (abdominal cocoon) (Martzivanou 2026), and **stump appendicitis can occur even after a prior appendectomy** (Gupta 2026, 25-year review) — "already had an appendectomy = appendicitis excluded" does not hold.
 
 ### Treatment
-**Uncomplicated (non-perforated)**: both appendectomy and antibiotics-first are options, with shared
-decision-making informed by the presence or absence of an appendicolith as the standard form (Talan &
-Di Saverio 2021) — that skeleton is unchanged, but the 2026 arrivals deepened the debate in three
-directions. (1) A meta-analysis of RCTs of antibiotics vs surgery has appeared for **children and
-adolescents** as well (Allocati 2026), though it drew a comment questioning the robustness of the
-conclusion once prediction intervals are considered (Nasri & Dziri 2026). (2) Going a step further, a
-**meta-analysis of antibiotics vs observation without medication, asking whether the antibiotics
-themselves are needed** has emerged (Lin 2026), followed by a comparison of optimal pediatric
-regimens (Kakar 2026). (3) On **cost-effectiveness**, conservative treatment is superior (surgery costs
-16.5-83% more, Farhad 2026). Patient selection and algorithms are being organized in a cluster of
-narrative reviews (Rincon Mora / Baana / Lehovsky & Hall / Hong for children, all 2026), and in children
-**endoscopic retrograde appendicitis therapy (ERAT) is starting to be discussed as a third option
-alongside surgery and antibiotics** (Hong 2026). Because the evidence is growing too fast, an evidence
-map tracking the whole field as a living systematic review (Kleindienst 2026) has even appeared. Surgery
-still holds first-line position, with laparoscopy the standard (Vidarsdottir 2025).
+**Non-perforated (uncomplicated)**: Both appendectomy and antibiotics-first are options, and the standard approach is shared decision-making informed by the presence or absence of an appendicolith (Talan & Di Saverio 2021) — this framework is unchanged, but the 2026 arrivals deepened the debate in three directions. (1) An RCT meta-analysis of antibiotics vs surgery has appeared for **children and adolescents** (Allocati 2026), but it drew the comment that, once prediction intervals are taken into account, the robustness of its conclusion is questionable (Nasri & Dziri 2026). (2) Going a step further, a **meta-analysis of antibiotics vs observation without antibiotics, asking "are antibiotics themselves needed?"** (Lin 2026) has appeared, followed by a comparison of optimal pediatric regimens (Kakar 2026). (3) On **cost-effectiveness**, conservative treatment is favored (surgery costs 16.5-83% more, Farhad 2026). Patient selection and algorithms are being organized by a group of narrative reviews (Rincon Mora / Baana / Lehovsky & Hall / Hong for children, all 2026), and in children **endoscopic retrograde appendicitis therapy (ERAT) has begun to be discussed as a third option after surgery and antibiotics** (Hong 2026). The evidence is growing so fast that an evidence map tracking the whole field as a living systematic review has even appeared (Kleindienst 2026). Surgery still holds the first-line position, with laparoscopy as the standard (Vidarsdottir 2025).
 
-And now **a fourth axis, time**, has joined this debate. Most previous RCTs spoke of non-inferiority at
-1 year, but **a meta-analysis restricted to studies with follow-up of 2 years or more** (Kahana 2026, 1635
-studies screened down to 9 studies, 3883 patients, of which 3 were RCTs and 5 were pediatric; median
-follow-up 33.6 months, maximum 312 months) returns a different picture: **long-term NOM failure rate
-38.9% (95%CI 31.1-46.7), 44.4% (41.4-47.4) when restricted to RCTs, and 36.3% (28.9-43.7) eventually
-undergoing appendectomy after NOM**. In other words, the "80% success at 1 year" story is **replaced,
-over a horizon of several years, by "around 40% end up having surgery after all"** — the very numbers
-handed to patients in SDM change. Cost, on the other hand, keeps favouring NOM even long term
-(**difference €1535, 95%CI -1892 to -1178**), extending Farhad 2026's "capped at 12 months" limitation by
-one notch. Appendiceal neoplasms found during NOM run at about 0.3%, connecting to the neoplasm-risk
-axis discussed below. That said, 6 of the studies are non-randomized and the definition of "failure" varies
-between studies, so this 40% figure should be kept in mind as **a coarse metric unaccompanied by the
-severity of recurrence, quality of life, or satisfaction**.
+And **a fourth axis — the time axis** — has been added to this debate. Most previous RCTs have spoken of non-inferiority at 1 year, but **a meta-analysis restricted to studies with ≥2 years of follow-up** (Kahana 2026; 1635 studies screened, 9 studies and 3883 patients included, of which 3 were RCTs and 5 pediatric; median follow-up 33.6 months / maximum 312 months) returns a different picture: **long-term NOM failure is 38.9% (95% CI 31.1-46.7), 44.4% (41.4-47.4) when limited to RCTs, and the proportion proceeding to appendectomy after NOM is 36.3% (28.9-43.7)**. In other words, the story of "80% success at 1 year" is **replaced over a multi-year horizon by the explanation that "around 40% end up having surgery after all"** — the very numbers handed to patients in SDM change. Meanwhile, the cost advantage of NOM is maintained in the long term (**difference €1535, 95% CI -1892 to -1178**), extending by one step the "12-month limit" of Farhad 2026. Appendiceal neoplasms found during NOM are about 0.3%, connecting to the neoplasm-risk axis discussed below. However, with 6 non-RCT studies mixed in and the definition of "failure" varying across studies, it should be kept in mind that this figure of 40% is **a crude indicator that does not reflect recurrence severity, QOL, or satisfaction**.
 
-**Complicated**: in children, laparoscopy is safe even in cases complicated by abscess (Wang 2026,
-prospective cohort). After conservative treatment, **the decision axis for interval appendectomy has moved
-from "recurrence prevention" to "selection based on age-linked neoplasm risk plus imaging findings"**
-(Gosavi 2026; for children, the APSA systematic review Sulkowski 2026). This neoplasm-risk axis extends
-beyond interval appendectomy as well: **in those aged 40 or older, detection rates of colorectal neoplasm
-after appendicitis of 0.5-34.6% and risk increases of 1.2-38.5-fold** have been reported (Spota 2026,
-scoping review of 17 studies), but all are retrospective and fall short of supporting a recommended
-follow-up standard, stopping at a proposed framework for prospective research. In perioperative
-management, single-dose antibiotics may be equivalent to continued postoperative therapy in
-non-perforated gangrenous appendicitis (Ozen 2026, antibiotic stewardship); postoperative intra-abdominal
-abscess remains the major complication in pediatric perforated disease (Borca 2026); and an RCT of a
-modified ERAS protocol shortened length of stay (Calderón-Alvarado 2026) — optimization of "after the cut"
-is advancing, and an **evidence-based synthesis of nursing care** covering pain management, infection
-prevention, and discharge support (Stansell 2026) has joined this line.
+**Complicated**: In children, laparoscopy is safe even with abscess (Wang 2026, prospective cohort). **The decision axis for interval appendectomy after conservative treatment is shifting from "preventing recurrence" to "age-linked neoplasm risk + selection based on imaging findings"** (Gosavi 2026; for children, the APSA systematic review, Sulkowski 2026). This neoplasm-risk axis also extends beyond interval appendectomy: **in patients aged ≥40, the detection rate of colorectal neoplasia after appendicitis is reported as 0.5-34.6%, with a 1.2- to 38.5-fold increase in risk** (Spota 2026, scoping review of 17 studies), but all studies are retrospective, so no recommendation on a follow-up standard could be made, and the review stops at proposing a framework for prospective studies. In perioperative management, optimization of "after the cut" is progressing: single-dose antibiotics may be equivalent to continued postoperative therapy in non-perforated gangrenous appendicitis (Ozen 2026, antibiotic stewardship), postoperative intra-abdominal abscess remains the main complication of pediatric perforated appendicitis (Borca 2026), and an RCT of a modified ERAS protocol shortened length of stay (Calderón-Alvarado 2026) — **the evidence-based integration of nursing care** covering pain management, infection prevention, and discharge support (Stansell 2026) has also joined this line.
+
+Before the debate over "how short" antibiotics can be used, there is the question of "what to target." According to a systematic review compiling causative organisms in pediatric complicated appendicitis (Almeida-Gomes 2026, 12 years, 23 observational cohort studies), **the most frequent is *Escherichia coli***, followed by *Streptococcus*, *Bacteroides*, *Pseudomonas*, *Enterococcus*, and *Klebsiella* species. This effectively re-lays, specifically for pediatric complicated disease, the premise of empirical therapy centered on Enterobacteriaceae and anaerobes, with *Pseudomonas* and *Enterococcus* also in view. The stewardship question of whether a single dose suffices (Ozen 2026) and the discussion of preventing postoperative abscess (Borca 2026) also rest on this microbial picture. However, the authors themselves rate **the certainty of evidence as low**, and the large heterogeneity in specimen collection, microbiological methods, and outcome reporting makes both cross-study comparison and generalization difficult. Susceptibility patterns cannot be read from the abstract either, so it is reasonable to read this not as a finding that directly changes regimen selection but as "a rough inventory of the targets."
 
 ### Epidemiology and pathophysiology
-Lifetime risk ranges across sources from 6-7% (Vidarsdottir 2025) to 7-9% (Kleindienst 2026), with a peak at
-10-19 years. Regional variation, diet, and socioeconomic status have long been implicated, and now a review
-has appeared that pushes this dietary hypothesis into mechanism and formulates it as **the "nutrition-
-microbiome-genetic axis"** (Ryoo 2026) — a pathophysiological model that complements rather than replaces
-the luminal-obstruction theory. Resonating with that overview, **cytokine profiles have been shown to differ
-clearly between uncomplicated and complicated disease** (IL-6, HGF, and MCP-1 elevated in complicated
-disease; Han 2026, prospective, 113 patients), immunologically reinforcing the view that "complicated
-appendicitis is not merely a progressed form of uncomplicated disease but a different disease" — the
-theoretical foundation on which NOM works for uncomplicated cases. In children, the relationship between
-nutritional status and perforation risk has also been examined: **obesity and BMI alone do not predict
-perforation, whereas low body weight and albumin/prealbumin-type indicators are more consistently
-associated with complicated disease** (Borca 2026, 14 studies). The clinical essential — that because
-progression to perforation and abscess formation occurs, prompt diagnosis determines prognosis — is
-unchanged. And once one takes into account the primary-care denominator that "most children with acute
-abdominal pain have a benign, self-limiting condition" (the referral efficiency of usual care assumed by
-Hogervorst 2026 is 88%), the very gap between prevalence as discussed in hospital populations and
-prevalence as seen in primary care becomes a design variable for diagnostic strategy. The fact that findings
-shift depending on the point in time between onset and presentation (which is exactly why ∆AAS works,
-Lastunen 2026) is likewise evidence that we are looking not at "appendicitis as a single disease image" but at
-**a process that moves as a function of time**.
+Lifetime risk ranges across sources from 6-7% (Vidarsdottir 2025) to 7-9% (Kleindienst 2026), with a peak at ages 10-19. The involvement of regional differences, diet, and socioeconomic status has long been suggested, and a review has now appeared that takes this dietary hypothesis into mechanism and **formulates it as a "nutrition-microbiome-genetic axis"** (Ryoo 2026) — a pathogenic model that complements rather than replaces the luminal obstruction theory. Resonating with this outline, it has been shown that **uncomplicated and complicated disease have clearly different cytokine profiles** (IL-6, HGF, and MCP-1 elevated in complicated disease, Han 2026, prospective, 113 patients), immunologically reinforcing the view that "complicated disease is not simply a progressed form of uncomplicated disease but a different disease" — the theoretical foundation for NOM working in uncomplicated disease. Attempts have also appeared to test the microbiome axis at the level of "which bacteria are present" (Almeida-Gomes 2026, *E. coli* predominant in pediatric complicated disease), but quantitative synthesis was **limited to studies reporting patient-level prevalence by culture**. What culture reveals is an inventory of "bacteria that grow," which is not measuring the same thing as the changes in gut microbial community structure that Ryoo 2026 describes — no bridge has yet been built between the "microbiome" of the pathogenic model and the "causative organisms" of clinical specimens. In children, the relationship between nutritional status and perforation risk has also been examined: **obesity/BMI alone does not predict perforation, whereas underweight and albumin/prealbumin-type indicators are more consistently associated with complicated disease** (Borca 2026, 14 studies). The key clinical point remains unchanged: because disease can progress to perforation and abscess formation, prompt diagnosis determines prognosis. Moreover, given the primary-care denominator that "most children with acute abdominal pain have benign, self-limiting conditions" (the referral efficiency of usual care assumed by Hogervorst 2026 is 88%), the gap between the prevalence discussed in hospital populations and the prevalence seen in primary care has itself become a design variable of diagnostic strategy. The fact that findings shift depending on the time from onset to presentation (which is exactly why ∆AAS works, Lastunen 2026) is also evidence that we are looking not at "a single static picture called appendicitis" but at **a process that moves as a function of time**.
 
 ### Open questions
-- Recurrence rate, QOL, and satisfaction **beyond 5 years** in the antibiotics-first arm — the beyond-2-year gap has been filled by Kahana 2026 (failure 38.9%, median 33.6 months), but
-  the definition of "failure" varies between studies, and the severity of recurrence and the patient experience remain a black box
-- A large RCT of antibiotics vs observation without medication (raised by Lin 2026) — a re-examination of the content of "antibiotics-first" itself
-- Robustness of the pediatric NOM recommendation — replication clearing the prediction-interval problem (Nasri & Dziri 2026). Integration with the 40% long-term failure rate (Kahana 2026, 5 of 9 studies pediatric) is also needed
-- External validation and transportability of the continuous risk model pARC — whether the finding that it outperforms fixed point-scoring (Tchouala Tchakoute 2026)
-  holds outside Europe/North America and in adults, and whether it can actually be deployed in an EHR (on the adult side, repeated AAS measurement is filling the same gap by another route)
-- **External validation of ∆AAS (observe and re-measure)** — the optimal observation interval, the validity of the thresholds (Lastunen 2026 is a secondary analysis of a single trial with n=83 and
-  thresholds derived from internal data), transportability to children and pregnant patients, and whether the "temporal difference" can be built into a pARC-type continuous model
-- The place of ERAT (endoscopic retrograde appendicitis therapy) in children — comparative trials against surgery and antibiotics (raised by Hong 2026)
-- Quantification of the age threshold and imaging findings that determine indications for interval appendectomy (stratification by neoplasm risk)
-- Colonoscopic follow-up after appendicitis in those aged 40 or older — prospective validation of indications and timing (Spota 2026 proposes a framework)
-- Predictors of failure other than appendicolith — preoperative discrimination of complicated disease via biomarkers such as IL-6 (+HGF/MCP-1) × imaging × AI
-- Multicenter, prospective external validation and implementation of AI diagnostic models (EHR/PACS integration)
-- Whether a primary-care prediction rule + CRP POCT actually reduces over-referral without increasing delayed diagnosis — awaiting the results of Hogervorst 2026 (NCT06762275). Extrapolability to free-access health systems without gatekeeping (including Japan) has not been examined
+- Recurrence rates, QOL, and satisfaction **beyond 5 years** in the antibiotics-first group — the >2-year gap has been filled by Kahana 2026 (failure 38.9%, median 33.6 months), but the definition of "failure" varies across studies, and recurrence severity and patient experience remain a black box
+- A large RCT of antibiotics vs observation without antibiotics (raised by Lin 2026) — re-examining the very content of "antibiotics first"
+- Robustness of pediatric NOM recommendations — replication that clears the prediction-interval problem (Nasri & Dziri 2026). Integration with the ~40% long-term failure rate (Kahana 2026, 5 of 9 studies pediatric) is also needed
+- External validation of the continuous risk model pARC and its transfer to other populations — whether the finding that it outperforms fixed-point scores (Tchouala Tchakoute 2026) holds outside Europe/North America and in adults, and whether it can actually be used once embedded in the EHR (on the adult side, repeated AAS measurement is filling the same gap by another route)
+- **External validation of ∆AAS (observe and re-score)** — the optimal observation time, the validity of the thresholds (Lastunen 2026 is a secondary analysis of a single trial with n=83, with thresholds derived from internal data), transfer to children and pregnant women, and whether the "time difference" can be incorporated into a pARC-type continuous model
+- The role of ERAT (endoscopic retrograde appendicitis therapy) in children — comparative trials against surgery and antibiotics (raised by Hong 2026)
+- Quantifying the age thresholds and imaging findings that determine indications for interval appendectomy (stratification of neoplasm risk)
+- Colonoscopic follow-up after appendicitis in patients ≥40 — prospective validation of indications and timing (Spota 2026 proposes a framework)
+- Predictors of failure other than appendicolith — preoperative discrimination of complicated disease by biomarkers such as IL-6 (+HGF/MCP-1) × imaging × AI
+- Standardization of causative-organism research — multicenter studies with harmonized specimen collection and culture/sequencing methods (called for by Almeida-Gomes 2026). Whether these can be linked to susceptibility data to provide a basis for empirical regimens in pediatric complicated disease, and whether changes in the gut microbiota (Ryoo 2026) can be connected to the microbial picture in clinical specimens
+- Multicenter, prospective external validation and implementation (EHR/PACS integration) of AI diagnostic models
+- Whether a primary-care prediction rule + CRP POCT actually reduces over-referral without increasing delayed diagnosis — awaiting results of Hogervorst 2026 (NCT06762275). Extrapolation to free-access healthcare systems without gatekeeping (including Japan) has not been examined
 <!-- LN:SYNTHESIS:END -->
 
 ## 📚 Bibliography (library)
@@ -220,40 +105,46 @@ Lastunen 2026) is likewise evidence that we are looking not at "appendicitis as 
 34. **Hogervorst EM, Venekamp RP, Knol-de Vries GE et al.** Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial. *Diagn Progn Res* 2026;10(1). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x) — ClinicalTrials.gov [NCT06762275](https://clinicaltrials.gov/study/NCT06762275)
 35. **Tchouala Tchakoute P, Iuhas A, Nechita VI et al.** Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review. *Pediatr Rep* 2026;18(4):115. PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115) — [PMC13516179](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13516179/) (free full text)
 36. **Kahana N, Boaz E, Emile SH et al.** Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis — a systematic review and meta-analysis. *Am J Surg* 2026;261:117203. PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
-37. **Lastunen KS, Leppäniemi AK, Mentula PJ.** Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis. *Eur J Trauma Emerg Surg* 2026;52(1). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x) — [PMC13541895](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13541895/) (free full text) · secondary analysis of the observation arm of the DIAMOND trial [NCT02742402](https://clinicaltrials.gov/study/NCT02742402)
+37. **Lastunen KS, Leppäniemi AK, Mentula PJ.** Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis. *Eur J Trauma Emerg Surg* 2026;52(1). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x) — [PMC13541895](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13541895/) (free full text); secondary analysis of the observation group of the DIAMOND trial [NCT02742402](https://clinicaltrials.gov/study/NCT02742402)
+38. **Almeida-Gomes RF, Massini RB, Bronzato JD, Gomes BPFA, Garcia IGO.** Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis. *Eur J Clin Microbiol Infect Dis* 2026 (published online 2026-10-08). PMID [42848117](https://pubmed.ncbi.nlm.nih.gov/42848117/) / [DOI](https://doi.org/10.1007/s10096-026-05662-7)
 
-> ※ Nos. 4-28 are the first batch of 2026-08-07, Nos. 29-33 the second batch that same day, No. 34 the 2026-08-14 batch, Nos. 35-36 the 2026-08-29 batch,
-> and No. 37 the portion woven in from the 2026-09-13 batch. All bibliographic records have been cross-checked in full against PubMed metadata (get_article_metadata).
-> On the collection-log side, DOIs belonging to other papers had been mixed into 9 entries in the first batch (corresponding to Nos. 5, 10, 11, 15, 16, 17, 21, 23, 24) and
-> 2 entries in the second batch as well (corresponding to Nos. 29, 30), so this list has been corrected to the PubMed-verified values. For the 2026-08-14 batch (No. 34), the 2026-08-29 batch
-> (Nos. 35-36), and the 2026-09-13 batch (No. 37), both PMID and DOI agree between the collection log and the PubMed-verified values — **three consecutive batches with no contamination**.
-> The DOI extraction in `living_notes_update.py` (suspected of mis-picking from the references section) is still formally unrepaired, but the contamination is confined to the first and second batches
-> (2026-08-07), and it is likely to have resolved on its own through a change in the collection logic or on the source side. If the next batch also agrees, it can be downgraded to
-> "no repair needed — monitoring only."
+> ※ Nos. 4-28 were woven in from the first batch of 2026-08-07, Nos. 29-33 from the second batch the same day, No. 34 from the 2026-08-14 batch, Nos. 35-36 from the 2026-08-29 batch,
+> No. 37 from the 2026-09-13 batch, and No. 38 from the 2026-10-11 batch. All bibliographic details have been checked item by item against PubMed metadata (get_article_metadata).
+> In the collection log, DOIs belonging to other papers had slipped in for 9 items in the first batch (corresponding to Nos. 5, 10, 11, 15, 16, 17, 21, 23, 24) and for 2 items in the second batch (corresponding to Nos. 29, 30),
+> so this list uses the corrected PubMed-verified values. For the 2026-08-14 batch (No. 34), the 2026-08-29 batch
+> (Nos. 35-36), the 2026-09-13 batch (No. 37), and the 2026-10-11 batch (No. 38), both PMID and DOI in the collection log matched the PubMed-verified values —
+> **no contamination for 4 consecutive batches**. Since contamination was confined to the first and second batches (2026-08-07), we judge that it resolved on its own through changes in the collection logic or the source, and,
+> as agreed in the previous batch, the DOI extraction in `living_notes_update.py` is **downgraded to "no repair needed, monitoring only"**
+> (PubMed verification at weave-in will continue, and repair will resume if it recurs).
 
 <!-- LN:BIB:END -->
 
 ## 🆕 Arrivals log
 <!-- LN:LOG:START -->
 
-### ✅ Collected 2026-09-13 (1 item · woven in)
+### ✅ Collected 2026-10-11 (1 item, woven in)
+
+- **Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis.** — Almeida-Gomes RF, Massini RB, Bronzato JD et al. *Eur J Clin Microbiol Infect Dis* (2026). PMID [42848117](https://pubmed.ncbi.nlm.nih.gov/42848117/) / [DOI](https://doi.org/10.1007/s10096-026-05662-7)
+  - Abstract: Appendicitis, characterized by inflammation of the vermiform appendix, remains the leading cause of acute abdomen worldwide. Emerging evidence suggests that alterations in the intestinal microbiota may play a role in its pathogenesis. This study aimed to analyze the prevalence and microbiological pr…
+
+### ✅ Collected 2026-09-13 (1 item, woven in)
 
 - **Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis.** — Lastunen KS, Leppäniemi AK, Mentula PJ *Eur J Trauma Emerg Surg* (2026). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x)
   - Abstract: The utilization of computed tomography in the early stage of acute appendicitis may result in overdiagnosis and unnecessarily expose patients to ionising radiation. The Adult Appendicitis Score (AAS) can be used to select patients for imaging. Observation and re-scoring in the DIAMOND trial reduced …
 
-### ✅ Collected 2026-08-29 (2 items · woven in)
+### ✅ Collected 2026-08-29 (2 items, woven in)
 
 - **Comparison of the Alvarado Score with Alternative Diagnostic Tools in Pediatric Acute Appendicitis: A Literature Review.** — Tchouala Tchakoute P, Iuhas A, Nechita VI et al. *Pediatr Rep* (2026). PMID [42646659](https://pubmed.ncbi.nlm.nih.gov/42646659/) / [DOI](https://doi.org/10.3390/pediatric18040115)
   - Abstract: Acute appendicitis is a leading pediatric surgical emergency. Timely diagnosis remains challenging, particularly in young children with atypical presentations. Clinical evaluation alone yields variable diagnostic performance, prompting the use of risk stratification tools. To evaluate and compare th…
 - **Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis - a systematic review and meta-analysis.** — Kahana N, Boaz E, Emile SH et al. *Am J Surg* (2026). PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
   - Abstract: We evaluated long-term outcomes of non-operative management (NOM) versus surgical management of acute uncomplicated appendicitis. Systematic review of studies comparing NOM versus surgery with ≥2 years follow-up. Primary outcome was long-term failure rate. 9/1635 studies were included (3 RCTs; 6 non…
 
-### ✅ Collected 2026-08-14 (1 item · woven in)
+### ✅ Collected 2026-08-14 (1 item, woven in)
 
 - **Impact of a diagnostic strategy for appendicitis in children with acute abdominal pain in primary care: study protocol for a hybrid type 1 cluster randomised controlled trial.** — Hogervorst EM, Venekamp RP, Knol-de Vries GE et al. *Diagn Progn Res* (2026). PMID [42596001](https://pubmed.ncbi.nlm.nih.gov/42596001/) / [DOI](https://doi.org/10.1186/s41512-026-00234-x)
   - Abstract: Children with acute abdominal pain pose a diagnostic challenge for general practitioners (GPs), as it can be difficult to distinguish appendicitis from self-limiting conditions due to overlapping symptoms. To support GPs, a diagnostic strategy for appendicitis was developed that integrates an extern…
 
-### ✅ Collected 2026-08-07 (5 items · woven in)
+### ✅ Collected 2026-08-07 (5 items, woven in)
 
 - **Accuracy of magnetic resonance imaging for acute appendicitis in pregnant women: an updated diagnostic systematic review and meta-analysis.** — Habiro Alves L, Machado GF, Martin GCC et al. *Abdom Radiol (NY)* (2026). PMID [41801387](https://pubmed.ncbi.nlm.nih.gov/41801387/) / [DOI](https://doi.org/10.1007/s00261-026-05416-1)
   - Abstract: Diagnosing acute appendicitis during pregnancy is challenging due to physiological changes and concerns regarding fetal radiation exposure from Computed Tomography (CT). This systematic review and meta-analysis evaluates the diagnostic accuracy and safety of Magnetic Resonance Imaging (MRI) for susp…
@@ -266,7 +157,7 @@ Lastunen 2026) is likewise evidence that we are looking not at "appendicitis as 
 - **Acute Appendicitis as a Harbinger of Colorectal Neoplasms in Patients Aged 40 or Older: A Scoping Review.** — Spota A, Englesakis M, Chadi S et al. *Surg Laparosc Endosc Percutan Tech* (2026). PMID [41707661](https://pubmed.ncbi.nlm.nih.gov/41707661/) / [DOI](https://doi.org/10.1097/sle.0000000000001451)
   - Abstract: Current guidelines on follow-up for acute appendicitis (AA) neglect the risk of colorectal cancer after AA. Heterogeneous and low-level evidence hinders drawing recommendations on follow-up of 40-year-old or older patients after AA, looking for colorectal neoplasms. This study aims to summarize exis…
 
-### ✅ Collected 2026-08-07 (25 items · woven in)
+### ✅ Collected 2026-08-07 (25 items, woven in)
 
 - **Enterobius vermicularis as a Mimic of Acute Appendicitis: A Case Report and Updated Systematic Review.** — Jaffry K, Tran A, Hyune MA et al. *Cureus* (2026). PMID [42559549](https://pubmed.ncbi.nlm.nih.gov/42559549/) / [DOI](https://doi.org/10.7759/cureus.112171)
   - Abstract: A 12-year-old premenarchal female patient presented with right iliac fossa pain, perianal pruritus, urticaria, angioedema, arthralgia, peripheral eosinophilia, and an initially undetectable C-reactive protein. Serial ultrasonography demonstrated increasing intra-abdominal free fluid. Diagnostic lapa…
@@ -315,5 +206,5 @@ Lastunen 2026) is likewise evidence that we are looking not at "appendicitis as 
 - **Artificial intelligence for acute appendicitis diagnosis: A systematic review of current evidence, challenges, and future directions.** — Ismayilzada K *Medicine (Baltimore)* (2026). PMID [41861187](https://pubmed.ncbi.nlm.nih.gov/41861187/) / [DOI](https://doi.org/10.1097/md.0000000000048094)
   - Abstract: Acute appendicitis remains one of the most common surgical emergencies, yet its diagnosis continues to pose challenges due to overlapping clinical presentations and variable imaging findings. Artificial intelligence (AI) has recently emerged as a promising tool to enhance diagnostic accuracy, assist…
 - **Diagnostic Accuracy of Point-of-Care Ultrasound (POCUS) for Suspected Acute Appendicitis in Pediatric and Adult Emergency Departments: A Systematic Review and Meta-Analysis.** — Kamal MM, Al Reshidi BM, Bedier HM et al. *Cureus* (2026). PMID [41841098](https://pubmed.ncbi.nlm.nih.gov/41841098/) / [DOI](https://doi.org/10.7759/cureus.103503)
-  - Abstract: Acute appendicitis is a common surgical emergency that often requires diagnostic imaging. While computed tomography (CT) is highly accurate, it involves ionizing radiation and potential delays. Point-of-care ultrasound (POCUS), performed by emergency physicians, offers a rapid, radiation-free altern…
+  - Abstract: Postpone-free. Acute appendicitis is a common surgical emergency that often requires diagnostic imaging. While computed tomography (CT) is highly accurate, it involves ionizing radiation and potential delays. Point-of-care ultrasound (POCUS), performed by emergency physicians, offers a rapid, radiation-free alternative…
 <!-- LN:LOG:END -->
