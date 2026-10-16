@@ -1,14 +1,14 @@
 ---
 topic: ペスト / plague (Yersinia pestis)
 slug: plague
-updated: 2026-10-09
+updated: 2026-10-16
 ---
 
 # 🌱 生きたノート: ペスト（Yersinia pestis） (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-09 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-16 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -27,6 +27,10 @@ updated: 2026-10-09
 ### 1. どこで今も起きているか — 「疑う」の前提になる疫学
 
 WHO のファクトシート（2026-09-29 更新）によれば、ヒトのペストは複数の国で今も地域流行しており、1990年代以降は報告例の多くがアフリカに集まっている。2019–2025 年に関しては**コンゴ民主共和国とマダガスカルが報告例の大半**を占める。マダガスカルでは腺ペストが**ほぼ毎年、9月から4月の流行期**に記録される。アメリカ西部にも自然界の宿主（地上性齧歯類）が定着していて、CDC は米国内でも自然発生があると明記している。
+
+**中央アジアの流行地も押さえておくと渡航者診療で効く**。モンゴルでは**マーモット（タルバガン）由来の腺ペスト**が毎年のように出ており、国立人獣共通感染症センター（NCZD）によれば **21省のうち17省がペストのリスク地域**に分類されている。高リスクとされるのは西部のバヤンウルギー・ゴビアルタイ・ホブド・ウブスで、政府は3万2千人超の接種を計画していると報じられた。直近の確定例は **2026年7月のホブド省**で、患者は隣接するバヤンウルギー省ウランフス郡を訪れた際に**マーモットの肉を食べて**感染した（細菌学的検査で確定。NCZD 発表・Xinhua 報）。マーモット猟は法律で禁じられているが、珍味として扱われるため密猟が続いているとされる。中国内モンゴル自治区でも同型の症例が出る。
+
+つまりモンゴル方面の渡航者では、**ノミ咬傷だけでなく「野生齧歯類の肉を食べたか」が問診項目になる**。感染経路として経口摂取・調理時の接触が実際に機能しており、夏季（人が草原に出る季節）に増える。
 
 ここが家庭医にとっての実装ポイントになる。ペストは「渡航外来の珍しい話」ではなく、**渡航歴＋野外曝露＋急速に進む発熱**という組み合わせを見たときに鑑別リストに載せるべき疾患である。逆に、曝露の文脈がまったくない発熱に対してペストを疑う必要は基本的にない。鍵は疾患頻度ではなく**曝露歴の有無**で、これは厚労省の届出基準が疑似症の判断材料として渡航歴とノミ咬傷を名指ししている構造と一致する。
 
@@ -164,6 +168,13 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 - ✅ **Demeure CE, Dussurget O, Mas Fiol G, Le Guern AS, Savin C, Pizarro-Cerdá J.** *Yersinia pestis* and plague: an updated view on evolution, virulence determinants, immune subversion, vaccination, and diagnostics. *Genes Immun* 2019;20(5):357-370. PMID 30940874 / [DOI](https://doi.org/10.1038/s41435-019-0065-0) — F1 抗原を含む診断標的、無治療での死亡までの時間（腺 <1週 / 肺 <48時間）
 - ⏳ **Sun W.** Plague Vaccines: Status and Future. *Adv Exp Med Biol* 2016;918:313-360. PMID 27722869 / [DOI](https://doi.org/10.1007/978-94-024-0890-4_12) — ワクチン開発の現状。次回織り直し時にワクチン節を立てるか判断
 
+### モンゴル・中央アジアの疫学（§1 の出典）— ⚠️ワイヤー経由の二次情報
+モンゴルについては**アクセスできる一次資料が実質無い**（NCZD 英語サイトは最新記事が2018年）。以下はワイヤーサービス経由で、年を本文の内部証拠で確かめたものだけを採った。
+- ⚠️ [Xinhua (2026-07-25)](https://english.news.cn/asiapacific/20260725/52ed7127c5df463bbf87b8dd272f6e13/c.html) — **2026年7月のホブド省確定例**。細菌学的検査で確定、バヤンウルギー省ウランフス郡でマーモット肉を摂食。NCZD 発表として報道
+- ⚠️ [Adnkronos (2026-07-22)](https://english.adnkronos.com/2026/07/22/mongolia-a-suspected-case-of-bubonic-plague-in-the-west/) — 同例の疑い段階（PCR 実施中）の報。確定前後の流れが追える
+- ⚠️ [Outbreak News Today (2026-07-26)](https://outbreaknewstoday.substack.com/p/mongolia-human-plague-confirmed-in) — **21省中17省がリスク地域**、マーモット猟の法的禁止と密猟、夏季に増える季節性
+- ⚠️ 17省・3万2千人接種計画の数字は Xinhua 系の二次報（[tbsnews 転載](https://www.tbsnews.net/node/107707)）。**原記事の日付が確定できず**、数字は参考値として扱う
+
 ### 診断の実力 — §4 の土台（2026-10-08 の初回収集から織り込み）
 - ✅ **Raberahona M, Rajerison M, Edwards T, ... Randremanana RV, Olliaro P.** Performance of diagnostic procedures for bubonic plague in endemic settings in Madagascar: a prospective test accuracy sub-study within the IMASOY trial. *Clin Microbiol Infect* 2026;32(4):638-643. PMID 41389991 / [DOI](https://doi.org/10.1016/j.cmi.2025.12.002) — **本ノート §4-1 の出典**。疑い例438、PCR 85% > 培養 65%、血清が残り13%を拾う、**現場F1RDT 感度94%/特異度74%で臨床判断に使えない**、中央検査室条件なら特異度97.6%。NCT04110340
 - ✅ **Amancio JGC, Gomes MM, Duarte BM, Almeida AMP, Bezerra MF.** Re: 'Performance of diagnostic procedures for bubonic plague in endemic settings in Madagascar' by Raberahona et al. *Clin Microbiol Infect* 2026. PMID 42190949 / [DOI](https://doi.org/10.1016/j.cmi.2026.05.022) — ブラジル Fiocruz からの書簡。論点は**バイオハザード封じ込め・移動検査室・POCT**（キーワードより）
@@ -180,6 +191,31 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-16 収集分 (11件・織り待ち)
+
+- **Quarantine, diplomacy, and epidemics: Jean-Étienne-Justin Schneider and the Bubonic Plague of Sīstān in 1906.** — Arabian S, Zargaran A, Sadr M et al. *J Med Ethics Hist Med* (2026). PMID [42859662](https://pubmed.ncbi.nlm.nih.gov/42859662/) / [DOI](https://doi.org/10.18502/jmehm.v19i10.22301)
+  - 抄録: The 1906 Sīstān bubonic plague was one of the most significant public health crises of the late Qājār period. This study examines the role of Jean-Étienne-Justin Schneider (1854-1917), head of the Central Sanitary Council (Majles-e Ḥefẓ al-Ṣeḥḥa), in implementing quarantine policies and their impact…
+- **Clinical Characterization and Outcomes of Pneumonic Plague in Madagascar: A Case Series.** — Raberahona M, Razananaivo LH, Edwards T et al. *Open Forum Infect Dis* (2026). PMID [42851858](https://pubmed.ncbi.nlm.nih.gov/42851858/) / [DOI](https://doi.org/10.1093/ofid/ofag635)
+  - 抄録: Pneumonic plague is rare compared to bubonic plague; data on clinical presentation and treatment outcomes are scant. We report on 13 prospectively-enrolled suspected pneumonic plague cases (7 laboratory-confirmed, one probable, 5 not-plague) treated with aminoglycoside plus ciprofloxacin for 10 days…
+- **Evolutionary trends of plague research from 2016 to 2025: A bibliometric analysis.** — Niu Y, Zhang Y, Zhou S et al. *PLoS Negl Trop Dis* (2026). PMID [42127162](https://pubmed.ncbi.nlm.nih.gov/42127162/) / [DOI](https://doi.org/10.1371/journal.pntd.0014337)
+  - 抄録: Plague is a severe zoonotic disease caused by Yersinia pestis, a pathogen characterized by high infectivity and mortality rates. Historically, three global pandemics have inflicted heavy disasters on human society. Despite improvements in control measures and the application of antibiotics, plague h…
+- **The impact of the COVID-19 pandemic on healthy volunteer motivations: a mixed-methods study of participants in plague vaccine trials in the UK and Uganda.** — Stuart AS, Muhumuza R, Kusemererwa S et al. *BMC Public Health* (2026). PMID [42104293](https://pubmed.ncbi.nlm.nih.gov/42104293/) / [DOI](https://doi.org/10.1186/s12889-026-27297-1)
+  - 抄録: The COVID-19 pandemic led to unprecedented interest and participation in vaccine trials globally, and a concurrent increase in vaccine hesitancy. Whether this impacted recruitment of healthy volunteers to subsequent non-COVID vaccine trials is not well studied. We explored the impact of the COVID-19…
+- **Epidemic imaginaries in literature and film: a comparative study of narrative responses to plague and pandemic.** — Bhatt BR, Dwivedi P *Med Humanit* (2026). PMID [42103463](https://pubmed.ncbi.nlm.nih.gov/42103463/) / [DOI](https://doi.org/10.1136/medhum-2025-013615)
+  - 抄録: Epidemics have historically been both biomedical disasters and cultural stories that societies interpret and recount. This study explores the epidemic imaginary, examining how literature and cinema symbolically depict contagion by analysing narratives of contagion produced during the Plague era in l…
+- **Genetic Diversity and Spatial Distribution of Yersinia pestis by Core Genome-Based Multilocus Sequence Typing Analysis.** — Appelt S, Rohleder AM, Schmidt K et al. *Microorganisms* (2026). PMID [42075294](https://pubmed.ncbi.nlm.nih.gov/42075294/) / [DOI](https://doi.org/10.3390/microorganisms14040898)
+  - 抄録: Yersinia pestis is the etiological agent of plague, a severe and often fatal disease in humans when left untreated. Because of the high genetic clonality of Y. pestis, high-resolution genotyping assays are necessary to differentiate between individual strains. Here, we report on the development and …
+- **Targeted mutagenesis of the ICP4 transactivation domain generates a protective DIVA vaccine against duck plague.** — Yang Q, Pan C, Wang L et al. *Poult Sci* (2026). PMID [42061247](https://pubmed.ncbi.nlm.nih.gov/42061247/) / [DOI](https://doi.org/10.1016/j.psj.2026.106960)
+  - 抄録: Duck plague, caused by duck plague virus (DPV), causes significant economic losses to the global waterfowl industry. The control of this disease is hampered by the limitations of conventional vaccines, which include the risk of virulence reversion, short-lived immunity, and the inability to differen…
+- **Avian herpesvirus-specific LORF5 is a late gene, interacts with 19 viral and 111 host proteins, critical for virulence of Duck plague virus.** — Li H, Cheng A, Wang M et al. *Poult Sci* (2026). PMID [42048789](https://pubmed.ncbi.nlm.nih.gov/42048789/) / [DOI](https://doi.org/10.1016/j.psj.2026.106924)
+  - 抄録: Duck plague virus (DPV) poses a major threat to the waterfowl industry. Its genome encodes multiple avian herpesvirus-specific genes with unknown functions, which hinders the understanding of the mechanism underlying DPV pathogenesis. LORF5 is among the more conserved genes, yet the properties and b…
+- **The Role of Polymorphism of HLA Class II Genes in Postvaccination Plague Immunity.** — Korytov KM, Dubrovina VI, Pyatyidesyatnikova AB et al. *Bull Exp Biol Med* (2026). PMID [42036551](https://pubmed.ncbi.nlm.nih.gov/42036551/) / [DOI](https://doi.org/10.1007/s10517-026-06656-3)
+  - 抄録: We evaluated the association of alleles of human leukocyte antigen (HLA) class II genes and the levels of secretion of IL-4 and IFNγ in the blood of individuals vaccinated/revaccinated with a live plague vaccine and living in the Gorno-Altai high-mountain and Tuvinian mountain natural plague foci. S…
+- **The plague of Athens (430-427 BC): Integration of historical, clinical, and ancient DNA data supports an invasive non-typhoidal Salmonella enterica etiology.** — Trakatelli CM, Kitsios K, Agathangelidi-Trakatelli M et al. *Int J Infect Dis* (2026). PMID [42034283](https://pubmed.ncbi.nlm.nih.gov/42034283/) / [DOI](https://doi.org/10.1016/j.ijid.2026.108728)
+  - 抄録: The Plague of Athens represents one of the earliest and most detailed descriptions of a large-scale epidemic in recorded history. Emerging in 430 BC during the second year of the Peloponnesian War, it caused extensive mortality, including the death of Pericles, the leader of Athenian democracy at th…
+- **Nursing the colonised: the politics of representation of the Western nurse in plague-stricken Bombay.** — Koshy R *Med Hist* (2026). PMID [42026837](https://pubmed.ncbi.nlm.nih.gov/42026837/) / [DOI](https://doi.org/10.1017/mdh.2026.10061)
+  - 抄録: The 1896 Bombay plague outbreak prompted the colonial government to recruit trained British nurses from England to serve the afflicted Indians of the Presidency. Studying this relatively under-explored aspect of British colonial nursing, this paper examines the politics of representation of the West…
 
 ### ⏳ 2026-10-09 収集分 (20件・織り待ち)
 
@@ -219,8 +255,9 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
   - 抄録: Plague is a disease that poses serious threats to public and ecosystem health. Its causative bacterium, Yersinia pestis, was transported to North America around 1900, where it quickly became established in native rodent populations and spread throughout the western half of the United States by the m…
 - **[Optimization and applicability evaluation of pretreatment method for rapid detection of Yersinia pestis in clinical samples by the up-converting phosphor technology-based immunochromatographic assay].** — Tang Z, Zhang YY, Shen XN et al. *Zhonghua Yu Fang Yi Xue Za Zhi* (2026). PMID [42128683](https://pubmed.ncbi.nlm.nih.gov/42128683/) / [DOI](https://doi.org/10.3760/cma.j.cn112150-20250508-00401)
   - 抄録: Objective: To optimize the pretreatment method of clinical samples in the up-converting phosphor technology-based immunochromatographic assay (UPT-ICA) for Yersinia pestis and evaluate its applicability. Methods: A total of 464 clinical samples (including 215 serum samples, 60 cerebrospinal fluid sa…
-- **2026-10-08** 初織り。向きは臨床・公衆衛生（たまさん選択）。一次資料は MMWR 2021 全文・WHO ファクトシート・厚労省届出基準（Shift_JIS を iconv で復号して原文確認）・感染症法原文（e-Gov API）。歴史編は `plague-history.md` に分離。自動収集の対象トピックとして `config/living-notes.json` に登録済み
+- **2026-10-08** 初織り。向きは臨床・公衆衛生（たまさん選択）。一次資料は MMWR 2021 全文・WHO ファクトシート・厚労省届出基準（Shift_JIS を iconv で復号して原文確認）・感染症法原文（e-Gov API）。歴史編は別ファイルに分離（公開版では上のリンク先）。週次の自動収集の対象トピックとして登録済み
 - **2026-10-08（2回目・同日）** §4 診断を全面改稿。初回収集でヒットした Raberahona 2026（IMASOY 精度サブ研究）が**「PCR > 培養」「現場F1RDTは臨床判断に使えない（特異度74%）」**という土台の書き換えだったため、4-1/4-2/4-3 に分節。5行サマリの治療行にも反映。NAAT レビュー（Khosrojerdi 2026）は**本文未取得**のため ⚠️ 扱いで数値は載せず
 
+- **2026-10-13（2回目）** §1 疫学に**モンゴル・中央アジア**を追加（たまさんの持ち込みから）。21省中17省がリスク地域、直近確定例は2026年7月のホブド省、経路は**マーモット肉の摂食** — つまり問診項目に「野生齧歯類を食べたか」が加わる。モンゴルは一次資料が実質無く（NCZD 英語サイトは2018年止まり）ワイヤー依存である旨も明記。公開版の更新ログから本家のファイル名表記を外した
 - **2026-10-08（4回目・同日）** 公開ミラーの仕組みを拡張。本文を丸ごと写す設計だったため「一部の節だけ本家に留める」が表現できなかったので、`living_note_public_sync.py` に private ブロック除外機構を TDD で追加（テスト5本・先に落ちることを確認済み）。**このノートの公開版は、本家から一部の節を除いたものである**
 <!-- LN:LOG:END -->
