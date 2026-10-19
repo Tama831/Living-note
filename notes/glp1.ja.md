@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-10-11
+updated: 2026-10-19
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-11 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-19 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,41 @@ updated: 2026-10-11
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-19 収集分 (16件・織り待ち)
+
+- **Adherence and Persistence to Injectable versus Oral GLP-1 Receptor Agonists in Patients with Type 2 Diabetes Mellitus: A Comparative Systematic Review and Analysis.** — Ashour AM *Diabetes Metab Syndr Obes* (2026). PMID [42893177](https://pubmed.ncbi.nlm.nih.gov/42893177/) / [DOI](https://doi.org/10.2147/dmso.s614243)
+  - 抄録: Type 2 diabetes mellitus (T2DM) requires sustained glycemic control to prevent long-term complications. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are effective therapies, traditionally administered via injection. The introduction of oral formulations, such as oral semaglutide, may improv…
+- **CagriSema versus Semaglutide 2.4 mg monotherapy for weight management in adults with overweight or obesity, with or without type 2 diabetes: a systematic review, meta-analysis, and trial sequential analysis.** — Rasool ZK, Shah R, Batool AEZ et al. *Front Endocrinol (Lausanne)* (2026). PMID [42890523](https://pubmed.ncbi.nlm.nih.gov/42890523/) / [DOI](https://doi.org/10.3389/fendo.2026.1903335)
+  - 抄録: Semaglutide 2.4 mg is the reference pharmacotherapy for weight management, yet many patients do not reach ambitious weight-loss targets. CagriSema, a fixed-dose combination of cagrilintide and semaglutide, may offer additional benefit through complementary mechanisms. We quantified its incremental e…
+- **Impact of GLP-1 Agonists on Post-Operative Outcomes in Aesthetic & Body Contouring Surgery: A Systematic Review & Meta-Analysis.** — McMahon ME, Wong R, Hanson RP *Plast Reconstr Surg* (2026). PMID [42879169](https://pubmed.ncbi.nlm.nih.gov/42879169/) / [DOI](https://doi.org/10.1097/prs.0000000000013542)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) have rapidly expanded in use for weight loss, resulting in a growing population of patients presenting for aesthetic and body-contouring procedures. Despite their increasing prevalence, the effects of GLP-1 RAs on postoperative wound healing and …
+- **Early GLP-1 Receptor Agonist Therapy in Acute Ischemic Stroke and High-Risk Transient Ischemic Attack: A Systematic Review and Meta-analysis of Randomized Trials.** — Ali A, Dézsi C, Gulyás-Oldal V et al. *Ann Indian Acad Neurol* (2026). PMID [42878597](https://pubmed.ncbi.nlm.nih.gov/42878597/) / [DOI](https://doi.org/10.4103/aian.aian_812_26)
+  - 抄録: The role of early glucagon-like peptide-1 receptor agonist (GLP-1RA) therapy after acute ischemic stroke or high-risk transient ischemic attack remains uncertain. We performed a systematic review and meta-analysis of randomized evidence evaluating efficacy and safety in this setting. Following Prefe…
+- **GLP-1 receptor agonists and tendon healing: a systematic review and meta-analysis.** — Khayyat MY, Khayyat YM *Arch Med Sci* (2026). PMID [42877202](https://pubmed.ncbi.nlm.nih.gov/42877202/) / [DOI](https://doi.org/10.5114/aoms/225241)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) are prescribed for cardiometabolic indications and may exert anti-inflammatory and tissue-regenerative effects. However, their effect on tendon healing and tendon-related surgical outcomes remains unclear. In this systematic review and meta-analys…
+- **GLP-1-Based therapies for obesity-related heart failure with preserved ejection fraction: an umbrella review incorporating broader heart failure and cardiometabolic evidence.** — Li Q, Yang T, Jin G et al. *Front Cardiovasc Med* (2026). PMID [42876799](https://pubmed.ncbi.nlm.nih.gov/42876799/) / [DOI](https://doi.org/10.3389/fcvm.2026.1930278)
+  - 抄録: The cardiometabolic phenotype of obesity-related heart failure with preserved ejection fraction (HFpEF) is increasing in clinical prevalence. Existing systematic reviews and meta-analyses have primarily summarized efficacy estimates for glucagon-like peptide-1 (GLP-1)-based therapies, but the credib…
+- **Risk of recurrent acute pancreatitis with GLP-1 receptor agonists after prior pancreatitis: a systematic review.** — Voltani DL, Pinto FG, Holland S *Acta Diabetol* (2026). PMID [42873314](https://pubmed.ncbi.nlm.nih.gov/42873314/) / [DOI](https://doi.org/10.1007/s00592-026-02809-y)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are widely used for patients with type 2 diabetes (T2D) and obesity. However, their safety in patients with prior pancreatitis remains uncertain. This systematic review aims to evaluate the risk of recurrent acute pancreatitis (RAP) associated wi…
+- **GLP-1 receptor agonists in elective spine surgery: a systematic review of fusion outcomes, perioperative safety, and procedure-specific risk.** — Ferraz VR, Dawoud B, Mercier PA et al. *N Am Spine Soc J* (2026). PMID [42871273](https://pubmed.ncbi.nlm.nih.gov/42871273/) / [DOI](https://doi.org/10.1016/j.xnsj.2026.100942)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are increasingly used in patients with obesity and type 2 diabetes mellitus undergoing elective spine surgery. Although these agents may improve metabolic risk profiles, their associations with spinal fusion, perioperative complications, and proc…
+- **Cardiovascular outcomes of oral incretin-based drugs in type 2 diabetes: a GRADE-assessed meta-analysis of 67,679 patients.** — Ali MF, Mohammed OF, Suhail A et al. *Front Cardiovasc Med* (2026). PMID [42870927](https://pubmed.ncbi.nlm.nih.gov/42870927/) / [DOI](https://doi.org/10.3389/fcvm.2026.1884895)
+  - 抄録: While injectable GLP-1 receptor agonists like semaglutide have demonstrated clear cardiovascular benefits in type 2 diabetes mellitus (T2DM), the role of oral incretin-based therapies, including oral semaglutide and DPP-4 inhibitors-remains less well defined. Comprehensive evaluation of their cardio…
+- **Effects of glucagon-like peptide-1 (GLP-1) mono-agonists on reward processing in animal models: a systematic review.** — Zheng YJ, Au HCT, Le GH et al. *Acta Neuropsychiatr* (2026). PMID [42870759](https://pubmed.ncbi.nlm.nih.gov/42870759/) / [DOI](https://doi.org/10.1017/neu.2026.10097)
+  - 抄録: Glucagon-like peptide-1 (GLP-1), indicated in the treatment of type 2 diabetes mellitus, influences reward processing, integral to disparate mental disorders. Emerging evidence suggests that GLP-1 receptor mono-agonists (GLP-1RAs) are potential treatment strategies for select mental disorders. Herei…
+- **Effects of tirzepatide (GIP/GLP-1 dual receptor agonist) on cardiorenal biomarkers and functional capacity in heart failure: a systematic review and meta-analysis.** — Eisa N, Khoury M *J Clin Endocrinol Metab* (2026). PMID [42867450](https://pubmed.ncbi.nlm.nih.gov/42867450/) / [DOI](https://doi.org/10.1210/clinem/dgag284)
+  - 抄録: Tirzepatide, a dual glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) receptor agonist, has demonstrated clinical benefits in heart failure with preserved ejection fraction (HFpEF) and obesity. However, its effects on cardiorenal biomarkers and functional capacit…
+- **Sodium-glucose cotransporter 2 inhibitors vs. glucagon-like peptide-1 receptor agonists and dipeptidyl peptidase-4 inhibitors for incident and recurrent urolithiasis: a European Association of Urology Endourology systematic review.** — Pischetola A, Esperto F, Tsaturyan A et al. *Transl Androl Urol* (2026). PMID [42866845](https://pubmed.ncbi.nlm.nih.gov/42866845/) / [DOI](https://doi.org/10.21037/tau-2026-0541)
+  - 抄録: Urolithiasis is a recurrent metabolic condition associated with obesity, metabolic syndrome, and type 2 diabetes (T2D), yet the relationship between modern antidiabetic drug classes and stone risk remains incompletely defined. This systematic review aimed to evaluate comparative clinical-event evide…
+- **Values, preferences, and treatment burden for initiation of GLP-1 receptor agonists, SGLT-2 inhibitors, tirzepatide, and finerenone in adults with type 2 diabetes: systematic review.** — González-Cruz DC, Garcia-Campa M, Moreno-Peña PJ et al. *BMJ Med* (2026). PMID [42866418](https://pubmed.ncbi.nlm.nih.gov/42866418/) / [DOI](https://doi.org/10.1136/bmjmed-2026-002780)
+  - 抄録: To summarise existing evidence regarding the values, preferences, and perceived treatment burden of adults with type 2 diabetes when considering initiation of glucagon-like peptide-1 receptor agonists (GLP-1 RA), sodium-glucose cotransporter-2 inhibitors (SGLT-2i), finerenone, or tirzepatide. System…
+- **Long-term GLP-1 receptor agonist therapy in obesity: expert panel recommendations for good clinical practice.** — Brancato D, Borretta G, Chianelli M et al. *Front Endocrinol (Lausanne)* (2026). PMID [42865447](https://pubmed.ncbi.nlm.nih.gov/42865447/) / [DOI](https://doi.org/10.3389/fendo.2026.1907270)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) have emerged as highly effective therapies for obesity, facilitating weight loss and improving cardiometabolic risk factors. However, several challenges persist regarding optimal long-term management in real-world clinical practice. A board of cli…
+- **Beyond Weight Loss: Facial Remodeling Associated with GLP-1 Receptor Agonists-A Systematic Review and Therapeutic Framework.** — Maglitto F, Salzano G, Trotta S et al. *Aesthetic Plast Surg* (2026). PMID [42864543](https://pubmed.ncbi.nlm.nih.gov/42864543/) / [DOI](https://doi.org/10.1007/s00266-026-06331-y)
+  - 抄録: Facial volume depletion and skin laxity have increasingly been reported during weight loss associated with glucagon-like peptide-1 receptor agonist (GLP-1RA) treatment. However, these changes are not recognized as a distinct clinical entity and may overlap with those occurring after other forms of r…
+- **GLP-1 Receptor Agonists and Insulin Versus Insulin for Perioperative Glycemic Control in Patients with Type 2 Diabetes Undergoing Cardiac Surgery: A Systematic Review.** — Hassan D, Shakeel R, Qaisi W et al. *Ann Card Anaesth* (2026). PMID [42862661](https://pubmed.ncbi.nlm.nih.gov/42862661/) / [DOI](https://doi.org/10.4103/aca.aca_307_25)
+  - 抄録: Perioperative hyperglycemia is common in patients with type 2 diabetes undergoing cardiac surgery and is linked to adverse outcomes. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) offer glucose-dependent insulinotropic effects and potential cardiac benefits, but their perioperative role remai…
 
 ### ⏳ 2026-10-11 収集分 (5件・織り待ち)
 

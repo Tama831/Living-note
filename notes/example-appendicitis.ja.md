@@ -1,14 +1,14 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-10-11
+updated: 2026-10-19
 ---
 
 # 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-11 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-19 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -17,10 +17,10 @@ updated: 2026-10-11
 ## 📌 5行サマリ
 <!-- LN:SUMMARY:START -->
 - 虫垂炎は外科的急腹症で最も多い。生涯リスク6-9%、ピーク10-19歳。病態は「栄養-マイクロバイオーム-遺伝軸」で捉えられ、非複雑性と複雑性はサイトカイン像が異なる「二つの病気」かもしれない (Ryoo / Han 2026)。小児複雑性の起炎菌は大腸菌が最多だが、確実性は低い (Almeida-Gomes 2026)
-- 診断は「**一つの検査で決めない・一時点で決めない**」へ収束: Alvarado は単独使用不可 (特異度57-76%)、連続型 pARC > 固定加点式、さらに早期の曖昧例は**観察して測り直す** — 単発 AAS の AUROC 0.629 が最終 AAS 0.936・∆AAS 0.932 に跳ねる (Tchouala Tchakoute / Lastunen 2026)
-- 画像は院内 CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用。土俵は精度競争から**「どの場で誰が振り分け、過剰 (画像・紹介) をどう減らすか」**へ移り、一次医療での予測ルール+CRP POCT 実装 RCT が進行中 (Hogervorst 2026, NCT06762275)
-- 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡 (中央値33.6ヶ月) では NOM 失敗38.9%・RCT限定44.4%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)
-- 複雑性は interval appendectomy の判断軸が「年齢連動の腫瘍リスク」へ (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%・フォロー標準未確立)。蔵書3本→38本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
+- 診断は「**一つの検査で決めない・一時点で決めない**」へ収束: Alvarado は単独使用不可、連続型 pARC > 固定加点式、早期の曖昧例は**観察して測り直す** (単発 AAS の AUROC 0.629 → ∆AAS 0.932)。さらに**スコアは集団を越えて持ち運べない** — 小児で特異度に強い AIR も妊婦では AUC 0.752 にとどまる (Tchouala Tchakoute / Lastunen / Tavakoli 2026)
+- 画像は院内 CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用。AI/ML の高い AUC は**「臨床準備度より方法論の脆さ」の表れ** — 較正・外部検証・臨床有用性の報告が欠ける (Bašković & Pogorelić 2026)。土俵は精度競争から一次医療での振り分けへ (Hogervorst 2026, NCT06762275)
+- 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡では NOM 失敗38.9%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)。手術側は腹腔鏡が gold standard のまま、技術細部の標準化へ (WSES 2025 準拠, Štefanová 2026)
+- 複雑性は**個別化 step-up** (静注抗菌薬+経皮ドレナージ → 切除) と、interval appendectomy の判断軸の「年齢連動の腫瘍リスク」への移動 (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%)。蔵書3本→43本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -43,6 +43,16 @@ updated: 2026-10-11
 — スコアを「点数の足し算」から「確率の推定」へ移す方向である。ここに CRP・好中球/リンパ球比 (NLR)・
 選択的超音波を重ね、CT は不確定例に限って投入するのが最適解、というのがこのレビューの結論である。
 
+ただし**スコアの性能は集団を越えて持ち運べない**。小児で特異度の強さが評価された AIR を妊婦に
+当てた初の診断精度メタ解析 (Tavakoli 2026, 5研究・二変量ランダム効果モデル) では、**統合感度
+66.7% (95%CI 44.2-83.5)・特異度 75.5% (40.0-93.5)・AUC 0.752** と中等度にとどまり、偽陽性率は
+24.5% に及ぶ。異質性は大きく (I² 75.6%)、その源の一つが**カットオフの選び方**で、カットオフは
+特異度を有意に動かすが感度は動かさない — 同一研究内でもカットオフを ≥4 から ≥9 へ上げると、感度は
+99.1%→36.8% に落ち、特異度は 42.4%→97.0% に上がる。妊娠に伴う白血球・CRP の生理的変化を思えば
+炎症反応ベースのスコアが揺れるのは自然で、著者らも**単独診断ではなく臨床評価の補助**と結論し、
+妊婦専用のカットオフを前向き多施設研究で定めるよう求めている。妊婦では「スコアで絞って MRI で
+決める」という前段の構図が、数字の上でも裏打ちされた形である。ただし 5研究と少なく、信頼区間も広い。
+
 2026-09 の新着は、この脱・スコア単独の流れに**「時間」という次元**を加えた。成人の早期・判断困難例
 (early equivocal) だけを集めた DIAMOND trial 観察群の二次解析 (Lastunen 2026, 83例) によれば、
 **受診時点の Adult Appendicitis Score (AAS) 単発の AUROC は 0.629 (95%CI 0.498-0.760) と
@@ -58,7 +68,15 @@ updated: 2026-10-11
 バイオマーカーの新戦力も揃ってきた: 小児で有望とされた IL-6 (Tan & Bo 2026) は成人前向きデータでも
 裏打ちされ — 48種サイトカイン解析で複雑性虫垂炎は IL-6・HGF・MCP-1 が有意に高く、IL-6 単独の
 複雑性予測 AUC 0.785 (Han 2026) — AI モデル (AUC 0.85-0.96、CT 深層学習が最高精度だが後ろ向き・
-単施設中心で外部検証不足、Ismayilzada 2026) も続く。
+単施設中心で外部検証不足、Ismayilzada 2026) も続く。この「高い AUC」そのものを疑う批判的方法論
+レビューも現れた (Bašković & Pogorelić 2026)。小児虫垂炎の臨床スコア・機械学習・深層学習・大規模
+言語モデルを、二値診断だけでなく**重症度層別・NOM 反応予測・画像の節制 (imaging stewardship)・
+術後経過まで診療の流れ全体**で見渡し、TRIPOD+AI / PROBAST+AI の基準で吟味すると、**報告される性能は
+識別能 (discrimination) に偏り、較正 (calibration)・臨床有用性・外部検証・公平性・再現性は報告が
+まちまちか欠けている**。著者らは「非常に高い精度という繰り返しのパターンは、臨床準備度よりも
+**方法論の脆さ**を映している」と述べ、予測研究を批判的に読むためのチェックリストを添えた。
+スコアが「確率の推定」へ移るほど、問われるのは並べ替えの上手さ (AUC) より**出した確率が当たって
+いるか (較正)** であり、まさにそこが空白になっている — pARC や ∆AAS の外部検証にも同じ物差しが要る。
 
 ただしこの精度論は一貫して**「すでに病院・ER に到達した患者」を前提**にしてきた。2026-08 の新着は
 その前段 — **一次医療の入口**に土俵を移す。オランダの一般外来を対象に、外的検証済みの7項目予測
@@ -78,7 +96,11 @@ GP の臨床判断と本人・保護者の希望で選ぶ、≥50 mg/L は即時
 鑑別と落とし穴も蓄積してきた: 小児の蟯虫 (Enterobius vermicularis) が虫垂炎を模倣する
 (Jaffry 2026)、特発性被嚢性腹膜硬化症 (abdominal cocoon) の誤診例 (Martzivanou 2026)、
 そして**虫垂切除の既往があっても遺残虫垂炎 (stump appendicitis) は起こりうる** (Gupta 2026,
-25年レビュー) — 「アッペ済み=虫垂炎否定」は成り立たない。
+25年レビュー) — 「アッペ済み=虫垂炎否定」は成り立たない。逆向きの落とし穴 — **虫垂炎のほうが
+別の病気の顔をして来る**例 — もある: 生後2日の新生児 (在胎36週・2500 g) が腹部膨満・哺乳低下・
+**鮮血便**で発症し、壊死性腸炎 (NEC) が疑われる状況で、開腹して急性虫垂炎が見つかった症例報告
+(Kılıç 2026)。新生児虫垂炎は極めて稀で、診断の遅れと穿孔のリスクが高い。著者らは**血便に腹部膨満・
+腸閉塞/イレウス所見を伴う新生児では鑑別に入れる**よう求めている (1例報告であり頻度は語れない)。
 
 ### 治療
 **非穿孔性 (uncomplicated)**: 虫垂切除と抗菌薬先行の両方が選択肢で、糞石の有無を見た上での
@@ -92,22 +114,34 @@ review 群 (Rincon Mora / Baana / Lehovsky & Hall / 小児は Hong, いずれも
 **内視鏡的虫垂治療 (ERAT) が手術・抗菌薬に続く第三の選択肢**として論じられ始めた (Hong 2026)。
 エビデンス増加が速すぎるため、分野全体を living systematic review で追う evidence map
 (Kleindienst 2026) まで登場した。手術は依然第一選択の位置で腹腔鏡が標準 (Vidarsdottir 2025)。
+WSES 2025 ガイドラインと ACS の手引きに沿って治療史と現行標準をまとめた総説 (Štefanová & Sákra 2026)
+は、治療が**保存的治療 → McBurney 切開による開腹虫垂切除 → 現在の gold standard である腹腔鏡下
+虫垂切除**と移ってきた流れを確認したうえで、争点を腹腔鏡の**技術細部** — ポート選択・虫垂間膜の
+処理・断端閉鎖法・創部感染と腹腔内感染を防ぐ回収バッグの使用 — に置いている。外科が始まる前の
+時代は保存的治療から出発していたことを思えば、いまの抗菌薬先行の議論は、抗菌薬と画像診断を
+得たうえでの**「保存」への条件つきの再訪**とも読める。
 
 そしてこの議論には**時間軸という第四の軸**が加わった。従来の RCT の多くは1年時点の非劣性を語って
 きたが、**追跡2年以上の研究だけを集めたメタ解析** (Kahana 2026, 1635研究をスクリーニングして9研究・
 3883例・うち3件が RCT、5件が小児、追跡中央値33.6ヶ月/最長312ヶ月) は別の像を返す:
 **NOM の長期失敗率は 38.9% (95%CI 31.1-46.7)、RCT に限れば 44.4% (41.4-47.4)、NOM 後に虫垂切除へ
 至った割合は 36.3% (28.9-43.7)**。つまり「1年時点で8割成功」の話は、**数年単位では『4割前後が結局
-手術に行き着く』という説明に置き換わる** — SDM で患者に渡す数字そのものが変わる。一方で費用は
+手術に行き着く』という説明に置き換わる** — SDM で患者に渡す数字そのものが変わる。上記の総説
+(Štefanová & Sákra 2026) も、一次抗菌薬治療を「選ばれた患者での妥当な代替」と認めつつ**長期再発率は
+相当高い**と明記しており、ガイドライン準拠の総説の側でもこの数字が前提になりつつある。一方で費用は
 長期でも NOM 優位が保たれ (**差 €1535, 95%CI -1892〜-1178**)、Farhad 2026 の「12ヶ月止まり」という
 限界を一段延ばした。NOM 中に見つかる虫垂腫瘍は約0.3%で、後述の腫瘍リスク軸とも接続する。
 ただし非 RCT 6件が混在し「失敗」の定義も研究間で揺れるため、この4割という数字は**再発の重症度・
 QOL・満足度を伴わない粗い指標**である点は留意が要る。
 
-**複雑性 (complicated)**: 小児では膿瘍合併例でも腹腔鏡は安全 (Wang 2026, 前向きコホート)。
-保存的治療後の **interval appendectomy の判断軸は「再発予防」から「年齢連動の腫瘍リスク+
-画像所見に基づく選択」へ移動**している (Gosavi 2026; 小児は APSA 系統的レビュー Sulkowski
-2026)。この腫瘍リスクの軸は interval appendectomy の外側にも伸びる: **40歳以上では虫垂炎後の
+**複雑性 (complicated)**: 穿孔・蜂窩織炎 (phlegmon)・膿瘍では**個別化した step-up 戦略** — 静注
+抗菌薬と経皮的ドレナージによる保存的治療から、虫垂切除、さらには盲腸底部切除・回盲部切除まで —
+が推奨される (Štefanová & Sákra 2026, WSES 2025 準拠)。小児では膿瘍合併例でも腹腔鏡は安全
+(Wang 2026, 前向きコホート)。保存的治療後の **interval appendectomy の判断軸は「再発予防」から
+「年齢連動の腫瘍リスク+画像所見に基づく選択」へ移動**している (Gosavi 2026; 小児は APSA 系統的
+レビュー Sulkowski 2026)。この APSA レビューには早くも letter to the editor が寄せられた
+(Bašković 2026) が、抄録がなく、どの点に異を唱えたかは本文未確認である。この腫瘍リスクの軸は
+interval appendectomy の外側にも伸びる: **40歳以上では虫垂炎後の
 大腸腫瘍の発見率 0.5-34.6%・リスク上昇 1.2-38.5倍**と報告される (Spota 2026, scoping review
 17研究) が、全て後ろ向きでフォローアップ標準の推奨には至らず、前向き研究の枠組み提案に
 とどまる。周術期管理では、非穿孔性壊疽性虫垂炎で単回投与抗菌薬が術後継続投与と同等の可能性
@@ -141,11 +175,14 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 小児では栄養状態と穿孔リスクの
 関係も検討され、**肥満・BMI 単独は穿孔を予測せず、低体重とアルブミン/プレアルブミン系指標の
 ほうが複雑性と一貫して関連**する (Borca 2026, 14研究)。穿孔・膿瘍形成への進展があるため迅速な
-診断が予後を分ける、という臨床的要諦は不変。なお「急性腹痛の子どもの大半は自然軽快する良性
+診断が予後を分ける、という臨床的要諦は不変 — それが最も厳しく効くのが年齢の両端で、**新生児では
+極めて稀なぶん想起されにくく、遅れと穿孔のリスクが高い** (Kılıç 2026)。なお「急性腹痛の子どもの大半は自然軽快する良性
 疾患」という一次医療側の母数 (Hogervorst 2026 が想定する通常診療の紹介効率は88%) を踏まえると、
 病院集団で語られる有病率とプライマリ・ケアで見える有病率のズレそのものが、診断戦略の設計変数に
 なっている。発症から受診までの時点によって所見が動く (だからこそ ∆AAS が効く, Lastunen 2026)
 という事実も、「虫垂炎という一枚の疾患像」ではなく**時間の関数として動く過程**を見ている証拠である。
+同じ理屈は対象集団にも当てはまり、妊娠という生理状態が炎症反応ベースのスコアの性能を変える
+(Tavakoli 2026) ことは、**誰に起きたかによっても所見の読み方が変わる**ことを示している。
 
 ### 未回収の問い
 - 抗菌薬先行群の**5年超**の再発率・QOL・満足度 — 2年超は Kahana 2026 が埋めた (失敗38.9%・中央値33.6ヶ月) が、
@@ -156,13 +193,17 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
   欧米以外・成人でも成り立つか、そして EHR に載せて実際に使えるか (成人側では AAS の反復測定が同じ空白を別経路で埋めつつある)
 - **∆AAS (観察して測り直す) の外部検証** — 最適な観察時間、閾値の妥当性 (Lastunen 2026 は n=83 の単一試験二次解析で
   閾値が内部データ由来)、小児・妊婦への移植、そして「時間差分」を pARC 型の連続モデルに組み込めるか
+- **妊婦専用の AIR カットオフ** — 5研究・I² 75.6% でカットオフが特異度を大きく動かす (Tavakoli 2026)。前向き多施設研究で
+  妊娠週数別の閾値を定め、MRI へ進む前段の振り分けにどう組み込むか
 - ERAT (内視鏡的虫垂治療) の小児での位置づけ — 手術・抗菌薬との比較試験 (Hong 2026 が提起)
 - interval appendectomy 適応を決める年齢閾値・画像所見の定量化 (腫瘍リスクの層別)
 - 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
 - 糞石以外の失敗予測因子 — IL-6 (+HGF/MCP-1) 等バイオマーカー×画像×AI による術前の複雑性判別
 - 起炎菌研究の標準化 — 検体採取・培養/配列解析の手法を揃えた多施設研究 (Almeida-Gomes 2026 が要請)。
   感受性データと結びつけて小児複雑性の経験的レジメンを根拠づけられるか、腸内細菌叢の変化 (Ryoo 2026) と臨床検体の菌像をつなげられるか
-- AI 診断モデルの多施設・前向き外部検証と実装 (EHR/PACS 統合)
+- AI 診断モデルの多施設・前向き外部検証と実装 (EHR/PACS 統合) — 識別能 (AUC) だけでなく**較正・決定曲線による臨床有用性・
+  公平性・再現性**を TRIPOD+AI / PROBAST+AI 準拠で報告できるか (Bašković & Pogorelić 2026 がチェックリストと研究課題を提示)。
+  大規模言語モデルを診療支援に使う場合の評価の物差しも未確立
 - 一次医療の予測ルール+CRP POCT が実際に過剰紹介を減らし遅延診断を増やさないか — Hogervorst 2026 (NCT06762275) の結果待ち。ゲートキーパー制のないフリーアクセス医療 (日本を含む) への外挿可能性は未検討
 <!-- LN:SYNTHESIS:END -->
 
@@ -206,13 +247,18 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 36. **Kahana N, Boaz E, Emile SH et al.** Long-term outcomes of non-operative compared to operative management of acute uncomplicated appendicitis — a systematic review and meta-analysis. *Am J Surg* 2026;261:117203. PMID [42636733](https://pubmed.ncbi.nlm.nih.gov/42636733/) / [DOI](https://doi.org/10.1016/j.amjsurg.2026.117203)
 37. **Lastunen KS, Leppäniemi AK, Mentula PJ.** Repeated scoring with the adult appendicitis score improves the sensitivity and the specificity of appendicitis diagnosis in patients with early equivocal signs of appendicitis: a secondary analysis. *Eur J Trauma Emerg Surg* 2026;52(1). PMID [42690425](https://pubmed.ncbi.nlm.nih.gov/42690425/) / [DOI](https://doi.org/10.1007/s00068-026-03326-x) — [PMC13541895](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13541895/) (無料全文)・DIAMOND trial [NCT02742402](https://clinicaltrials.gov/study/NCT02742402) の観察群二次解析
 38. **Almeida-Gomes RF, Massini RB, Bronzato JD, Gomes BPFA, Garcia IGO.** Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis. *Eur J Clin Microbiol Infect Dis* 2026 (2026-10-08 オンライン公開). PMID [42848117](https://pubmed.ncbi.nlm.nih.gov/42848117/) / [DOI](https://doi.org/10.1007/s10096-026-05662-7)
+39. **Tavakoli Y, Ghanami B, Alimohammadi A, Motaharnia A.** Diagnostic accuracy of the appendicitis inflammatory response (AIR) score for acute appendicitis during pregnancy: A systematic review and diagnostic meta-analysis. *Surg Pract Sci* 2026;27:100367. PMID [42892885](https://pubmed.ncbi.nlm.nih.gov/42892885/) / [DOI](https://doi.org/10.1016/j.sipas.2026.100367) — [PMC13675802](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13675802/) (無料全文)
+40. **Štefanová H, Sákra L.** Acute appendicitis - history and current management standards. *Rozhl Chir* 2026;105(9):386-390. PMID [42885638](https://pubmed.ncbi.nlm.nih.gov/42885638/) / [DOI](https://doi.org/10.48095/ccrvch2026386)
+41. **Bašković M, Pogorelić Z.** A Critical Methodological Review of Clinical Scores, Machine Learning, and Large Language Models for the Diagnosis and Management of Pediatric Appendicitis. *Healthcare (Basel)* 2026;14(19). PMID [42881708](https://pubmed.ncbi.nlm.nih.gov/42881708/) / [DOI](https://doi.org/10.3390/healthcare14193269)
+42. **Kılıç S, Bozdağ Ş, Aşıcıoğlu MC, Güvenç BH.** Neonatal appendicitis with rectal bleeding: an unusual presentation. *Ir J Med Sci* 2026 (2026-10-12 オンライン公開). PMID [42862451](https://pubmed.ncbi.nlm.nih.gov/42862451/) / [DOI](https://doi.org/10.1007/s11845-026-04678-4)
+43. **Bašković M, Dujić B, Vuković S.** Letter to the Editor in reference to 'Interval appendectomy practices for complicated appendicitis in children: a systematic review from the APSA Outcomes and Evidence-Based Practice Committee'. *Pediatr Surg Int* 2026;42(1). PMID [42862381](https://pubmed.ncbi.nlm.nih.gov/42862381/) / [DOI](https://doi.org/10.1007/s00383-026-06679-x) — No.21 への letter・抄録なし (論点は本文未確認)
 
 > ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便、
-> No.37 は 2026-09-13 便、No.38 は 2026-10-11 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
+> No.37 は 2026-09-13 便、No.38 は 2026-10-11 便、No.39-43 は 2026-10-19 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
 > 収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に
 > 別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34)・2026-08-29 便
-> (No.35-36)・2026-09-13 便 (No.37)・2026-10-11 便 (No.38) は PMID・DOI とも収集ログと PubMed 照合値が一致 —
-> **4便連続で混入なし**。混入は第1・第2便 (2026-08-07) に限られ、収集ロジックかソース側の変化で自然に解消したと
+> (No.35-36)・2026-09-13 便 (No.37)・2026-10-11 便 (No.38)・2026-10-19 便 (No.39-43) は PMID・DOI とも収集ログと
+> PubMed 照合値が一致 — **5便連続で混入なし**。混入は第1・第2便 (2026-08-07) に限られ、収集ロジックかソース側の変化で自然に解消したと
 > 判断し、前便の取り決めどおり `living_notes_update.py` の DOI 抽出は**「修理不要・監視のみ」に格下げ**する
 > (今後も編み込み時の PubMed 照合は続け、再発したら修理に戻す)。
 
@@ -220,6 +266,18 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-10-19 収集分 (5件・編み込み済み)
+
+- **Diagnostic accuracy of the appendicitis inflammatory response (AIR) score for acute appendicitis during pregnancy: A systematic review and diagnostic meta-analysis.** — Tavakoli Y, Ghanami B, Alimohammadi A et al. *Surg Pract Sci* (2026). PMID [42892885](https://pubmed.ncbi.nlm.nih.gov/42892885/) / [DOI](https://doi.org/10.1016/j.sipas.2026.100367)
+  - 抄録: This diagnostic test accuracy meta-analysis evaluated the accuracy of the Appendicitis Inflammatory Response (AIR) score for acute appendicitis (AA) in pregnant women. Following PRISMA guidance, PubMed, Embase, Scopus, and Web of Science were searched from inception through March 2026 for studies pr…
+- **Acute appendicitis - history and current management standards.** — Štefanová H, Sákra L *Rozhl Chir* (2026). PMID [42885638](https://pubmed.ncbi.nlm.nih.gov/42885638/) / [DOI](https://doi.org/10.48095/ccrvch2026386)
+  - 抄録: Acute appendicitis is still the most common cause of acute abdomen requiring emergency surgical intervention. This review aims to summarize the historical evolution of therapeutic strategies and present current standard management methods for acute appendicitis based on the latest international evid…
+- **A Critical Methodological Review of Clinical Scores, Machine Learning, and Large Language Models for the Diagnosis and Management of Pediatric Appendicitis.** — Bašković M, Pogorelić Z *Healthcare (Basel)* (2026). PMID [42881708](https://pubmed.ncbi.nlm.nih.gov/42881708/) / [DOI](https://doi.org/10.3390/healthcare14193269)
+  - 抄録: Background/Objectives: Acute appendicitis is the most common surgical emergency of childhood, yet its diagnosis remains difficult because presentations are atypical, inflammatory markers are nonspecific, and the consequences of error run in both directions, from negative appendectomy to missed perfo…
+- **Neonatal appendicitis with rectal bleeding: an unusual presentation.** — Kılıç S, Bozdağ Ş, Aşıcıoğlu MC et al. *Ir J Med Sci* (2026). PMID [42862451](https://pubmed.ncbi.nlm.nih.gov/42862451/) / [DOI](https://doi.org/10.1007/s11845-026-04678-4)
+  - 抄録: Neonatal appendicitis is an exceptionally rare condition with a high risk of delayed diagnosis and perforation. Its nonspecific clinical presentation may mimic other causes of acute abdomen and gastrointestinal bleeding in newborns, particularly necrotizing enterocolitis. A 36-week, 2500-g male neon…
+- **Letter to the Editor in reference to the article entitled 'Interval appendectomy practices for complicated appendicitis in children: a systematic review from the APSA Outcomes and Evidence-Based Practice Committee'.** — Bašković M, Dujić B, Vuković S *Pediatr Surg Int* (2026). PMID [42862381](https://pubmed.ncbi.nlm.nih.gov/42862381/) / [DOI](https://doi.org/10.1007/s00383-026-06679-x)
 
 ### ✅ 2026-10-11 収集分 (1件・編み込み済み)
 
