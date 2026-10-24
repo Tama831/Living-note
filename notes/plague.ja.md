@@ -1,14 +1,14 @@
 ---
 topic: ペスト / plague (Yersinia pestis)
 slug: plague
-updated: 2026-10-16
+updated: 2026-10-24
 ---
 
 # 🌱 生きたノート: ペスト（Yersinia pestis） (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-16 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-24 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -191,6 +191,11 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-24 収集分 (1件・織り待ち)
+
+- **Community Transmission of Pneumonic Plague, Fenoarivobe, Madagascar, 2022.** — Randrianasolo L, Rakotoarimisa R, Rahajandraibe S et al. *Emerg Infect Dis* (2026). PMID [42912474](https://pubmed.ncbi.nlm.nih.gov/42912474/) / [DOI](https://doi.org/10.3201/eid3211.260549)
+  - 抄録: The results of an outbreak investigation of pneumonic plague conducted in the plague-endemic district of Fenoarivobe, Madagascar, revealed a familial cluster of plague. Transmission was aided by intrahousehold contact or gatherings and was amplified by delayed plague treatment, highlighting the need…
 
 ### ⏳ 2026-10-16 収集分 (11件・織り待ち)
 
