@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-10-19
+updated: 2026-10-26
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-19 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-26 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -266,6 +266,27 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-26 収集分 (9件・織り待ち)
+
+- **A Framework to Monitor Editing of Artificial Intelligence-Generated Medical Documentation.** — Garcia-Agundez A, Zhou S, Pourian J et al. *medRxiv* (2026). PMID [42926862](https://pubmed.ncbi.nlm.nih.gov/42926862/) / [DOI](https://doi.org/10.64898/2026.09.30.26364427)
+  - 抄録: To develop and evaluate a framework for characterizing clinician editing of Artificial Intelligence (AI)-generated documentation and assess its feasibility for health system-level monitoring of AI scribes. We analyzed outpatient encounters in which an AI scribe was used at a single academic health s…
+- **A prebill control plane for record integrity in inpatient artificial intelligence-enabled clinical documentation workflows.** — Smith S, Judeh H *Front Digit Health* (2026). PMID [42923338](https://pubmed.ncbi.nlm.nih.gov/42923338/) / [DOI](https://doi.org/10.3389/fdgth.2026.1910263)
+  - 抄録: Ambient artificial intelligence (AI) scribes and other electronic health record (EHR)-integrated generative AI tools are entering clinical documentation workflows because they offer measurable, if still modest, gains in documentation efficiency and clinician experience. At the same time, the medical…
+- **The Artificial Levite: AI and the Temptation to "Pass By" the Patient.** — Petruconis L *Linacre Q* (2026). PMID [42923080](https://pubmed.ncbi.nlm.nih.gov/42923080/) / [DOI](https://doi.org/10.1177/00243639261496010)
+  - 抄録: Healthcare stands to gain much from the integration of artificial intelligence (AI). We must, as a society, decide how it should be ethically implemented into these human-led sectors. After first examining AI from a Catholic perspective at the general scale using Antiqua et Nova, this essay shifts i…
+- **From chatbot to clinical copilot: the role of generative artificial intelligence in nuclear medicine reporting and data extraction.** — Shih PF *Nucl Med Commun* (2026). PMID [42922372](https://pubmed.ncbi.nlm.nih.gov/42922372/) / [DOI](https://doi.org/10.1097/mnm.0000000000002254)
+  - 抄録: Large language models (LLMs) are rapidly transforming clinical documentation workflow. This scoping review evaluates the emerging role of LLMs in nuclear medicine and molecular imaging, as recent literature suggests increasing evaluation of newer LLM architectures alongside GPT-4. We conducted a sco…
+- **Beyond documentation burden: clinician-reported workflow and cognitive changes associated with ambient documentation technology.** — Zellner K, Malhotra K, Szerencsy AC et al. *JAMIA Open* (2026). PMID [42921637](https://pubmed.ncbi.nlm.nih.gov/42921637/) / [DOI](https://doi.org/10.1093/jamiaopen/ooag208)
+  - 抄録: To examine clinicians' experiences using ambient documentation technology (ADT) in ambulatory practice, with a focus on impacts on documentation workflows, perceived cognitive burden, and clinical reasoning. This survey study included clinicians participating in an ADT pilot at NYU Langone Health be…
+- **Association of ambient artificial intelligence scribe availability with patient instruction documentation and readability in ambulatory care.** — Shi K, Creasman M, Schmajuk G et al. *J Am Med Inform Assoc* (2026). PMID [42914097](https://pubmed.ncbi.nlm.nih.gov/42914097/) / [DOI](https://doi.org/10.1093/jamia/ocag177)
+  - 抄録: This retrospective cohort study evaluated the effect of an artificial intelligence (AI) scribe on patient instructions documentation in ambulatory internal medicine settings. We analyzed 391 061 adult encounters at a single medical center from December 2023 to July 2025. A difference-in-differences …
+- **Effectiveness and user experience of ambient artificial intelligence-driven scribe technology among clinicians: a protocol for a systematic review.** — Shankar R, Kumar FDS, Bundele A et al. *Syst Rev* (2026). PMID [42902352](https://pubmed.ncbi.nlm.nih.gov/42902352/) / [DOI](https://doi.org/10.1186/s13643-026-03220-y)
+  - 抄録: The increasing adoption of electronic health records (EHRs) has contributed to high documentation burden among clinicians, negatively impacting job satisfaction and contributing to burnout. Ambient AI-driven scribe technology has emerged as a potential solution to automate clinical documentation and…
+- **Generative AI in clinical practice: how should rheumatologists evaluate and monitor emerging tools?** — Kouranloo K, Dey M, Yazdany J *Arthritis Care Res (Hoboken)* (2026). PMID [42901770](https://pubmed.ncbi.nlm.nih.gov/42901770/) / [DOI](https://doi.org/10.1002/acr.80195)
+  - 抄録: Generative artificial intelligence (AI) is increasingly being used in rheumatology practice, to assist with tasks such as documentation, record summarization, and clinical decision support. Rheumatologists need a practical approach to determining what evidence and oversight each application requires…
+- **The Ambulatory Patient Experience with Ambient Artificial Intelligence Scribes: A Qualitative Study.** — Nguyen OT, Afshar M, Jaeb MA et al. *J Gen Intern Med* (2026). PMID [42897388](https://pubmed.ncbi.nlm.nih.gov/42897388/) / [DOI](https://doi.org/10.1007/s11606-026-10931-4)
+  - 抄録: The effect of ambient artificial intelligence (AI) scribes on patient experience remains understudied and has been largely limited to closed-ended surveys. Qualitative studies are needed to more fully explore how ambient AI scribes influence patient experience. The aim of this study was to explore h…
 
 ### ⏳ 2026-10-19 収集分 (16件・織り待ち)
 

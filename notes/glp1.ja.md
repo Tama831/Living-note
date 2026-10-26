@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-10-19
+updated: 2026-10-26
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-19 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-10-26 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,33 @@ updated: 2026-10-19
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-10-26 収集分 (12件・織り待ち)
+
+- **Perioperative Safety Considerations and Surgical Outcomes Associated With GLP-1-Based Therapies: A Systematic Review.** — Rodrigues da Cunha M, Rodrigues da Cunha MT *Cureus* (2026). PMID [42928739](https://pubmed.ncbi.nlm.nih.gov/42928739/) / [DOI](https://doi.org/10.7759/cureus.116901)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are increasingly prescribed for the management of type 2 diabetes mellitus and obesity. Their effects on gastric emptying have raised concerns in the perioperative setting, where standard fasting protocols are used to reduce aspiration risk. Howe…
+- **[Efficacy and safety of GLP-1 receptor agonists combined with bariatric surgery for obesity: a timing-stratified systematic review].** — He MC, Hua R, Shao YK et al. *Zhonghua Wei Chang Wai Ke Za Zhi* (2026). PMID [42927970](https://pubmed.ncbi.nlm.nih.gov/42927970/) / [DOI](https://doi.org/10.3760/cma.j.cn441530-20260715-00287)
+  - 抄録: Objective: To systematically evaluate the efficacy and safety of GLP-1 receptor agonists applied at different stages before and after bariatric surgery, and to compare the clinical benefits of preoperative use, early postoperative use, and rescue use after insufficient weight loss or weight regain a…
+- **Efficacy and safety of GLP-1 receptor agonists in patients with schizophrenia spectrum disorders treated with antipsychotics: a systematic review and meta-analysis.** — Gędek A, Modrzejewski S, Polański K et al. *Eur Neuropsychopharmacol* (2026). PMID [42925811](https://pubmed.ncbi.nlm.nih.gov/42925811/) / [DOI](https://doi.org/10.1016/j.euroneuro.2026.113886)
+  - 抄録: Weight gain and impaired glucose metabolism are common complications of antipsychotic treatment in schizophrenia spectrum disorders (SSD). While beneficial in other populations, the efficacy and safety of glucagon-like peptide-1 receptor agonists (GLP-1 RAs) in SSD remain unclear. We conducted a sys…
+- **Effects of Tirzepatide on Pancreatic β-Cell Function in Adults With Type 2 Diabetes Mellitus: A Systematic Review.** — Mahmoud R, Zarrouq Yousif AA, Osman AFM et al. *Cureus* (2026). PMID [42923463](https://pubmed.ncbi.nlm.nih.gov/42923463/) / [DOI](https://doi.org/10.7759/cureus.116733)
+  - 抄録: Type 2 diabetes mellitus (T2DM) is driven by progressive pancreatic β-cell failure, and few glucose-lowering agents demonstrably modify this defect. This systematic review assessed whether tirzepatide, a dual glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1) rece…
+- **Effects of liraglutide on blood pressure and renal function in patients with type 2 diabetic nephropathy: a meta-analysis of randomized controlled trials.** — Gao S, Shan Y, Ma D et al. *Front Med (Lausanne)* (2026). PMID [42920458](https://pubmed.ncbi.nlm.nih.gov/42920458/) / [DOI](https://doi.org/10.3389/fmed.2026.1921737)
+  - 抄録: The effects of liraglutide on blood pressure in patients with T2DN remain unclear. This meta-analysis aimed to systematically evaluate the effects of liraglutide on blood pressure and renal function in patients with T2DN. We conducted comprehensive searches of Web of Science, PubMed, the Cochrane Li…
+- **Skeletal effects of GLP-1 receptor agonist therapy in adults with overweight or obesity: a systematic review.** — Lai CH, Li YT, Wu TS et al. *Arch Osteoporos* (2026). PMID [42920024](https://pubmed.ncbi.nlm.nih.gov/42920024/) / [DOI](https://doi.org/10.1007/s11657-026-01785-8)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are widely used for weight management, yet their skeletal effects remain unclear. This systematic review of eight randomized controlled trials (n = 493) evaluating dual-energy X-ray absorptiometry (DXA)-derived bone mineral density reports findin…
+- **Efficacy and safety of GLP-1 receptor agonists for antipsychotic-related overweight and metabolic dysregulation: a systematic review and meta-analysis.** — Zhou L, Zhang Y, Shen C et al. *Eur J Clin Pharmacol* (2026). PMID [42920001](https://pubmed.ncbi.nlm.nih.gov/42920001/) / [DOI](https://doi.org/10.1007/s00228-026-04206-4)
+  - 抄録: Antipsychotic-related overweight and metabolic dysregulation are highly prevalent among patients with severe mental illness. Although glucagon-like peptide-1 receptor agonists (GLP-1RAs) have demonstrated substantial metabolic benefits in the general population, their efficacy and safety in antipsyc…
+- **Semaglutide modulates explore/exploit decision-making in major depressive disorder: A randomized clinical trial.** — Zhang Z, Chen N, Wang D et al. *Psychol Med* (2026). PMID [42904347](https://pubmed.ncbi.nlm.nih.gov/42904347/) / [DOI](https://doi.org/10.1017/s0033291726106412)
+  - 抄録: Explore/exploit decision-making is a crucial component of motivated behavior. Explore/exploit behaviors are related to disparate cognitive and reward-related functions and have been implicated in multiple neuropsychiatric conditions, including major depressive disorder (MDD). Several mediators of ex…
+- **Weight loss and blood pressure lowering with GLP-1 receptor agonists and multi-hormone receptor modulators in overweight and obesity: a systematic review and meta-regression of phase 3 clinical trials.** — Nardone M, Kugathasan L, Daunt L et al. *EClinicalMedicine* (2026). PMID [42903654](https://pubmed.ncbi.nlm.nih.gov/42903654/) / [DOI](https://doi.org/10.1016/j.eclinm.2026.104251)
+  - 抄録: Obesity and hypertension frequently coexist, and weight-reduction is recommended as a core strategy for blood pressure (BP) management in adults with overweight or obesity. Glucagon-like peptide-1 receptor agonists (GLP-1RAs) and emerging multi-hormone receptor modulators (MHRMs) induce substantial …
+- **Influence of GLP-1-Based Pharmacotherapies on Eating Behavior, Appetite, and Energy Intake in Adults With Overweight or Obesity: A Systematic Review and Meta-Analysis.** — Dakin C, Beaumont JD, O Hara B *Obes Rev* (2026). PMID [42897694](https://pubmed.ncbi.nlm.nih.gov/42897694/) / [DOI](https://doi.org/10.1111/obr.70245)
+  - 抄録: Although GLP-1-based pharmacotherapies achieve clinically significant weight loss, their influence on eating behavior is unknown. This systematic review examined the effects of GLP-1-based pharmacotherapies on eating behavior, appetite, and energy intake in adults (≥ 18 years) with overweight or obe…
+- **Changes in Muscle Strength Following Semaglutide Treatment in Adults: A Systematic Review With Meta-Analysis of Handgrip Strength.** — Machado LG, Siedschlag Schmidt PH, Tasca Petroski G et al. *Diabetes Obes Metab* (2026). PMID [42897109](https://pubmed.ncbi.nlm.nih.gov/42897109/) / [DOI](https://doi.org/10.1111/dom.71432)
+  - 抄録: To systematically review and quantitatively synthesize within-group changes in skeletal muscle strength following semaglutide treatment in adults. This PRISMA 2020 systematic review was registered in PROSPERO (CRD420251185935). MEDLINE, Embase, CENTRAL, LILACS and Google Scholar were searched throug…
+- **The effect of glucagon-like peptide-1 receptor agonists versus metformin on pregnancy rates in women with polycystic ovary syndrome: a systematic review and meta-analysis of randomized trials.** — Kar E, Yeh J, Efe MA et al. *Eur J Obstet Gynecol Reprod Biol* (2026). PMID [42893679](https://pubmed.ncbi.nlm.nih.gov/42893679/) / [DOI](https://doi.org/10.1016/j.ejogrb.2026.115499)
+  - 抄録: PCOS-related infertility is closely linked to metabolic dysfunction. Glucagon-like peptide-1 receptor agonists (GLP-1RAs) improve insulin resistance and promote weight loss in women with PCOS, but their direct effect on reproductive outcomes remains uncertain. To evaluate whether GLP-1RA-based thera…
 
 ### ⏳ 2026-10-19 収集分 (16件・織り待ち)
 
