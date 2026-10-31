@@ -1,14 +1,14 @@
 ---
 topic: ペスト / plague (Yersinia pestis)
 slug: plague
-updated: 2026-10-24
+updated: 2026-11-01
 ---
 
 # 🌱 生きたノート: ペスト（Yersinia pestis） (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-24 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-01 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -191,6 +191,13 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-01 収集分 (2件・織り待ち)
+
+- **Plague in the modern world: Ecological persistence, epidemic containment, and the limits of public health preparedness.** — Sun L, Zhu H, Qi Q et al. *Biosci Trends* (2026). PMID [42951599](https://pubmed.ncbi.nlm.nih.gov/42951599/) / [DOI](https://doi.org/10.5582/bst.2026.01267)
+  - 抄録: Yersinia pestis persists across sylvatic rodent-flea reservoirs globally and is not currently amenable to eradication. Paleogenomic and paleoecological evidence indicates that historical plague pandemics reflected complex interactions among pathogen biology, environmental conditions, and societal vu…
+- **Establishment of Recombinase-Aided Amplification Combined with Lateral Flow Dipstick for Rapid Detection of Yersinia pestis Based on the pla Gene.** — Zhou Y, Yang X, Ding Z et al. *Vet Sci* (2026). PMID [42944185](https://pubmed.ncbi.nlm.nih.gov/42944185/) / [DOI](https://doi.org/10.3390/vetsci13101091)
+  - 抄録: This study establishes a rapid detection method for Yersinia pestis that combines recombinase-aided amplification with a lateral flow dipstick (RAA-LFD) and targets the pla gene. Based on the pla gene sequences of six representative strains from NCBI, three primer pairs (P-F1/R1, P-F2/R2, and P-F3/R…
 
 ### ⏳ 2026-10-24 収集分 (1件・織り待ち)
 
