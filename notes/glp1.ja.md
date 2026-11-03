@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-10-26
+updated: 2026-11-03
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-26 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,33 @@ updated: 2026-10-26
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-03 収集分 (12件・織り待ち)
+
+- **The effect of glucagon-like peptide-1 receptor agonists on bone metabolism: A systematic review and meta-analysis of randomized placebo-controlled trials of predominantly first-generation agents.** — Safargar M, Ahmadi N, Prabahar K et al. *Bone* (2026). PMID [42971377](https://pubmed.ncbi.nlm.nih.gov/42971377/) / [DOI](https://doi.org/10.1016/j.bone.2026.118160)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1RAs) improve cardiometabolic outcomes, but their isolated effects on human bone remodeling remain uncertain because prior syntheses pooled heterogeneous study designs and active antidiabetic comparators. This systematic review and meta-analysis quantif…
+- **Patient-centred outcomes with incretin-based therapies and sodium-glucose cotransporter 2 inhibitors in obesity-related heart failure with preserved ejection fraction: a programme-level systematic review and meta-analysis.** — Khan MD, Ul Haq MS, Shaukat MI et al. *Cardiol Young* (2026). PMID [42969830](https://pubmed.ncbi.nlm.nih.gov/42969830/) / [DOI](https://doi.org/10.1017/s1047951126124317)
+  - 抄録: Obesity-related heart failure with preserved ejection fraction is characterised by symptom burden, impaired mobility, and reduced health status. Direct comparative evidence between incretin-based therapies and sodium-glucose cotransporter 2 inhibitors is lacking. We conducted a PRISMA-guided systema…
+- **Semaglutide and Cardiovascular Death: a Systematic Review and Meta-Analysis Cardioprotective Efficacy of Semaglutide.** — Marino G, Aquilani S, Di Fusco SA et al. *Crit Pathw Cardiol* (2026). PMID [42969445](https://pubmed.ncbi.nlm.nih.gov/42969445/) / [DOI](https://doi.org/10.1097/hpc.0000000000000445)
+  - 抄録: Cardiovascular death (CVD) remains a leading cause of global mortality. Although semaglutide reduces major adverse cardiovascular events (MACE), the consistency and exact magnitude of its standalone effect on CVD across various patient phenotypes require comprehensive evaluation. This meta-analysis …
+- **Cutaneous Adverse Events With Semaglutide: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.** — Ganjre S, Borah L, Khardenavis A *Cureus* (2026). PMID [42966951](https://pubmed.ncbi.nlm.nih.gov/42966951/) / [DOI](https://doi.org/10.7759/cureus.117270)
+  - 抄録: Semaglutide is widely used for metabolic disease, but cutaneous adverse events are inconsistently reported. This systematic review and meta-analysis evaluated randomized comparisons of semaglutide with placebo, usual care, or non-semaglutide active treatment. The protocol was registered in the Inter…
+- **Pregnancy and perinatal outcomes following exposure to GLP-1 and dual GLP-1/GIP receptor agonists: a time-window-stratified systematic review and meta-analysis.** — Mavigök E, Mavigök AN *Front Pharmacol* (2026). PMID [42964193](https://pubmed.ncbi.nlm.nih.gov/42964193/) / [DOI](https://doi.org/10.3389/fphar.2026.1994366)
+  - 抄録: To evaluate maternal, fetal, and neonatal outcomes after preconception or gestational exposure to glucagon-like peptide-1 receptor agonists and dual glucagon-like peptide-1/glucose-dependent insulinotropic polypeptide receptor agonists, and to assess the reproducibility of reported safety signals. S…
+- **Metabolic, hormonal, and reproductive effects of GLP-1 receptor agonizts in hyperandrogenic insulin-resistant women: a systematic review.** — Sherif Mohamed M, Farrag A, Bachkangi P *Gynecol Endocrinol* (2026). PMID [42960716](https://pubmed.ncbi.nlm.nih.gov/42960716/) / [DOI](https://doi.org/10.1080/09513590.2026.2757301)
+  - 抄録: Hyperandrogenic insulin-resistant states, most commonly polycystic ovary syndrome (PCOS) and severe phenotypes such as HAIR-AN syndrome, are characterized by metabolic dysfunction, androgen excess, and reproductive disturbance. Insulin resistance is a central pathogenic driver and therapeutic target…
+- **Effect of glucagon-like-peptide-1 receptor agonists on major cardiovascular outcomes: a systematic review and meta-analysis.** — Saleem MF, Mansoor A, Shahid E et al. *Monaldi Arch Chest Dis* (2026). PMID [42948977](https://pubmed.ncbi.nlm.nih.gov/42948977/) / [DOI](https://doi.org/10.4081/monaldi.2026.3980)
+  - 抄録: Glucagon-like-peptide-1 (GLP-1) receptor agonists are an antihyperglycemic group of drugs that have emerged as potentially preventing the risk of cardiovascular events. This meta-analysis assesses the effect of GLP-1 receptor agonists on cardiovascular outcomes. A detailed search of existing literat…
+- **Impact of GLP-1 Receptor Agonists on Cognitive Performance in Adults at Risk of Alzheimer's Disease: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.** — Abbatecola AM, Migliara G, D'Agostino F et al. *Nutrients* (2026). PMID [42942883](https://pubmed.ncbi.nlm.nih.gov/42942883/) / [DOI](https://doi.org/10.3390/nu18203312)
+  - 抄録: Background/Objectives: Type 2 diabetes, a widely recognized risk factor of Alzheimer's disease (AD), is mainly due to the role played by insulin resistance on neuronal degeneration. Mild Cognitive Impairment (MCI) also significantly increases the risk of developing AD by approximately 40%. Epidemiol…
+- **GLP-1 Receptor Agonist Therapy in Patients with Cancer: A Review of Clinical Outcomes.** — Andronescu AC, Ciumărnean L, Orășan OH et al. *Int J Mol Sci* (2026). PMID [42942021](https://pubmed.ncbi.nlm.nih.gov/42942021/) / [DOI](https://doi.org/10.3390/ijms27209251)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are increasingly used for the management of obesity and type 2 diabetes, including among patients with cancer. Although previous research has mainly focused on cancer incidence, their associations with clinical outcomes after cancer diagnosis rem…
+- **Weight Regain After Discontinuation of GLP-1 and GIP/GLP-1 Receptor Agonists: A Systematic Review.** — Marchetti M, Campisano G, Paragliola RM et al. *Metabolites* (2026). PMID [42941232](https://pubmed.ncbi.nlm.nih.gov/42941232/) / [DOI](https://doi.org/10.3390/metabo16100757)
+  - 抄録: Weight regain and loss of cardiometabolic benefit commonly follow the withdrawal of glucagon-like peptide-1 receptor agonists (GLP-1RAs) and dual glucose-dependent insulinotropic polypeptide/GLP-1 receptor agonists, yet maintenance strategies are incompletely characterized. We conducted a systematic…
+- **Efficacy and safety of GLP-1 receptor agonists in patients with metabolic dysfunction-associated steatotic liver disease (MASLD) and metabolic dysfunction-associated steatohepatitis (MASH): A systematic review and meta-analysis.** — Alfawaz M, Bajamaan D, Alghamdi L et al. *Medicine (Baltimore)* (2026). PMID [42937793](https://pubmed.ncbi.nlm.nih.gov/42937793/) / [DOI](https://doi.org/10.1097/md.0000000000051306)
+  - 抄録: Metabolic dysfunction-associated steatotic liver disease (MASLD) and metabolic dysfunction-associated steatohepatitis (MASH) are increasingly prevalent liver diseases closely linked to obesity, type 2 diabetes mellitus, and cardiometabolic risk. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) …
+- **Cutaneous Adverse Events Associated with Semaglutide, Liraglutide and Tirzepatide: A Systematic Review.** — Gupta AK, Teasell EM, Magalhães RF et al. *Med Sci (Basel)* (2026). PMID [42930571](https://pubmed.ncbi.nlm.nih.gov/42930571/) / [DOI](https://doi.org/10.3390/medsci14060652)
+  - 抄録: Incretin-based therapies, including glucagon like peptide-1 receptor agonists (GLP-1 RAs) and glucose-dependent insulinotropic polypeptide (GIP)/GLP-1 RAs, are increasingly prescribed for obesity, leading to greater recognition of associated dermatological adverse events (AEs). We aimed to character…
 
 ### ⏳ 2026-10-26 収集分 (12件・織り待ち)
 

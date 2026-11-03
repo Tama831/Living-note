@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-10-26
+updated: 2026-11-03
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-26 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -266,6 +266,43 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-03 収集分 (19件・織り待ち)
+
+- **The Ambient AI Era and Medical Student Education: Insights From Family Medicine Clerkship Directors.** — Welder E, Kunz A, Xu Y et al. *Fam Med* (2026). PMID [42970399](https://pubmed.ncbi.nlm.nih.gov/42970399/) / [DOI](https://doi.org/10.22454/fammed.2026.568997)
+  - 抄録: Artificial intelligence (AI) adoption in medicine is rapidly expanding, including ambient AI (AAI), which converts clinician-patient conversations into documentation. Despite growing use among practicing physicians, little is known about student access to AAI or barriers to implementation during med…
+- **Artificial Intelligence Use and Training in Residency: Results of a National Family Medicine Survey.** — Barr WB, Peterson LE, Owens S et al. *Fam Med* (2026). PMID [42970387](https://pubmed.ncbi.nlm.nih.gov/42970387/) / [DOI](https://doi.org/10.22454/fammed.2026.0347)
+  - 抄録: We are in a time of rapid adoption of artificial intelligence (AI) in medical care and medical education. We sought to determine the patterns of use and training in AI among family medicine (FM) residents. The 2025 American Board of Family Medicine (ABFM) National Resident Survey (NRS) was administe…
+- **Re: "Comparing ambient scribes: a randomized crossover clinical trial addressing ambient scribe technologies' impact on physician burnout".** — Pannu AS, Cacciamani GE *J Am Med Inform Assoc* (2026). PMID [42956819](https://pubmed.ncbi.nlm.nih.gov/42956819/) / [DOI](https://doi.org/10.1093/jamia/ocag172)
+- **Parent Perceptions of Virtual and Artificial Intelligence Scribes at Pediatric Medical Visits.** — Pletta KH, Kotleski K, Moreno MA et al. *Appl Clin Inform* (2026). PMID [42956816](https://pubmed.ncbi.nlm.nih.gov/42956816/) / [DOI](https://doi.org/10.1055/a-2985-5011)
+  - 抄録: BACKGROUND: Scribes help physicians decrease electronic medical record documentation burden. There is transition from virtual to artificial intelligence (AI) scribes. A gap exists in our understanding of parent perspectives on technology-based scribe use at pediatric medical visits. OBJECTIVES: The …
+- **The unforeseen tradeoff: could AI scribes alter the cognitive and relational work of clinical documentation?** — Pan T, Kera EAC, Hascalovici JR *Postgrad Med* (2026). PMID [42955891](https://pubmed.ncbi.nlm.nih.gov/42955891/) / [DOI](https://doi.org/10.1080/00325481.2026.2754554)
+  - 抄録: AI scribes can reduce the documentation burden and allow clinicians to spend more face time with patients. However, we propose a hypothesis-generating concern that by reducing the active cognitive work of composing clinical notes, AI scribes may alter the encoding of patient encounter details into m…
+- **What Ambient AI Scribes Cannot Hear.** — Bair H *J Gen Intern Med* (2026). PMID [42955206](https://pubmed.ncbi.nlm.nih.gov/42955206/) / [DOI](https://doi.org/10.1007/s11606-026-10779-8)
+  - 抄録: Ambient AI scribes are being deployed across health systems to reduce documentation burden and clinician burnout, with encouraging early results. However, because these tools generate clinical notes from speech, they capture what is said during the encounter, not what clinicians observe without verb…
+- **AI-Mediated Relational Competence in Medical Education: Construct Rationale and Curriculum Maturity Framework.** — McGrath RJ *JMIR Med Educ* (2026). PMID [42954149](https://pubmed.ncbi.nlm.nih.gov/42954149/) / [DOI](https://doi.org/10.2196/105459)
+  - 抄録: AI is quickly becoming a foundational component of many clinical workflows. New tools are continually evolving to enable a host of functionalities, from ambient documentation to enhanced decision support, assistive diagnostic tools, risk prediction, patient triage, and patient communication. As a re…
+- **Ambient Artificial Intelligence Scribe Use and Objective Documentation Effort Among Emergency Physicians.** — Martini WA, Heaton H, Walker L et al. *Ann Emerg Med* (2026). PMID [42949694](https://pubmed.ncbi.nlm.nih.gov/42949694/) / [DOI](https://doi.org/10.1016/j.annemergmed.2026.08.737)
+  - 抄録: Ambient artificial intelligence (AI) scribes ("AI scribes") are purported to reduce emergency department (ED) documentation burden, but ED evidence is largely single-site, uncontrolled, or self-reported, with exposure inferred rather than measured. We evaluated AI scribe use among attending emergenc…
+- **Beyond Time Saved: A Framework for Comprehensive Evaluation of AI Clinical Documentation.** — Sze Min EV *JMIR Med Inform* (2026). PMID [42945375](https://pubmed.ncbi.nlm.nih.gov/42945375/) / [DOI](https://doi.org/10.2196/86091)
+  - 抄録: Ambient AI scribes have been rapidly adopted across health care organizations to mitigate documentation burden and burnout. Initial single-system reports described substantial time savings, but more recent multisite evaluations and meta-analyses describe modest, heterogeneous effects with generally …
+- **Beyond the hype: why artificial intelligence is not a shortcut to solving mental illness.** — Corponi F, Young AH, Kaufman KR *BJPsych Open* (2026). PMID [42934987](https://pubmed.ncbi.nlm.nih.gov/42934987/) / [DOI](https://doi.org/10.1192/bjo.2026.12129)
+  - 抄録: More than one billion people worldwide live with a mental health disorder, and rising prevalence continues to outpace the capacity of mental health services. Artificial intelligence, and large language models in particular, have been widely proposed as a remedy. Nevertheless, psychiatry's limited me…
+- **Ambient AI scribes are here: What every PA needs to know before clicking "Sign".** — Bell M *JAAPA* (2026). PMID [42934911](https://pubmed.ncbi.nlm.nih.gov/42934911/) / [DOI](https://doi.org/10.1097/01.jaa.0000000000000433)
+  - 抄録: Ambient artificial intelligence (AI) scribes, which record patient encounters and automatically draft clinical notes, are rapidly entering frontline practice. They rely on large language models to convert recorded conversations into structured documentation and are marketed as a way to reduce the do…
+- **Impact of Unrestricted Artificial Intelligence Scribe Deployment in a Single Health System on Clinician Workload and Productivity : A Quality Improvement Study.** — Booth SE, Gould R, Cibotti N et al. *Ann Intern Med* (2026). PMID [42932880](https://pubmed.ncbi.nlm.nih.gov/42932880/) / [DOI](https://doi.org/10.7326/annals-25-05294)
+  - 抄録: Ambient artificial intelligence (AI) medical scribes may reduce documentation burden and clinician burnout. Whether use intensity drives benefits remains uncertain. To evaluate the association between AI scribe (Heidi) enrollment and documentation burden and whether changes differ by use intensity. …
+- **The Hidden Human Costs of Ambient Scribes.** — Ostherr K *Ann Intern Med* (2026). PMID [42932879](https://pubmed.ncbi.nlm.nih.gov/42932879/) / [DOI](https://doi.org/10.7326/annals-26-03797)
+- **The Consent Gap in Ambient AI Scribes - Reply.** — Lukac PJ, Cheng EM, Mafi JN *NEJM AI* (2026). PMID [42932713](https://pubmed.ncbi.nlm.nih.gov/42932713/) / [DOI](https://doi.org/10.1056/ailtr2600683)
+- **The Consent Gap in Ambient AI Scribes.** — Ngcobo M *NEJM AI* (2026). PMID [42932711](https://pubmed.ncbi.nlm.nih.gov/42932711/) / [DOI](https://doi.org/10.1056/ailtr2600505)
+- **Ambient AI in Clinical Practice - The Legal Landscape of Recording Consent Requirements.** — Anderson TN, Sinha MS, Cohen IG et al. *NEJM AI* (2026). PMID [42932624](https://pubmed.ncbi.nlm.nih.gov/42932624/) / [DOI](https://doi.org/10.1056/aip2600203)
+  - 抄録: AbstractThe rapid proliferation of ambient artificial intelligence (AI) platforms has created a precarious legal landscape, as highlighted by the 2025 class action lawsuit Saucedo versus Sharp Healthcare. In the absence of legal precedent, the application of existing legal restrictions to the captur…
+- **Privacy Considerations of Artificial Intelligence Scribes.** — Gerke S, Simon DA *NEJM AI* (2026). PMID [42932620](https://pubmed.ncbi.nlm.nih.gov/42932620/) / [DOI](https://doi.org/10.1056/aipc2501401)
+  - 抄録: AbstractArtificial intelligence (AI) scribes are increasingly deployed in U.S. health systems to document patient-physician encounters, with anticipated gains in administrative efficiency counterbalanced by emerging privacy risks. These systems capture audio of clinical encounters and generate trans…
+- **Accelerating Science with Human+AI Review.** — Manrai AK, Ouyang D, Hogan JW et al. *NEJM AI* (2025). PMID [42932522](https://pubmed.ncbi.nlm.nih.gov/42932522/) / [DOI](https://doi.org/10.1056/aie2501175)
+  - 抄録: AbstractThis issue of NEJM AI features the first two articles published through our accelerated human+AI review process. In this editorial, we describe the invitation-only "Fast Track" process used to review these studies, both of which are randomized controlled trials of ambient AI scribes. We emph…
+- **AI Scribes Are Not Productivity Tools (Yet).** — Kim E, Liu VX, Singh K *NEJM AI* (2025). PMID [42932521](https://pubmed.ncbi.nlm.nih.gov/42932521/) / [DOI](https://doi.org/10.1056/aie2501051)
+  - 抄録: AbstractArtificial intelligence (AI) scribes have been heralded as a potential solution to the documentation burden in health care, which is a major contributor to physician burnout. In two landmark randomized controlled trials, published in this issue of NEJM AI, Afshar et al. and Lukac et al. coll…
 
 ### ⏳ 2026-10-26 収集分 (9件・織り待ち)
 

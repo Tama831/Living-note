@@ -1,14 +1,14 @@
 ---
 topic: フッ化水素酸曝露 / hydrofluoric acid exposure
 slug: hydrofluoric-acid
-updated: 2026-08-28
+updated: 2026-11-03
 ---
 
 # 🧪 生きたノート: フッ化水素酸曝露の治療とマネジメント (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-10-26 JST — 新着なし (ノートは前回のまま)。**
+> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -99,6 +99,11 @@ HF (pKa≈3.2) は酸としては弱く、腐食性の顔は塩酸に劣る。�
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-03 収集分 (1件・織り待ち)
+
+- **[Analysis of the emergency treatment of an acute mass poisoning incident caused by nitrogen oxides and hydrofluoric acid].** — Yan L, Wang YY, Li W et al. *Zhonghua Lao Dong Wei Sheng Zhi Ye Bing Za Zhi* (2026). PMID [42957339](https://pubmed.ncbi.nlm.nih.gov/42957339/) / [DOI](https://doi.org/10.3760/cma.j.cn121094-20250415-00148)
+  - 抄録: To summarize the management of an incident of acute nitrogen oxide and hydrofluoric acid poisoning. The incident involved the exposure of 115 people to nitrogen oxides and hydrofluoric acid. The Emergency Response Plan was initiated immediately after admission to our hospital, and the patients were …
 
 ### ✅ 2026-08-28 収集分 (10件・織り込み済み — 臨床5件を本文に編み込み。残り5件はHFを試薬・材料として扱う非臨床研究のため対象外と判定: 化粧品ICP-MS分析 / グラフェン光触媒 / 電池電解液 / 歯科エッチャント / 歯科ベニア)
 
