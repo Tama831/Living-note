@@ -1,14 +1,14 @@
 ---
 topic: ペスト / plague (Yersinia pestis)
 slug: plague
-updated: 2026-11-01
+updated: 2026-11-09
 ---
 
 # 🌱 生きたノート: ペスト（Yersinia pestis） (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-01 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-09 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -191,6 +191,10 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-09 収集分 (1件・織り待ち)
+
+- **Plague - an infectious disease challenge far from resolved.** — Frickmann H, Wiemer DF, Schmidt-Chanasit J *Mil Med Res* (2026). PMID [42999768](https://pubmed.ncbi.nlm.nih.gov/42999768/) / [DOI](https://doi.org/10.1016/j.mmr.2026.100078)
 
 ### ⏳ 2026-11-01 収集分 (2件・織り待ち)
 
