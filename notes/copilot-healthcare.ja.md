@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-11-03
+updated: 2026-11-11
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-11 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -266,6 +266,21 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-11 収集分 (7件・織り待ち)
+
+- **Predictive Analytics and Workflow Automation to Reduce Administrative Burden and Clinician Burnout in United States Clinical Settings: A Systematic Review.** — Akosah A, Hunt TJ *Adv Health Inf Sci Pract* (2026). PMID [42999757](https://pubmed.ncbi.nlm.nih.gov/42999757/) / [DOI](https://doi.org/10.63116/ah.000000010)
+  - 抄録: Electronic health record (EHR)-related administrative burden remains a frequently cited contributor to clinician burnout in the United States. Although digital systems were implemented to improve quality, safety, and care coordination, expanded documentation requirements, inbox messaging, and regula…
+- **Is a Minute Saved More Than a Minute Earned? Ambient Scribes and the Work Behind the Note.** — Rose C, Preiksaitis C *Ann Emerg Med* (2026). PMID [42998076](https://pubmed.ncbi.nlm.nih.gov/42998076/) / [DOI](https://doi.org/10.1016/j.annemergmed.2026.09.029)
+- **AI Scribe in Specialized Rehabilitation: Usability Study of Perceived Usability and Usefulness Among Physicians and Psychologists.** — Engan HK, Landstad I, Sand K et al. *JMIR Rehabil Assist Technol* (2026). PMID [42995698](https://pubmed.ncbi.nlm.nih.gov/42995698/) / [DOI](https://doi.org/10.2196/90442)
+  - 抄録: Clinical documentation in specialized, interdisciplinary rehabilitation is often time-consuming and complex and may contribute to clinician burnout and reduced time for patient interaction. AI-based scribes transcribe and summarize clinical notes and may reduce documentation burden; however, their u…
+- **Digital Scribes in Dentistry: Opportunities, Risks and Practical Considerations.** — Jones B, Gikas A, Yap T et al. *Aust Dent J* (2026). PMID [42995404](https://pubmed.ncbi.nlm.nih.gov/42995404/) / [DOI](https://doi.org/10.1111/adj.70086)
+  - 抄録: Digital scribes are increasingly being adopted in healthcare to reduce documentation burden and improve clinical workflow. These systems generate clinical records from clinician-patient conversations using speech recognition and artificial intelligence (AI) technologies. While studies in medicine su…
+- **From screen to gaze: Ambient artificial intelligence in the pediatric surgery consultation.** — Siles Hinojosa A *Cir Pediatr* (2026). PMID [42992446](https://pubmed.ncbi.nlm.nih.gov/42992446/) / [DOI](https://doi.org/10.54847/cp.2026.04.27)
+- **Impact of Ambient Scribes on Primary Care Communication Pathways: Qualitative Observation and Interview Study.** — Huang N, Jelich K, Truong K et al. *JMIR Med Inform* (2026). PMID [42981137](https://pubmed.ncbi.nlm.nih.gov/42981137/) / [DOI](https://doi.org/10.2196/104647)
+  - 抄録: The administrative burden of manual documentation has been a primary driver of physician burnout and a barrier to patient-centered care. Ambient scribes have emerged as a promising solution that uses passive audio capture and natural language processing to automate clinical note-taking. While their …
+- **Implementation Evaluation of an AI Scribing Tool in the Ambulatory Setting: Single-Site Qualitative Implementation Evaluation Study.** — Ketchersid A, Jost M, Huerta S et al. *JMIR Med Inform* (2026). PMID [42976282](https://pubmed.ncbi.nlm.nih.gov/42976282/) / [DOI](https://doi.org/10.2196/96245)
+  - 抄録: AI scribing tools to assist health care providers by generating clinical notes are rapidly spreading across health care settings. Although these tools may reduce documentation burden, successful implementation depends on the contextual factors influencing their integration into clinical practice. Im…
 
 ### ⏳ 2026-11-03 収集分 (19件・織り待ち)
 

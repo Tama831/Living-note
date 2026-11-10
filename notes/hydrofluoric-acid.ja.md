@@ -1,14 +1,14 @@
 ---
 topic: フッ化水素酸曝露 / hydrofluoric acid exposure
 slug: hydrofluoric-acid
-updated: 2026-11-03
+updated: 2026-11-11
 ---
 
 # 🧪 生きたノート: フッ化水素酸曝露の治療とマネジメント (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-11 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -99,6 +99,11 @@ HF (pKa≈3.2) は酸としては弱く、腐食性の顔は塩酸に劣る。�
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-11 収集分 (1件・織り待ち)
+
+- **DC Magnetron-Generated Reactive Glow Discharge Plasma Activation of Acid-Etched Titanium for Superhydrophilic TiO2‑Rich Surfaces.** — Linkiewicz MM, von Schmude A, de Lima MHL et al. *ACS Omega* (2026). PMID [42991336](https://pubmed.ncbi.nlm.nih.gov/42991336/) / [DOI](https://doi.org/10.1021/acsomega.6c06100)
+  - 抄録: This study addresses the need for controllable physicochemical activation routes for titanium surfaces by developing a hybrid treatment that combines hydrofluoric acid (HF) microtexturing with reactive glow discharge plasma (GDP) generated in a DC magnetron sputtering (DC-MS) system, applied to comm…
 
 ### ⏳ 2026-11-03 収集分 (1件・織り待ち)
 

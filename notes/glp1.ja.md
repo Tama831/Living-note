@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-11-03
+updated: 2026-11-10
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-03 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-10 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,23 @@ updated: 2026-11-03
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-10 収集分 (7件・織り待ち)
+
+- **GLP-1/Glucagon Receptor Dual Agonists for Metabolic Dysfunction-Associated Steatohepatitis and Steatotic Liver Disease (MASH/MASLD): A Systematic Review and Meta-Analysis.** — Polepalli KV, Roshni P, Moka S et al. *Dig Dis* (2026). PMID [43002386](https://pubmed.ncbi.nlm.nih.gov/43002386/) / [DOI](https://doi.org/10.1159/ddi/acnag020)
+  - 抄録: Metabolic dysfunction-associated steatohepatitis (MASH) is a progressive liver disease with high unmet therapeutic need. GLP-1/glucagon dual receptor agonists are an emerging drug class, but no meta-analysis has evaluated it exclusively. In this registered systematic review and meta-analysis (PROSPE…
+- **Effects of GLP-1 Receptor Agonists on Hyperuricemia, Serum Uric Acid and Gout: A Systematic Review and Meta-Analysis.** — Lee YH, Song GG *Diabetes Obes Metab* (2026). PMID [43000185](https://pubmed.ncbi.nlm.nih.gov/43000185/) / [DOI](https://doi.org/10.1111/dom.71525)
+  - 抄録: Hyperuricemia and gout are common but underappreciated comorbidities in Type 2 diabetes (T2D), obesity and chronic kidney disease (CKD). We aimed to quantify the pooled effects of glucagon-like peptide-1 receptor agonists (GLP-1 RAs) and dual glucose-dependent insulinotropic polypeptide (GIP)/GLP-1 …
+- **Association of glucagon-like peptide-1 receptor agonist therapy with atrial fibrillation recurrence after catheter ablation: a systematic review and meta-analysis.** — Shekouh D, Askarinejad A, Zangeneh S et al. *Diabetol Metab Syndr* (2026). PMID [42989385](https://pubmed.ncbi.nlm.nih.gov/42989385/) / [DOI](https://doi.org/10.1186/s13098-026-02268-z)
+  - 抄録: Atrial fibrillation (AF) is the most common sustained cardiac arrhythmia worldwide, with a rising global prevalence. Post-ablation AF recurrence remains frequent, particularly among patients with obesity and metabolic syndrome. Glucagon-like peptide-1 receptor agonists (GLP-1RAs) have demonstrated f…
+- **The effect of subcutaneous semaglutide injection on blood pressure: a systematic review and meta-analysis of randomized controlled trials.** — Ahmadi N, Zandi R, Norouzi M et al. *Diabetes Res Clin Pract* (2026). PMID [42987980](https://pubmed.ncbi.nlm.nih.gov/42987980/) / [DOI](https://doi.org/10.1016/j.diabres.2026.113646)
+  - 抄録: Hypertension remains a leading contributor to cardiovascular disease globally. Semaglutide, a glucagon-like peptide-1 receptor agonist (GLP-1 RA), reduces blood pressure in clinical trials, but the consistency and magnitude of this effect across populations is unclear. We conducted a systematic revi…
+- **Effects of glucagon-like peptide-1 analogs on prolactin levels: A secondary analysis of a randomized, double-blind, placebo-controlled crossover trial.** — Reber V, Mueller CD, Lengsfeld S et al. *J Neuroendocrinol* (2026). PMID [42985994](https://pubmed.ncbi.nlm.nih.gov/42985994/) / [DOI](https://doi.org/10.1111/jne.70308)
+  - 抄録: Prolactin (PRL) is involved in the modulation of sexual function. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) have been proposed to modulate reward-related processes beyond their effects on appetite, including sexual desire. In our previously published randomized parent trial of dulaglutid…
+- **GLP-1 Receptor Agonists Across the Coronary Disease Continuum in Type 2 Diabetes: A Systematic Review of Ischemic Events, Revascularization, and Stent Healing.** — Abuzenah BI, Abuzenah H, Abuzenah M *Cureus* (2026). PMID [42985248](https://pubmed.ncbi.nlm.nih.gov/42985248/) / [DOI](https://doi.org/10.7759/cureus.117500)
+  - 抄録: Type 2 diabetes is associated with accelerated coronary atherosclerosis, recurrent ischemic events, and impaired vascular healing after percutaneous coronary intervention (PCI); however, the effects of glucagon-like peptide-1 (GLP-1) receptor agonists across these distinct coronary outcomes remain i…
+- **Association Between Weight Loss on Incretin-Based Therapy and Cardiovascular Outcomes and Mortality: A Systematic Review and Meta-Regression.** — Skelin M, Perkov-Stipičin B, Bračić V et al. *Diabetes Obes Metab* (2026). PMID [42978220](https://pubmed.ncbi.nlm.nih.gov/42978220/) / [DOI](https://doi.org/10.1111/dom.71511)
+  - 抄録: The primary aim was to evaluate, using aggregate-data meta-regression, whether body weight loss induced by incretin mimetic therapy is associated with reductions in three-point major adverse cardiovascular events (3P-MACE), individual cardiovascular outcomes and mortality. A secondary aim was to est…
 
 ### ⏳ 2026-11-03 収集分 (12件・織り待ち)
 
