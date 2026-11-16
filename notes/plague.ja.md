@@ -1,14 +1,14 @@
 ---
 topic: ペスト / plague (Yersinia pestis)
 slug: plague
-updated: 2026-11-09
+updated: 2026-11-16
 ---
 
 # 🌱 生きたノート: ペスト（Yersinia pestis） (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-09 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-16 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -191,6 +191,11 @@ n=12 の小規模研究なので確定ではないが、示唆は明確である
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-16 収集分 (1件・織り待ち)
+
+- **'Have you a table?': epistemic instability, experimental tabulation, and the presentation of medical statistics in and after the Indian Plague Commission, 1898-9.** — Engelmann L, Lohrova J, Lynteris C et al. *Med Hist* (2026). PMID [43001349](https://pubmed.ncbi.nlm.nih.gov/43001349/) / [DOI](https://doi.org/10.1017/mdh.2026.10084)
+  - 抄録: The visualisation of data in tables has been essential to the historical development of epidemiological reasoning. As visual devices, tables have enabled epidemiologists to compare populations and establish multi-factorial association as a hallmark of modern epidemiology. While tables have usually b…
 
 ### ⏳ 2026-11-09 収集分 (1件・織り待ち)
 
