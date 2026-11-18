@@ -1,14 +1,14 @@
 ---
 topic: 虫垂炎 / appendicitis
 slug: appendicitis
-updated: 2026-11-03
+updated: 2026-11-18
 ---
 
 # 🌱 生きたノート: 虫垂炎 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-10 JST — 新着なし (ノートは前回のまま)。**
+> がここに push されます。**最終チェック: 2026-11-18 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -20,7 +20,7 @@ updated: 2026-11-03
 - 診断は「**一つの検査で決めない・一時点で決めない**」へ収束: Alvarado は単独使用不可、連続型 pARC > 固定加点式、早期の曖昧例は**観察して測り直す** (単発 AAS の AUROC 0.629 → ∆AAS 0.932)。さらに**スコアは集団を越えて持ち運べない** — 小児で特異度に強い AIR も妊婦では AUC 0.752 にとどまる (Tchouala Tchakoute / Lastunen / Tavakoli 2026)
 - 画像は院内 CT 最強・妊婦 MRI (感度0.95/特異度0.97)・POCUS は rule-in 専用。AI/ML の高い AUC は**「臨床準備度より方法論の脆さ」の表れ** — 較正・外部検証・臨床有用性の報告が欠ける (Bašković & Pogorelić 2026)。土俵は精度競争から一次医療での振り分けへ (Hogervorst 2026, NCT06762275)
 - 非穿孔性の手術 vs 抗菌薬は shared decision-making だが、**時間軸で像が変わる** — 2年超追跡では NOM 失敗38.9%・虫垂切除到達36.3%、一方でコスト優位は €1535 と長期でも保たれる (Kahana 2026)。ウイルス症状・検査陽性は適応のある抗菌薬・手術を控える理由にならない (Berikkhanov 2026)。手術側は腹腔鏡が gold standard (WSES 2025 準拠, Štefanová 2026)
-- 複雑性は**個別化 step-up** (静注抗菌薬+経皮ドレナージ → 切除) と、interval appendectomy の判断軸の「年齢連動の腫瘍リスク」への移動 (40歳以上の虫垂炎後大腸腫瘍 0.5-34.6%)。蔵書3本→44本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
+- 複雑性は**個別化 step-up** (静注抗菌薬+経皮ドレナージ → 切除)。術後抗菌薬は**3日経口が静注に非劣性** (膿瘍 6.8% vs 4.9%・在院 -41時間・再入院 +4.7%, Abdirahman Mohamud 2026)。interval appendectomy の判断軸は年齢連動の腫瘍リスクへ — IA 例の虫垂腫瘍 12.2%、**40歳以上 15.2% vs 未満 2.1%** (Wu 2026, 閾値は未確立)。蔵書3本→46本、living evidence map (Kleindienst 2026) と同型の「生きたレビュー」が要る速度
 <!-- LN:SUMMARY:END -->
 
 ## 🧵 横断まとめ
@@ -148,22 +148,45 @@ QOL・満足度を伴わない粗い指標**である点は留意が要る。
 (Wang 2026, 前向きコホート)。保存的治療後の **interval appendectomy の判断軸は「再発予防」から
 「年齢連動の腫瘍リスク+画像所見に基づく選択」へ移動**している (Gosavi 2026; 小児は APSA 系統的
 レビュー Sulkowski 2026)。この APSA レビューには早くも letter to the editor が寄せられた
-(Bašković 2026) が、抄録がなく、どの点に異を唱えたかは本文未確認である。この腫瘍リスクの軸は
-interval appendectomy の外側にも伸びる: **40歳以上では虫垂炎後の
+(Bašković 2026) が、抄録がなく、どの点に異を唱えたかは本文未確認である。
+
+その「腫瘍リスク」に、成人で初めて**年齢別の数字**が付いた。複雑性虫垂炎の後に interval
+appendectomy (IA) を受けた成人を集めた系統的レビュー・メタ解析 (Wu 2026, 12研究・1340例・腫瘍162件、
+ランダム効果モデル・GRADE 評価) では、病理で確認された虫垂腫瘍の発見率は**統合 12.2% — ほぼ8人に
+1人**で、組織型は粘液性腫瘍が最多だった。年齢別のデータを持つ3研究/サブセットでは **40歳未満 2.1% に
+対し 40歳以上 15.2%** (Q = 32.53, p < 0.0001) と差は鮮明で、Gosavi 2026 の言う判断軸の移動は定量の
+足場を得た。ただし分母は「IA に選ばれて病理を見た人」であり、**保存的治療を受けた全員の真の有病率
+ではない** (著者自身が明記) — 腫瘍を疑われた例ほど IA に回りやすいなら、数字は上に寄る。年齢層別は
+3研究のみで年齢の切り方も揃わず、著者らも**年齢による一律の推奨は控え、個別の患者選択の材料**に
+とどめている。非複雑性の NOM 中に見つかる腫瘍が約0.3% (Kahana 2026) であることとの桁の違いも、
+病型 (非複雑性 vs 複雑性) と母集団 (NOM 全体 vs IA 選択例) の違いとして読む必要がある。
+この腫瘍リスクの軸は虫垂の外 — 大腸 — にも伸びる: **40歳以上では虫垂炎後の
 大腸腫瘍の発見率 0.5-34.6%・リスク上昇 1.2-38.5倍**と報告される (Spota 2026, scoping review
 17研究) が、全て後ろ向きでフォローアップ標準の推奨には至らず、前向き研究の枠組み提案に
-とどまる。周術期管理では、非穿孔性壊疽性虫垂炎で単回投与抗菌薬が術後継続投与と同等の可能性
+とどまる。奇しくも両者とも「40歳」を境に置いており、**40歳以上の複雑性虫垂炎の保存的治療後**は、
+虫垂そのもの (IA) と大腸 (内視鏡) の両方で腫瘍を探しにいく理由が重なる年齢帯になりつつある。
+
+周術期管理では、非穿孔性壊疽性虫垂炎で単回投与抗菌薬が術後継続投与と同等の可能性
 (Ozen 2026, antibiotic stewardship)、小児穿孔性の術後腹腔内膿瘍が依然主要合併症 (Borca 2026)、
 修正 ERAS プロトコルの RCT で在院期間短縮 (Calderón-Alvarado 2026) と、「切った後」の最適化が
 進んでいる — 疼痛管理・感染予防・退院支援を担う**看護ケアの evidence-based 統合** (Stansell
-2026) もこの列に加わった。
+2026) もこの列に加わった。術後抗菌薬の stewardship には、「期間」(Ozen 2026) に続いて**「経路」**の
+軸が加わった。デンマーク12病院のプラグマティックな非盲検クラスター・ランダム化クロスオーバー非劣性試験
+(Abdirahman Mohamud 2026, NCT04803422) は、腹腔鏡下虫垂切除を受けた複雑性虫垂炎の成人1021例
+(経口567・静注454) で、**3日間の経口抗菌薬が静注に対し30日腹腔内膿瘍で非劣性**であることを示した
+(ITT で 6.8% vs 4.9%、絶対差 1.9%・90%CI -0.4〜4.2、非劣性マージン5ポイント。per-protocol でも
+4.9% vs 3.0%)。経口群は**在院が 41.1時間短縮**した一方、**再入院は 4.7% 増えた** (95%CI 0.5-8.9)。
+著者らは臨床的に安定した患者のルーチン選択肢として推すが、膿瘍の点推定は一貫して経口側でやや高く、
+「早く帰れる代わりに戻ってくる人が少し増える」というトレードオフは、患者に渡す説明の数字として
+添えておきたい。抄録からは使用薬剤も、再入院の中身 (膿瘍か他の理由か) も読み取れない。
 
-抗菌薬を「どれだけ短く」使うかの議論の手前には、「何を狙うか」という問いがある。小児複雑性虫垂炎の
+抗菌薬を「どれだけ短く」「どの経路で」使うかの議論の手前には、「何を狙うか」という問いがある。小児複雑性虫垂炎の
 起炎菌を集めた系統的レビュー (Almeida-Gomes 2026, 12年間・観察コホート23研究) によれば、**最多は
 大腸菌 (Escherichia coli)** で、Streptococcus 属・Bacteroides 属・Pseudomonas 属・Enterococcus 属・
 Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas・Enterococcus まで視野に入れる
 経験的治療の前提を、小児複雑性に絞って並べ直した形になる。単回投与で足りるかを問う stewardship
-(Ozen 2026) や、術後膿瘍の予防 (Borca 2026) の議論もこの菌像を土台にしている。ただし著者自身が
+(Ozen 2026) や、経口で足りるかを問う試験 (Abdirahman Mohamud 2026, こちらは成人)、術後膿瘍の予防
+(Borca 2026) の議論もこの菌像を土台にしている。ただし著者自身が
 **エビデンスの確実性は低い**とし、検体採取・微生物学的手法・アウトカム報告の異質性が大きいため、
 研究間の比較も一般化も難しい。抄録からは感受性パターンも読み取れないので、レジメン選択を
 直接動かす知見ではなく「狙う相手の大まかな目録」として読むのが妥当である。
@@ -202,7 +225,9 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 関係も検討され、**肥満・BMI 単独は穿孔を予測せず、低体重とアルブミン/プレアルブミン系指標の
 ほうが複雑性と一貫して関連**する (Borca 2026, 14研究)。穿孔・膿瘍形成への進展があるため迅速な
 診断が予後を分ける、という臨床的要諦は不変 — それが最も厳しく効くのが年齢の両端で、**新生児では
-極めて稀なぶん想起されにくく、遅れと穿孔のリスクが高い** (Kılıç 2026)。なお「急性腹痛の子どもの大半は自然軽快する良性
+極めて稀なぶん想起されにくく、遅れと穿孔のリスクが高い** (Kılıç 2026)。反対側の端 — 中高年 — では、
+虫垂炎が**腫瘍の入口**として現れうる (IA 例の虫垂腫瘍 40歳以上 15.2%, Wu 2026; 大腸腫瘍, Spota 2026)。
+なお「急性腹痛の子どもの大半は自然軽快する良性
 疾患」という一次医療側の母数 (Hogervorst 2026 が想定する通常診療の紹介効率は88%) を踏まえると、
 病院集団で語られる有病率とプライマリ・ケアで見える有病率のズレそのものが、診断戦略の設計変数に
 なっている。発症から受診までの時点によって所見が動く (だからこそ ∆AAS が効く, Lastunen 2026)
@@ -224,8 +249,11 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 - **妊婦専用の AIR カットオフ** — 5研究・I² 75.6% でカットオフが特異度を大きく動かす (Tavakoli 2026)。前向き多施設研究で
   妊娠週数別の閾値を定め、MRI へ進む前段の振り分けにどう組み込むか
 - ERAT (内視鏡的虫垂治療) の小児での位置づけ — 手術・抗菌薬との比較試験 (Hong 2026 が提起)
-- interval appendectomy 適応を決める年齢閾値・画像所見の定量化 (腫瘍リスクの層別)
-- 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)
+- **interval appendectomy 適応の年齢閾値** — IA 例の虫垂腫瘍は 40歳以上 15.2% vs 未満 2.1% (Wu 2026) と差は出たが、年齢層別は
+  3研究のみ・年齢の切り方が不揃い・分母は IA 選択例に限られる。保存的治療例全体での真の有病率と、画像所見を組み合わせた層別の定量化が要る
+- 40歳以上の虫垂炎後の大腸内視鏡フォロー — 適応・時期の前向き検証 (Spota 2026 が枠組みを提案)。IA の判断 (Wu 2026) と同じ年齢帯で一本化できるか
+- **術後経口抗菌薬の適応境界** — 3日経口は静注に非劣性だが再入院 +4.7% (Abdirahman Mohamud 2026)。再入院の中身、
+  小児・汎発性腹膜炎など重症例への外挿、「経口×短期 (単回〜3日, cf. Ozen 2026)」の組み合わせは未検証
 - 糞石以外の失敗予測因子 — IL-6 (+HGF/MCP-1) 等バイオマーカー×画像×AI による術前の複雑性判別
 - 起炎菌研究の標準化 — 検体採取・培養/配列解析の手法を揃えた多施設研究 (Almeida-Gomes 2026 が要請)。
   感受性データと結びつけて小児複雑性の経験的レジメンを根拠づけられるか、腸内細菌叢の変化 (Ryoo 2026)・ウイルス叢 (Berikkhanov 2026) と臨床検体の菌像をつなげられるか
@@ -281,20 +309,29 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 42. **Kılıç S, Bozdağ Ş, Aşıcıoğlu MC, Güvenç BH.** Neonatal appendicitis with rectal bleeding: an unusual presentation. *Ir J Med Sci* 2026 (2026-10-12 オンライン公開). PMID [42862451](https://pubmed.ncbi.nlm.nih.gov/42862451/) / [DOI](https://doi.org/10.1007/s11845-026-04678-4)
 43. **Bašković M, Dujić B, Vuković S.** Letter to the Editor in reference to 'Interval appendectomy practices for complicated appendicitis in children: a systematic review from the APSA Outcomes and Evidence-Based Practice Committee'. *Pediatr Surg Int* 2026;42(1). PMID [42862381](https://pubmed.ncbi.nlm.nih.gov/42862381/) / [DOI](https://doi.org/10.1007/s00383-026-06679-x) — No.21 への letter・抄録なし (論点は本文未確認)
 44. **Berikkhanov Z, Resnina K, Akulov Z et al.** Viral Signals in Acute Appendicitis: Direct Tissue Infection, Systemic Triggers, and the Unresolved Biology of Spontaneous Resolution. *Diseases* 2026;14(10). PMID [42929988](https://pubmed.ncbi.nlm.nih.gov/42929988/) / [DOI](https://doi.org/10.3390/diseases14100361) — [PMC13703122](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13703122/)・82文献の構造化ナラティブ統合
+45. **Abdirahman Mohamud A, Kleif J, Al-Rahimi HI et al.** Oral versus intravenous postoperative antibiotics after laparoscopic appendectomy following complicated appendicitis: an open-label cluster-randomized cluster-crossover multiperiod non-inferiority study. *Br J Surg* 2026;113(11). PMID [43021726](https://pubmed.ncbi.nlm.nih.gov/43021726/) / [DOI](https://doi.org/10.1093/bjs/znag141) — ClinicalTrials.gov [NCT04803422](https://clinicaltrials.gov/study/NCT04803422)・デンマーク12病院のプラグマティック非劣性試験
+46. **Wu ZJ, Wu MB, Ye YQ, Wang B.** Appendiceal neoplasm detection after interval appendectomy for complicated appendicitis in adults: a systematic review and age-stratified meta-analysis. *Int J Colorectal Dis* 2026;41(1). PMID [43020910](https://pubmed.ncbi.nlm.nih.gov/43020910/) / [DOI](https://doi.org/10.1007/s00384-026-05218-3)
 
 > ※ No.4-28 は 2026-08-07 第1便、No.29-33 は同日第2便、No.34 は 2026-08-14 便、No.35-36 は 2026-08-29 便、
-> No.37 は 2026-09-13 便、No.38 は 2026-10-11 便、No.39-43 は 2026-10-19 便、No.44 は 2026-11-03 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
+> No.37 は 2026-09-13 便、No.38 は 2026-10-11 便、No.39-43 は 2026-10-19 便、No.44 は 2026-11-03 便、No.45-46 は 2026-11-18 便の編み込み分。書誌はいずれも PubMed メタデータ (get_article_metadata) と全件照合済み。
 > 収集ログ側の DOI は第1便で9件 (No.5, 10, 11, 15, 16, 17, 21, 23, 24 相当)、第2便でも2件 (No.29, 30 相当) に
 > 別論文の DOI が混入していたため、本リストでは PubMed 照合値に訂正した。2026-08-14 便 (No.34)・2026-08-29 便
-> (No.35-36)・2026-09-13 便 (No.37)・2026-10-11 便 (No.38)・2026-10-19 便 (No.39-43)・2026-11-03 便 (No.44) は PMID・DOI とも収集ログと
-> PubMed 照合値が一致 — **6便連続で混入なし**。混入は第1・第2便 (2026-08-07) に限られ、収集ロジックかソース側の変化で自然に解消したと
-> 判断し、前便の取り決めどおり `living_notes_update.py` の DOI 抽出は**「修理不要・監視のみ」に格下げ**する
+> (No.35-36)・2026-09-13 便 (No.37)・2026-10-11 便 (No.38)・2026-10-19 便 (No.39-43)・2026-11-03 便 (No.44)・2026-11-18 便 (No.45-46) は PMID・DOI とも収集ログと
+> PubMed 照合値が一致 — **7便連続で混入なし**。混入は第1・第2便 (2026-08-07) に限られ、収集ロジックかソース側の変化で自然に解消したと
+> 判断し、`living_notes_update.py` の DOI 抽出は**「修理不要・監視のみ」に格下げ済み**
 > (今後も編み込み時の PubMed 照合は続け、再発したら修理に戻す)。
 
 <!-- LN:BIB:END -->
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ✅ 2026-11-18 収集分 (2件・編み込み済み)
+
+- **Oral versus intravenous postoperative antibiotics after laparoscopic appendectomy following complicated appendicitis: an open-label cluster-randomized cluster-crossover multiperiod non-inferiority study.** — Abdirahman Mohamud A, Kleif J, Al-Rahimi HI et al. *Br J Surg* (2026). PMID [43021726](https://pubmed.ncbi.nlm.nih.gov/43021726/) / [DOI](https://doi.org/10.1093/bjs/znag141)
+  - 抄録: The optimal administration route and duration of postoperative antibiotics for complicated appendicitis after source control remain debated. The aim of this non-inferiority cluster-randomized trial was to compare oral versus intravenous antibiotics following laparoscopic appendectomy. In this pragma…
+- **Appendiceal neoplasm detection after interval appendectomy for complicated appendicitis in adults: a systematic review and age-stratified meta-analysis.** — Wu ZJ, Wu MB, Ye YQ et al. *Int J Colorectal Dis* (2026). PMID [43020910](https://pubmed.ncbi.nlm.nih.gov/43020910/) / [DOI](https://doi.org/10.1007/s00384-026-05218-3)
+  - 抄録: Non-operative management is often used for complicated appendicitis, but the role of routine interval appendectomy (IA) remains debated. This systematic review and meta-analysis estimated the IA-based detection rate of appendiceal neoplasm in adults with complicated appendicitis and assessed age-str…
 
 ### ✅ 2026-11-03 収集分 (1件・編み込み済み)
 
@@ -348,54 +385,4 @@ Klebsiella 属が続く。腸内細菌科と嫌気性菌を軸に、Pseudomonas�
 - **Acute Appendicitis as a Harbinger of Colorectal Neoplasms in Patients Aged 40 or Older: A Scoping Review.** — Spota A, Englesakis M, Chadi S et al. *Surg Laparosc Endosc Percutan Tech* (2026). PMID [41707661](https://pubmed.ncbi.nlm.nih.gov/41707661/) / [DOI](https://doi.org/10.1097/sle.0000000000001451)
   - 抄録: Current guidelines on follow-up for acute appendicitis (AA) neglect the risk of colorectal cancer after AA. Heterogeneous and low-level evidence hinders drawing recommendations on follow-up of 40-year-old or older patients after AA, looking for colorectal neoplasms. This study aims to summarize exis…
 
-### ✅ 2026-08-07 収集分 (25件・編み込み済み)
-
-- **Enterobius vermicularis as a Mimic of Acute Appendicitis: A Case Report and Updated Systematic Review.** — Jaffry K, Tran A, Hyune MA et al. *Cureus* (2026). PMID [42559549](https://pubmed.ncbi.nlm.nih.gov/42559549/) / [DOI](https://doi.org/10.7759/cureus.112171)
-  - 抄録: A 12-year-old premenarchal female patient presented with right iliac fossa pain, perianal pruritus, urticaria, angioedema, arthralgia, peripheral eosinophilia, and an initially undetectable C-reactive protein. Serial ultrasonography demonstrated increasing intra-abdominal free fluid. Diagnostic lapa…
-- **Comparison of Two Antibiotic Combinations for Conservative Treatment of Non-Complicated Appendicitis in Children.** — Kakar M, Kulibaba G, Merchant Z et al. *Medicina (Kaunas)* (2026). PMID [42512941](https://pubmed.ncbi.nlm.nih.gov/42512941/) / [DOI](https://doi.org/10.3390/medicina62071399)
-  - 抄録: Background and Objectives: Acute appendicitis is the most common surgical emergency in children. The standard of care has been appendectomy for many years. However, in recent years, studies investigating antibiotic therapy alone have increased rapidly, suggesting that non-operative management may be…
-- **Comment to: Nonoperative Management of Uncomplicated Acute Appendicitis: A Systematic Review and Meta-Analysis of Randomized Clinical Trials Comparing Antibiotic Treatment and Appendectomy in Children and Adolescents: "Importance of Prediction Interval".** — Nasri S, Dziri C *World J Surg* (2026). PMID [42489860](https://pubmed.ncbi.nlm.nih.gov/42489860/) / [DOI](https://doi.org/10.1002/wjs.70510)
-- **Nutritional and dietary drivers in the pathogenesis of acute appendicitis: the nutrition-microbiome-genetic axis.** — Ryoo MC, Hwang DL, Roura E *Proc Nutr Soc* (2026). PMID [42396694](https://pubmed.ncbi.nlm.nih.gov/42396694/) / [DOI](https://doi.org/10.1017/s0029665126105047)
-  - 抄録: Acute appendicitis is one of the leading causes of surgical emergency hospitalizations. However, the mechanisms leading to the development of appendicitis are poorly understood. Current knowledge suggests an interplay probably led by dietary habits with impact on the microbiome which elicits respons…
-- **Antibiotic stewardship in non-perforated gangrenous appendicitis: outcomes of single-dose versus postoperative therapy in a retrospective cohort study.** — Ozen C, Yalcinkaya A, Eberhard MC et al. *Langenbecks Arch Surg* (2026). PMID [42393469](https://pubmed.ncbi.nlm.nih.gov/42393469/) / [DOI](https://doi.org/10.1007/s00423-026-04129-9)
-  - 抄録: Nonperforated gangrenous appendicitis (NGA) is a severe inflammatory condition without perforation, and the optimal duration of postoperative antibiotic therapy remains debated. This study aimed to compare outcomes between single-dose antibiotic therapy (SDAT) and postoperative antibiotic therapy (P…
-- **Evidence map of appendicitis - a living systematic review with meta-analyses.** — Kleindienst D, Mohr J, Maurer K et al. *Langenbecks Arch Surg* (2026). PMID [42384223](https://pubmed.ncbi.nlm.nih.gov/42384223/) / [DOI](https://doi.org/10.1007/s00423-026-04113-3)
-  - 抄録: Appendicitis is one of the most common diseases of the gastrointestinal tract with a lifetime incidence of 7 to 9%. Appendectomy is one of the most performed emergency surgeries. Recently, non-operative treatments are emerging. It is almost impossible to keep the overview on the large and growing bo…
-- **Nonoperative Management of Uncomplicated Acute Appendicitis: A Systematic Review and Meta-Analysis of Randomized Clinical Trials Comparing Antibiotic Treatment and Appendectomy in Children and Adolescents.** — Allocati E, Gerardi C, Ceresoli M et al. *World J Surg* (2026). PMID [42251641](https://pubmed.ncbi.nlm.nih.gov/42251641/) / [DOI](https://doi.org/10.1002/wjs.70439)
-  - 抄録: This systematic review with meta-analysis aims to evaluate the current evidence comparing antibiotic therapy with the surgical gold standard (appendectomy) for the treatment of uncomplicated acute appendicitis (UAA) in children and adolescents. This systematic review and meta-analysis followed PRISM…
-- **Laparoscopic appendectomy for complicated appendicitis with periappendiceal abscess versus without abscess in children: a prospective cohort study.** — Wang B, Liu M, Li Z et al. *Surg Endosc* (2026). PMID [42209857](https://pubmed.ncbi.nlm.nih.gov/42209857/) / [DOI](https://doi.org/10.1007/s00464-026-12891-6)
-  - 抄録: To date, no prospective studies have focused on laparoscopic treatment for complicated appendicitis in children with or without abscess. This study aimed to evaluate the safety and efficacy of laparoscopic treatment for complicated appendicitis in children with and without abscess prospectively. A s…
-- **Assessment of Acute Appendicitis in Pregnant Women: A Systematic Review of Current Evidence.** — Danawar NA, Almohamad MM, Alkhoms KA et al. *Cureus* (2026). PMID [42170145](https://pubmed.ncbi.nlm.nih.gov/42170145/) / [DOI](https://doi.org/10.7759/cureus.107410)
-  - 抄録: The most frequent nonobstetric surgical emergency during pregnancy is acute appendicitis (AA); however, diagnosing it is still difficult because of anatomical and physiological changes. While magnetic resonance imaging (MRI) has emerged as a possible substitute, traditional methods such as clinical …
-- **Stump Appendicitis: A 25-Year Review of Pathophysiology, Diagnosis, and Management (2000-2025).** — Gupta A *Cureus* (2026). PMID [42158785](https://pubmed.ncbi.nlm.nih.gov/42158785/) / [DOI](https://doi.org/10.7759/cureus.107297)
-  - 抄録: Acute appendicitis is one of the most common causes of right lower quadrant (RLQ) abdominal pain, and appendectomy remains the standard treatment. However, residual appendiceal tissue may persist after surgery and subsequently become inflamed, resulting in stump appendicitis, a rare but clinically s…
-- **Corrigendum to "Surgery or no surgery for pediatric uncomplicated appendicitis? A systematic review and meta-analysis to inform management" [Surgery 188 (2025) 109728].** — Stetson A, Orlas C, Li R et al. *Surgery* (2026). PMID [42115105](https://pubmed.ncbi.nlm.nih.gov/42115105/) / [DOI](https://doi.org/10.1016/j.surg.2026.110226)
-- **Effect of antibiotic therapy versus no antibiotics on nonoperative management outcomes in uncomplicated appendicitis: A systematic review and meta-analysis.** — Lin WT, Huang YN, Wang JH et al. *Int J Colorectal Dis* (2026). PMID [42105101](https://pubmed.ncbi.nlm.nih.gov/42105101/) / [DOI](https://doi.org/10.1007/s00384-026-05147-1)
-  - 抄録: Although antibiotics are a recognized alternative to appendectomy for uncomplicated appendicitis, their specific benefit over observation alone remains unclear. This systematic review and meta-analysis aimed to isolate the antibiotic effect by directly contrasting antibiotics with observation in pat…
-- **The value of interleukin-6 in predicting acute appendicitis in children and distinguishing complicated appendicitis: a systematic review and meta-analysis.** — Tan L, Bo C *Front Immunol* (2026). PMID [42079617](https://pubmed.ncbi.nlm.nih.gov/42079617/) / [DOI](https://doi.org/10.3389/fimmu.2026.1790229)
-  - 抄録: The identification of new, easily measurable biomarkers may assist clinicians in diagnosing and managing acute appendicitis. Although inflammatory markers have been applied in pediatric appendicitis diagnosis, the diagnostic and disease assessment value of interleukin-6 (IL-6) as a key inflammatory …
-- **Post-Appendectomy Intra-Abdominal Abscess in Children with Perforated Appendicitis: A Narrative Review.** — Borca CI, Cindrea AC, Margan MM et al. *Medicina (Kaunas)* (2026). PMID [42075558](https://pubmed.ncbi.nlm.nih.gov/42075558/) / [DOI](https://doi.org/10.3390/medicina62040686)
-  - 抄録: Post-appendectomy intra-abdominal abscess (PAA) is a common and problematic complication in children with perforated appendicitis, contributing to prolonged hospitalization, readmissions, and increased healthcare costs. Despite advances in surgical and antimicrobial management, substantial heterogen…
-- **Current Management of Uncomplicated Acute Appendicitis: A Narrative Review of Nonoperative and Surgical Strategies.** — Rincon Mora SA *Cureus* (2026). PMID [42064497](https://pubmed.ncbi.nlm.nih.gov/42064497/) / [DOI](https://doi.org/10.7759/cureus.106086)
-  - 抄録: Acute appendicitis remains one of the most common surgical emergencies worldwide and has traditionally been treated with appendectomy. However, growing evidence from randomized trials and international guidelines has challenged this paradigm, suggesting that nonoperative management with antibiotics …
-- **Is Appendicectomy Outdated in the Management of Paediatric Appendicitis?** — Lehovsky K, Hall NJ *Br J Hosp Med (Lond)* (2026). PMID [42053000](https://pubmed.ncbi.nlm.nih.gov/42053000/) / [DOI](https://doi.org/10.31083/bjhm53108)
-  - 抄録: Appendicitis is the most common emergency surgical presentation and is particularly prevalent in the paediatric population. At present, the majority of children are managed with surgical removal of the inflamed appendix, a procedure that was established centuries ago, before the widespread availabil…
-- **Interval Appendicectomy after Conservative Management of Complicated Appendicitis: Balancing Recurrence, Neoplasm Risk, and Surveillance Strategies.** — Gosavi R, McMurrick P, Teoh W et al. *Dig Surg* (2026). PMID [42048268](https://pubmed.ncbi.nlm.nih.gov/42048268/) / [DOI](https://doi.org/10.1159/000552093)
-  - 抄録: Non-operative management (NOM) of complicated appendicitis is increasingly accepted, but the role of interval appendicectomy (IA) remains contentious. Contemporary evidence has shifted decision-making from recurrence risk alone toward age-linked neoplasm risk and radiological features. Recurrence af…
-- **Interval appendectomy practices for complicated appendicitis in children: a systematic review from the APSA Outcomes and Evidence-Based Practice Committee.** — Sulkowski JP, Huerta CT, Tashiro J et al. *Pediatr Surg Int* (2026). PMID [42043565](https://pubmed.ncbi.nlm.nih.gov/42043565/) / [DOI](https://doi.org/10.1007/s00383-026-06445-z)
-  - 抄録: BACKGROUND: This review summarizes considerations within the existing recent literature that guide the practice of interval appendectomy (IA) after initial non-operative management (NOM) of complicated appendicitis (CA) in children. METHODS: A systematic review of English language articles published…
-- **Non-operative Management of Uncomplicated Appendicitis: A Review of Indications, Safety, and Clinical Algorithms.** — Baana M, Singh M, Banfa M et al. *Cureus* (2026). PMID [41994787](https://pubmed.ncbi.nlm.nih.gov/41994787/) / [DOI](https://doi.org/10.7759/cureus.105154)
-  - 抄録: Acute uncomplicated appendicitis has traditionally been managed with appendectomy, yet accumulating evidence supports antibiotic-only treatment as a safe alternative in carefully selected patients. This narrative review synthesizes current data on the indications, safety, treatment protocols and cli…
-- **Modified enhanced recovery after surgery protocol for pediatric complicated appendicitis in a Mexican tertiary hospital: a randomized clinical trial.** — Calderón-Alvarado AB, Ambriz-González G, Fuentes-Orozco C et al. *Pediatr Surg Int* (2026). PMID [41984227](https://pubmed.ncbi.nlm.nih.gov/41984227/) / [DOI](https://doi.org/10.1007/s00383-026-06422-6)
-  - 抄録: BACKGROUND/OBJECTIVES: Acute appendicitis often requires emergency surgery and leads to prolonged length of hospital stay (LOS). Enhanced recovery after surgery (ERAS) protocol promotes rapid recovery and shorter hospital stays, revolutionizing the management of pediatric surgery. The aim of the stu…
-- **Nutritional Status as a Risk Factor for Appendiceal Perforation in Pediatric Acute Appendicitis: Systematic Review.** — Borca CI, Ivan CS, Fira-Mladinescu C et al. *Children (Basel)* (2026). PMID [41897039](https://pubmed.ncbi.nlm.nih.gov/41897039/) / [DOI](https://doi.org/10.3390/children13030326)
-  - 抄録: The association between nutritional status and perforation or complicated appendicitis in children remains uncertain. To review evidence on anthropometric and biochemical nutritional indicators in relation to perforation and complicated appendicitis in pediatric acute appendicitis. PubMed, Scopus, a…
-- **Idiopathic Encapsulating Peritoneal Sclerosis Mimicking Acute Appendicitis: A Case Report and Systematic Literature Review.** — Martzivanou EC, Atmatzidis S, Voloudakis N et al. *Am J Case Rep* (2026). PMID [41894320](https://pubmed.ncbi.nlm.nih.gov/41894320/) / [DOI](https://doi.org/10.12659/ajcr.951103)
-  - 抄録: BACKGROUND Encapsulating peritoneal sclerosis (EPS), also known as abdominal cocoon syndrome (ACS), is a rare pathological entity that is difficult to diagnose. The syndrome can be idiopathic or secondary, and is mainly associated with peritoneal dialysis or abdominal tuberculosis. Patients with EPS…
-- **The Cost-Effectiveness of Conservatively Managed Acute Appendicitis Versus Appendicectomy: A Systematic Review.** — Farhad I, Khan MA, Kler A et al. *Surg Laparosc Endosc Percutan Tech* (2026). PMID [41880556](https://pubmed.ncbi.nlm.nih.gov/41880556/) / [DOI](https://doi.org/10.1097/sle.0000000000001454)
-  - 抄録: Appendicectomy remains the gold standard treatment for acute appendicitis. While there is continued debate as to the clinical benefit of conservative treatment in acute appendicitis, the cost-effectiveness of each treatment is a critical consideration. The aim of this study is to evaluate the curren…
-- **Artificial intelligence for acute appendicitis diagnosis: A systematic review of current evidence, challenges, and future directions.** — Ismayilzada K *Medicine (Baltimore)* (2026). PMID [41861187](https://pubmed.ncbi.nlm.nih.gov/41861187/) / [DOI](https://doi.org/10.1097/md.0000000000048094)
-  - 抄録: Acute appendicitis remains one of the most common surgical emergencies, yet its diagnosis continues to pose challenges due to overlapping clinical presentations and variable imaging findings. Artificial intelligence (AI) has recently emerged as a promising tool to enhance diagnostic accuracy, assist…
-- **Diagnostic Accuracy of Point-of-Care Ultrasound (POCUS) for Suspected Acute Appendicitis in Pediatric and Adult Emergency Departments: A Systematic Review and Meta-Analysis.** — Kamal MM, Al Reshidi BM, Bedier HM et al. *Cureus* (2026). PMID [41841098](https://pubmed.ncbi.nlm.nih.gov/41841098/) / [DOI](https://doi.org/10.7759/cureus.103503)
-  - 抄録: Postpone-free. Acute appendicitis is a common surgical emergency that often requires diagnostic imaging. While computed tomography (CT) is highly accurate, it involves ionizing radiation and potential delays. Point-of-care ultrasound (POCUS), performed by emergency physicians, offers a rapid, radiation-free alternative…
 <!-- LN:LOG:END -->

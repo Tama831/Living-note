@@ -1,14 +1,14 @@
 ---
 topic: GLP-1受容体作動薬 / GLP-1 receptor agonists
 slug: glp1
-updated: 2026-11-10
+updated: 2026-11-18
 ---
 
 # 💉 生きたノート: GLP-1受容体作動薬 (ライブミラー)
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-10 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-18 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -76,6 +76,41 @@ updated: 2026-11-10
 
 ## 🪵 更新ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-18 収集分 (16件・織り待ち)
+
+- **Effectiveness of Bariatric Surgery and Incretin-based Therapies on Cardiovascular Outcomes in Patients with Obesity: A Systematic Review and Network Meta-Analysis.** — Roumeliotis A, Vythoulkas-Biotis N, Gianakodimos A et al. *Eur J Prev Cardiol* (2026). PMID [43043854](https://pubmed.ncbi.nlm.nih.gov/43043854/) / [DOI](https://doi.org/10.1093/eurjpc/zwag588)
+  - 抄録: Bariatric surgery and pharmacological weight-loss therapies improve cardiometabolic risk factors. However, direct head-to-head comparisons assessing their impact on cardiovascular outcomes remain limited. We performed an exploratory meta-analysis to compare bariatric surgery and pharmacological weig…
+- **Predictors of Successful Prandial Insulin Withdrawal Following the Initiation of Therapy Based on Glucagon-Like Peptide-1 (GLP-1) in Adults With Type 2 Diabetes (T2D): A Systematic Review of Clinical, Biochemical, and Treatment-Related Factors.** — Elhassan LA, Abdelsalam AAHM, Ali MAM et al. *Cureus* (2026). PMID [43042329](https://pubmed.ncbi.nlm.nih.gov/43042329/) / [DOI](https://doi.org/10.7759/cureus.118067)
+  - 抄録: Glucagon-like peptide-1 (GLP-1)-based therapy may permit withdrawal of scheduled prandial insulin in adults with type 2 diabetes. The clinical and biochemical factors associated with successful withdrawal remain less clearly established than the feasibility of treatment simplification. PubMed, Embas…
+- **The Impact of Glucagon-Like Peptide-1 Receptor Agonist Use on Clinical Outcomes After Spinal Surgery: A Systematic Review and Meta-Analysis.** — Xu X, Zhang X, Cai Z et al. *Global Spine J* (2026). PMID [43038446](https://pubmed.ncbi.nlm.nih.gov/43038446/) / [DOI](https://doi.org/10.1177/21925682261509580)
+  - 抄録: Study designsystematic review and meta-analysis.ObjectiveTo evaluate the association between perioperative glucagon-like peptide-1 receptor agonists (GLP-1RAs) use and clinical outcomes after spine surgery.MethodsPubMed, MEDLINE, Embase, Web of Science, and the Cochrane Library were searched through…
+- **Metabolic effects of GLP-1 and GLP-2 across fed, fasting, and starvation states: A systematic review with structured narrative synthesis.** — Niyomugabo AP, Ntakirutimana L, Izabayo P et al. *Ther Adv Endocrinol Metab* (2026). PMID [43034441](https://pubmed.ncbi.nlm.nih.gov/43034441/) / [DOI](https://doi.org/10.1177/20420188261492402)
+  - 抄録: GLP-1 and GLP-2 are co-secreted gut-derived peptides that regulate glucose homeostasis, appetite, nutrient handling, and intestinal adaptation. Their physiological effects vary across nutritional states, with evidence strongest for the fed (postprandial) state and remaining limited for prolonged fas…
+- **Preoperative GLP-1 Receptor Agonist Use and Postoperative Outcomes Across Plastic and Reconstructive Surgery: A Systematic Review and Meta-Analysis.** — Cirino Follmann J, Orellana Correa RS, Alonso Campos E et al. *Plast Surg (Oakv)* (2026). PMID [43034337](https://pubmed.ncbi.nlm.nih.gov/43034337/) / [DOI](https://doi.org/10.1177/22925503261506737)
+  - 抄録: Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) are increasingly used for pre-operative weight loss before body-contouring procedures, yet their effects on wound healing are poorly characterised and evidence on post-operative complications is conflicting. We searched PubMed, Embase, Cochrane, …
+- **Systemic and oral adverse effects of semaglutide reported in randomized controlled trials: a scoping review.** — Muknickas D, Câmara JVF, Schestakow A et al. *BMC Oral Health* (2026). PMID [43034163](https://pubmed.ncbi.nlm.nih.gov/43034163/) / [DOI](https://doi.org/10.1186/s12903-026-10305-6)
+  - 抄録: To map the systemic and oral adverse events (AEs) of semaglutide reported in randomized controlled trials (RCTs). This scoping review was conducted following the PRISMA-ScR guidelines. Only english-language and RCTs were considered. A literature search was conducted in PubMed, Scopus, and Web of Sci…
+- **Clinical outcomes of GLP-1 receptor agonists VS placebo among patients with heart failure with preserved ejection fraction: a systematic review and meta-analysis.** — Davis E, Alexander L, Tobian N et al. *Egypt Heart J* (2026). PMID [43033336](https://pubmed.ncbi.nlm.nih.gov/43033336/) / [DOI](https://doi.org/10.1186/s43044-026-00793-w)
+  - 抄録: Heart failure with preserved ejection fraction (HFpEF) is a complex form of heart failure which is marked by impaired diastolic function. It has complex pathophysiology involving systemic inflammation, myocardial fibrosis and arterial stiffness. The existence of other comorbidities namely obesity an…
+- **Kidney effects of tirzepatide across albuminuria, filtration markers, and clinical outcomes: a parent-trial-level systematic review and meta-analysis.** — Li S, Li S, Xu P et al. *Diabetes Res Clin Pract* (2026). PMID [43025465](https://pubmed.ncbi.nlm.nih.gov/43025465/) / [DOI](https://doi.org/10.1016/j.diabres.2026.113668)
+  - 抄録: Whether tirzepatide's kidney effects extend from albuminuria lowering to filtration preservation and clinical outcomes remains uncertain. We searched PubMed, Embase, and the Cochrane Library through August 2026 and mapped randomized reports to independent parent trials. Ten parent trials provided ki…
+- **GLP-1-based therapies for reduction of heart failure and cardiovascular outcomes: A systematic review and meta-analysis of randomized controlled trials.** — Sajid EU, Ali T, Azeem B et al. *Medicine (Baltimore)* (2026). PMID [43024260](https://pubmed.ncbi.nlm.nih.gov/43024260/) / [DOI](https://doi.org/10.1097/md.0000000000051501)
+  - 抄録: Glucagon-like peptide-1 (GLP-1) based therapies have demonstrated cardiovascular benefits beyond glycemic control in patients with type 2 diabetes mellitus (T2DM). However, the magnitude and consistency of their effects across individual cardiovascular and heart failure outcomes remain incompletely …
+- **Weight, Fat Mass, and Lean Mass Changes After Bariatric Surgery and GLP-1-Based Therapy: A Systematic Review and Meta-Analysis.** — Urbina J, Scott J, Prieto Aldape MR et al. *Obes Surg* (2026). PMID [43024141](https://pubmed.ncbi.nlm.nih.gov/43024141/) / [DOI](https://doi.org/10.1007/s11695-026-09024-2)
+  - 抄録: Metabolic and bariatric surgery (MBS) and GLP-1-based therapies both reduce weight, but their effects on body composition are not directly comparable across measurement methods. We systematically reviewed 31 studies; 30 studies comprising 5,616 participants were included in random-effects meta-analy…
+- **Clinical Outcomes of Tirzepatide After Metabolic Bariatric Surgery: A Systematic Review.** — Alfuhaydi GL, Alahmed AA, Alfayez OM *Diabetes Metab Syndr Obes* (2026). PMID [43022657](https://pubmed.ncbi.nlm.nih.gov/43022657/) / [DOI](https://doi.org/10.2147/dmso.s656297)
+  - 抄録: Suboptimal weight outcomes, including recurrent weight gain (RWG) and insufficient weight loss (IWL), remain important clinical challenges after metabolic bariatric surgery (MBS). Although tirzepatide has demonstrated substantial weight loss in nonsurgical populations, its role after MBS remains unc…
+- **Excessive Intrapancreatic Fat Deposition and the Potential Therapeutic Role of Glucagon-Like Peptide-1 Receptor Agonists: A Systematic Review.** — Bilal Azam M, Al Rashid S, Balasubramanian R et al. *Exp Clin Endocrinol Diabetes* (2026). PMID [43008789](https://pubmed.ncbi.nlm.nih.gov/43008789/) / [DOI](https://doi.org/10.1055/a-2988-3090)
+  - 抄録: Excessive intrapancreatic fat deposition, also called non-alcoholic fatty pancreas disease, is marked by abnormal fat accumulation in pancreatic tissue and inked to metabolic syndrome, obesity, insulin resistance, and type 2 diabetes mellitus. Despite its clinical importance, intrapancreatic fat dep…
+- **Effects of Incretin-Based Pharmacotherapies on Lean Body Mass in Adults With Overweight, Obesity, or Type 2 Diabetes: A Systematic Review With Prespecified Network Meta-Analysis Feasibility Assessment.** — Alhamad ZM, AlShalhoub N, Al-Mana A et al. *Cureus* (2026). PMID [43005990](https://pubmed.ncbi.nlm.nih.gov/43005990/) / [DOI](https://doi.org/10.7759/cureus.117738)
+  - 抄録: Incretin-based pharmacotherapies produce substantial weight loss, but their comparative effects on lean tissue remain incompletely characterized. We systematically reviewed randomized controlled trials in adults with overweight, obesity, and/or type 2 diabetes. The prospectively registered primary o…
+- **Systematic review and network meta-analysis of the safety and efficacy of the triple incretin receptor agonist, retatrutide compared to the dual incretin receptor agonist, tirzepatide, for treatment of type 2 diabetes mellitus.** — Tereshchenko A, Garay Gálvez B, Tello JA *Ther Adv Endocrinol Metab* (2026). PMID [43005518](https://pubmed.ncbi.nlm.nih.gov/43005518/) / [DOI](https://doi.org/10.1177/20420188261474093)
+  - 抄録: Type 2 diabetes mellitus (T2DM) is a common metabolic disorder marked by persistent hyperglycaemia that requires effective treatment to prevent complications. As current therapies do not achieve adequate glycaemic control in all patients, the triple receptor agonist retatrutide was developed to targ…
+- **Repurposing incretin-based therapies for alcohol use disorder: a systematic review of efficacy and safety relative to standard pharmacotherapies in a recent comparative context.** — Alevizopoulos AG, Vasilakos V, Kritikos I et al. *Ther Adv Psychopharmacol* (2026). PMID [43005319](https://pubmed.ncbi.nlm.nih.gov/43005319/) / [DOI](https://doi.org/10.1177/20451253261457548)
+  - 抄録: Alcohol use disorder (AUD) affects millions worldwide, but current treatments, such as disulfiram, naltrexone, acamprosate, and topiramate, have limitations in efficacy and tolerability. Glucagon-like peptide-1 receptor agonists (GLP-1 RAs), commonly used for diabetes and obesity, may offer a new ap…
+- **Glucagon-like peptide-1 receptor agonists in schizophrenia spectrum disorders: A systematic review and meta-analysis of efficacy, safety and mental health outcomes.** — de Aguiar DR, Pereira SIDS, Castro PB et al. *Br J Clin Pharmacol* (2026). PMID [43003672](https://pubmed.ncbi.nlm.nih.gov/43003672/) / [DOI](https://doi.org/10.1002/bcp.70892)
+  - 抄録: The purpose of this study is to evaluate efficacy, safety and mental-health outcomes of glucagon-like peptide-1 (GLP-1) receptor agonists in adults with overweight or obesity and antipsychotic-treated schizophrenia-spectrum disorders. PubMed/MEDLINE, Embase, PsycINFO, CENTRAL, Virtual Health Library…
 
 ### ⏳ 2026-11-10 収集分 (7件・織り待ち)
 

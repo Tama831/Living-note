@@ -1,7 +1,7 @@
 ---
 topic: Copilot活用 (ヘルスケア) / copilot in healthcare
 slug: copilot-healthcare
-updated: 2026-11-11
+updated: 2026-11-18
 mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・活用術=手織り)
 ---
 
@@ -9,7 +9,7 @@ mode: hybrid (エビデンス=PubMed自動収集・週次 / 製品・制度・�
 
 > **これは作者の実稼働インスタンスのライブミラーです** — 本家で週1回の自動収集
 > (PubMed) と織り直しが走るたび、このノートと鼓動 ([heartbeat](../data/heartbeat.json))
-> がここに push されます。**最終チェック: 2026-11-11 JST — ノート更新あり。**
+> がここに push されます。**最終チェック: 2026-11-18 JST — ノート更新あり。**
 > **内容は AI が論文から編んだ要約であり、鵜呑みにしないでください。** 臨床判断は必ず
 > 原著と主治医・現場の判断に従ってください。各記述の出典リンクから原文に当たれます。
 > ⏳ = 収集済み・織り待ち / ✅ = 本文に編み込み済み。
@@ -266,6 +266,30 @@ Microsoft は多数の AI 製品に Copilot の名を与えており、**どの 
 
 ## 🆕 新着ログ
 <!-- LN:LOG:START -->
+
+### ⏳ 2026-11-18 収集分 (11件・織り待ち)
+
+- **Artificial Intelligence in Hand Surgery.** — Jain NS, Kingma ES, McEachan J et al. *Clin Plast Surg* (2027). PMID [43045319](https://pubmed.ncbi.nlm.nih.gov/43045319/) / [DOI](https://doi.org/10.1016/j.cps.2026.08.003)
+  - 抄録: In the context of hand surgery, artificial intelligence (AI) encompasses computer vision, large language models (LLMs), machine learning (ML), and robotics. While computer vision achieves human-comparable accuracy in fracture detection and LLMs streamline "ambient" documentation, clinical implementa…
+- **The Evolving Role of Artificial Intelligence in Facial Plastic Surgery: From Education and Research to EHR-Embedded Applications.** — Losenegger T, Feng M, Pawar SS *Facial Plast Surg* (2026). PMID [43044674](https://pubmed.ncbi.nlm.nih.gov/43044674/) / [DOI](https://doi.org/10.1055/a-3005-4145)
+  - 抄録: Aims and Backgrounds Artificial intelligence (AI) is increasingly relevant to facial plastic surgery. This narrative review examines applications in education, research, and clinical workflows, including tools embedded in the electronic health record (EHR), and discusses responsible adoption. Techno…
+- **Implementing Artificial Intelligence in Daily Clinical Practice, from Voice Dictation to Operating Room Organization: A Targeted Narrative Review with Hysteroscopy as a Clinical Exemplar.** — Haimovich S, Fazel A *J Clin Med* (2026). PMID [43030828](https://pubmed.ncbi.nlm.nih.gov/43030828/) / [DOI](https://doi.org/10.3390/jcm15218688)
+  - 抄録: Artificial intelligence (AI) is entering routine care through documentation tools, decision support, and hospital operations. The central question is whether these systems improve clinical work and patient care once embedded in routine workflows, not only whether they perform well on test data. This…
+- **Emergency Department-Centered Digital Health Transformation: Narrative Review and Three-Pillar Implementation Framework.** — Sossong S, Kalaydjian A, Pletcher S et al. *West J Emerg Med* (2026). PMID [43023752](https://pubmed.ncbi.nlm.nih.gov/43023752/) / [DOI](https://doi.org/10.5811/westjem.66747)
+  - 抄録: Emergency departments (EDs) face escalating pressures from rising patient volumes, workforce shortages, and documentation burdens. Digital health technologies have shown promise individually, but most are implemented in isolation, limiting their collective impact. This narrative review synthesizes e…
+- **Artificial Intelligence in Inpatient Medicine: Skills for the Hospital Physician.** — Gusdorf J, Brodeur P, Koshy JM *Clin Med (Lond)* (2026). PMID [43020335](https://pubmed.ncbi.nlm.nih.gov/43020335/) / [DOI](https://doi.org/10.1016/j.clinme.2026.100675)
+  - 抄録: Artificial intelligence (AI) has moved from novelty to daily use in internal medicine: ambient documentation, point-of-care literature synthesis and diagnostic support are already in routine use. This review describes the skills needed to use these tools safely: critical appraisal of the evidence be…
+- **Speak before the reveal: a practical method to protect clinical reasoning from artificial intelligence scribe deskilling, never-skilling, and mis-skilling.** — Jurblum M *J Am Med Inform Assoc* (2026). PMID [43017790](https://pubmed.ncbi.nlm.nih.gov/43017790/) / [DOI](https://doi.org/10.1093/jamia/ocag191)
+  - 抄録: Ambient artificial intelligence (AI) scribes are rapidly becoming normalized in clinical practice, yet governance frameworks focus on accuracy, privacy, consent, and medicolegal status. Risks to clinician capabilities have received less attention. Speak before the reveal is a proposed method in whic…
+- **Ambient AI for Clinical Documentation in Dentistry: Opportunities, Challenges, and Future Directions.** — Shujaat S *J Dent* (2026). PMID [43014473](https://pubmed.ncbi.nlm.nih.gov/43014473/) / [DOI](https://doi.org/10.1016/j.jdent.2026.107162)
+  - 抄録: Clinical documentation is essential in dental practice but contributes to administrative workload, cognitive burden, and workflow inefficiencies. Ambient artificial intelligence (AI) has emerged as an approach that passively captures clinician-patient interactions and generates structured clinical r…
+- **Evaluating AI-generated clinical documentation: a narrative review of quality frameworks and the case for a purpose-built instrument.** — Rao A, Khillan A, Paddle P *Int J Med Inform* (2026). PMID [43014021](https://pubmed.ncbi.nlm.nih.gov/43014021/) / [DOI](https://doi.org/10.1016/j.ijmedinf.2026.106789)
+  - 抄録: Clinical documentation is a cornerstone of safe, high-quality healthcare, yet has become an increasingly burdensome task for clinicians. Artificial Intelligence (AI) scribes have emerged as a promising solution to this problem, ambiently capturing clinical encounters and alleviating administrative l…
+- **The Myth of Effortless Clinical Documentation Automation: A Critical Sociotechnical Commentary on Ambient Digital Scribes.** — Preston K, Habli I, Lawton T et al. *J Med Internet Res* (2026). PMID [43013843](https://pubmed.ncbi.nlm.nih.gov/43013843/) / [DOI](https://doi.org/10.2196/109717)
+  - 抄録: Ambient digital scribes (ADSs) are promoted to reduce clinical documentation burden, improve efficiency, and allow clinicians to focus on patients. This viewpoint examines the sociotechnical assumptions underlying these claims and argues that safe integration of ADSs requires consideration of how do…
+- **Ambient AI in Residency Training: A Call for Competency-Based Documentation Milestones.** — Rehman E *PRiMER* (2026). PMID [43011701](https://pubmed.ncbi.nlm.nih.gov/43011701/) / [DOI](https://doi.org/10.22454/primer.2026.0089)
+- **Berta, an Open-Source, Modular AI Scribe for Clinical Documentation: Implementation Report.** — Vaid S, Weldon M, Dunn J et al. *JMIR Med Inform* (2026). PMID [43008220](https://pubmed.ncbi.nlm.nih.gov/43008220/) / [DOI](https://doi.org/10.2196/105385)
+  - 抄録: Clinical documentation is a major contributor to physician workload and burnout, particularly in high-acuity settings such as emergency departments. Ambient AI scribes have emerged as a response, but commercial products cost US $99 to more than US $600 per physician per month, operate as opaque syst…
 
 ### ⏳ 2026-11-11 収集分 (7件・織り待ち)
 
